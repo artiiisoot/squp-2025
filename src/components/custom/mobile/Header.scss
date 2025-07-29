@@ -1,0 +1,48 @@
+#GNB {
+  @include FlexBox;
+  @include PaddingY(1.25rem);
+  @include PaddingX(1.25rem);
+  gap: 1.5rem;
+  position: sticky;
+  top: 0;
+  background: $G00;
+  z-index: 9999;
+
+  .header-container {
+    @include FlexBox(row, center, space-between);
+    flex: 1;
+    h5 {
+      a {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+#Sidebar {
+  @include Size(100%, 100vh);
+  position: fixed;
+  top: 0;
+  background: $G00;
+  z-index: 10000;
+  // animation: FadeLeft 0.3s ease-out;
+  .header {
+    @include FlexBox(column, unset, center);
+    @include Size(100%, 3.5rem);
+    @include PaddingX(1.25rem);
+    svg {
+      margin-left: auto;
+    }
+  }
+  .body {
+    ul {
+      @include FlexBox(column, unset, unset);
+      li {
+        @include FlexBox(column, unset, unset);
+        @include PaddingY(0.5rem);
+        @include PaddingX(1.25rem);
+        font-size: 2rem;
+      }
+    }
+  }
+}

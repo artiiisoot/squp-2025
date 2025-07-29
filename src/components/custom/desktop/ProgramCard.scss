@@ -1,0 +1,9 @@
+#ProgramCard {
+  cursor: pointer;
+  @include FlexBox(column, unset, unset);
+  @include Size(20rem, 25rem);
+  @include PaddingY(1rem);
+  @include PaddingX(1rem);
+  @include Rounded(0.75rem);
+  background: $G30;
+}

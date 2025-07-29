@@ -1,0 +1,84 @@
+#ModalExhibitionDetail {
+  .modal-dialog {
+    @include Size(40rem, auto);
+  }
+  .modal-header {
+    @include Size(100%, auto);
+    svg {
+      margin-left: auto;
+    }
+  }
+  .modal-img {
+    @include Size(100%, 22.5rem);
+    @include Rounded(0.75rem);
+    overflow: hidden;
+    background: $G40;
+  }
+  .modal-body {
+    @include FlexBox(column, unset, unset);
+    gap: 1.25rem;
+    .title {
+      @include FlexBox(column, unset, unset);
+      p {
+        font-size: 1.25rem;
+        color: $secondary;
+      }
+    }
+    .wrapper {
+      @include FlexBox;
+      @include Size(100%, auto);
+      gap: 0.75rem;
+      &.grid {
+        align-items: unset;
+        row-gap: 1.5rem;
+      }
+    }
+    .list-group {
+      @include FlexBox(column, unset, unset);
+      @include Size(100%, auto);
+      gap: 0.75rem;
+      .list-title {
+        @include FlexBox;
+        @include Size(100%, 2.5rem);
+        @include PaddingX(1rem);
+        @include Rounded(0.5rem);
+        font-weight: bold;
+        color: $G00;
+        background: $primary;
+      }
+      ul {
+        @include FlexBox(column, unset, unset);
+        @include PaddingX(0.5rem);
+        gap: 0.5rem;
+        h6 {
+          color: $G100;
+        }
+        li {
+          color: $G100;
+        }
+
+        a.link-page {
+          @include FlexBox(row, center, center);
+          @include Size(fit-content, 2rem);
+          @include PaddingY(0.25rem);
+          @include PaddingX(0.75rem);
+          @include BorderAll(1px, solid, $lineG20);
+          @include Rounded(0.5rem);
+          color: $G100;
+          svg {
+            color: $secondary;
+          }
+        }
+      }
+    }
+  }
+  .modal-footer {
+    a {
+      @include FlexBox;
+      gap: 0.25rem;
+      p {
+        font-size: 0.875rem;
+      }
+    }
+  }
+}

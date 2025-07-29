@@ -1,0 +1,17 @@
+#CommonAlert {
+  .modal-body {
+    p {
+      font-size: 0.875rem;
+      color: $G60;
+      text-align: left;
+    }
+  }
+  .modal-footer {
+    .button-group {
+      #Button,
+      #LineButton {
+        @include Size(100%, 3.75rem);
+      }
+    }
+  }
+}

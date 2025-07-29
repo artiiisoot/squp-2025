@@ -1,0 +1,141 @@
+#Input {
+  @include FlexBox(row, flex-start, unset);
+  @include Size(100%, auto);
+  &.with-text-lebel {
+    gap: 0.75rem;
+  }
+  p.text-label {
+    @include FlexBox;
+    gap: 0.25rem;
+    min-width: 7.5rem;
+    min-height: 3rem;
+    color: $G100;
+  }
+  .input-item {
+    position: relative;
+    @include FlexBox(column, flex-start, unset);
+    gap: 0.25rem;
+    width: 100%;
+    .input-label {
+      @include FlexBox;
+      gap: 0.25rem;
+      width: 100%;
+      p {
+        font-size: 0.875rem;
+      }
+    }
+    .link {
+      padding-top: 0.25rem;
+    }
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus {
+    -webkit-text-fill-color: #000;
+    -webkit-box-shadow: 0 0 0px 1000px #ffffff00 inset;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+
+  .input {
+    @include FlexBox;
+    @include Size(100%, auto);
+    @include PaddingY(0.75rem);
+    @include PaddingX(0.75rem);
+    gap: 0.625rem;
+    flex: 1;
+    position: relative;
+    input {
+      flex: 1;
+      color: $G80;
+      background: unset;
+      z-index: 1;
+      &::placeholder {
+        color: $G40;
+      }
+      &:focus {
+        caret-color: $O100;
+      }
+    }
+    &.line {
+      .border {
+        @include Size(100%, 1px);
+        left: 0;
+        bottom: 0;
+        background: $G40;
+      }
+      &:focus-within {
+        .border {
+          background: $O100;
+        }
+      }
+    }
+    &.box {
+      .border {
+        @include Size(100%, 100%);
+        @include BorderAll(1px, solid, transparent);
+        @include Rounded(0.25rem);
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-color: $G40;
+      }
+      &:focus-within {
+        .border {
+          border-color: $O100;
+        }
+      }
+    }
+    &.disabled {
+      cursor: default;
+      background: $G10;
+
+      input {
+        color: $G60;
+      }
+    }
+    .timer {
+      position: absolute;
+      top: 50%;
+      right: 0.5rem;
+      transform: translateY(-50%);
+      &.run {
+        color: $B70;
+      }
+      &.expire {
+        color: $R70;
+      }
+    }
+    svg {
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+
+span.error-msg {
+  @include FlexBox(column, unset, unset);
+  font-size: 0.75rem;
+  color: $R70;
+  text-align: left;
+}
+span.success-msg {
+  font-size: 0.75rem;
+  color: $B70;
+  text-align: left;
+}
+span.info-msg {
+  @include FlexBox;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  color: $G60;
+  text-align: left;
+}
+span.border {
+  position: absolute;
+  z-index: 0;
+  &.error {
+    border-color: $R70 !important;
+  }
+}

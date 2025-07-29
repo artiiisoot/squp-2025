@@ -1,0 +1,61 @@
+$G00: #ffffff;
+$G10: #f5f5f7;
+$G20: #efefef;
+$G30: #dedede;
+$G40: #bfbfbf;
+$G50: #909090;
+$G60: #666666;
+$G70: #444444;
+$G80: #333333;
+$G90: #1a1a1a;
+$G100: #000000;
+
+$O100: #ff8400;
+$O60: #ffb566;
+$O40: #ffce99;
+$O20: #ffe6cc;
+$O10: #fff4e4;
+
+$N100: #202b45;
+$N80: #4e546b;
+$N60: #a5aab5;
+$N40: #d3d5db;
+
+$bgG10: #f5f5f7;
+$bgG20: #efefef;
+$bgO80: #fff5eb;
+
+$lineG20: #efefef;
+$lineG30: #e5e5e5;
+$lineG40: #d9d9d9;
+
+$R100: #ff0000;
+$R70: #ff4d4d;
+$B100: #1f86ff;
+$B70: #62aaff;
+
+$primary: #17064a;
+$secondary: #c03356;
+$primary-bg: radial-gradient(
+    100% 260% at 80% 120%,
+    #fc435b 0%,
+    #da3a58 3%,
+    #ac2e55 9%,
+    #832352 14%,
+    #611a4f 20%,
+    #45124d 26%,
+    #300d4b 33%,
+    #20094a 40%,
+    #17064a 49%,
+    #15064a 61%,
+    #0f043b 70%,
+    #04011f 89%,
+    #000015 100%
+  ),
+  #000;
+$light-primary: #acb1c8;
+$section-bg: linear-gradient(180deg, #f4f5fa 0%, #e8ecfd 100%);
+$thead-bg: #210b67;
+$thead-bg-gradient: linear-gradient(113deg, #210b67 27.8%, #912854 101.01%),
+  #17064a;
+$tbody-bg: #97a8d4;

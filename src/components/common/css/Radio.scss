@@ -1,0 +1,101 @@
+#Radio {
+  @include FlexBox;
+  position: relative;
+
+  input {
+    position: absolute;
+    visibility: hidden;
+    display: none;
+  }
+
+  label {
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    @include FlexBox(row, center, flex-start);
+    gap: 0.5rem;
+    flex: 1;
+
+    .custom-radio {
+      @include FlexBox(row, center, center);
+      @include Size(1.5rem, 1.5rem);
+      @include BorderAll(1px, solid, $lineG40);
+      @include Rounded(50%);
+      position: relative;
+
+      span.circle {
+        @include FlexBox(row, center, center);
+        @include Size(0.625rem, 0.625rem);
+        @include Rounded(50%);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: $O100;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+      }
+    }
+
+    .text {
+      @include FlexBox;
+      gap: 0.25rem;
+
+      p {
+        font-weight: 700;
+        color: $G100;
+      }
+    }
+  }
+
+  input:checked + label .custom-radio {
+    @include BorderAll(1px, solid, $O100);
+    span.circle {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+#CustomRadio {
+  position: relative;
+
+  input {
+    position: absolute;
+    visibility: hidden;
+    display: none;
+  }
+  label {
+    cursor: pointer;
+    @include FlexBox(column, center, center);
+    gap: 1rem;
+  }
+  .radio-marker {
+    @include FlexBox;
+    @include Size(2rem, 2rem);
+    @include BorderAll(1px, solid, $lineG40);
+    @include Rounded(50%);
+    position: relative;
+    transition: all 0.3s;
+    &::after {
+      transition: all 0.3s;
+      content: "";
+      @include FlexBox;
+      @include Size(1rem, 1rem);
+      @include Rounded(50%);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: transparent;
+    }
+  }
+
+  input:checked + label .radio-marker {
+    border-color: $secondary;
+    &::after {
+      background: $secondary;
+    }
+  }
+}

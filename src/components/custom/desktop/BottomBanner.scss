@@ -1,0 +1,40 @@
+#BottomBanner {
+  @include FlexBox(column, center, center);
+  @include Size(100%, 11.25rem);
+  @include PaddingX(1.25rem);
+  gap: 0.75rem;
+  background: $primary;
+  .page-container {
+    @include FlexBox(row, center, center);
+    @include Size(100%, 100%);
+    color: $G00;
+    position: relative;
+    &::before {
+      content: "";
+      @include FlexBox;
+      @include Size(100%, 100%);
+      position: absolute;
+      background: url("../../../assets/images/home/bg_line.svg");
+      background-size: 36%;
+      background-repeat: no-repeat;
+      background-position: top 10% right;
+    }
+  }
+  .content {
+    cursor: pointer;
+    @include FlexBox(row, center, center);
+    @include Size(100%, 100%);
+    gap: 1.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  svg {
+    @include PaddingY(0.75rem);
+    @include PaddingX(0.75rem);
+    @include Rounded(100%);
+    color: $G00;
+    background: $secondary;
+  }
+}

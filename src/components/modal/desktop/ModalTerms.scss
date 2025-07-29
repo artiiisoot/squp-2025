@@ -1,0 +1,23 @@
+#ModalTerms {
+  .modal-dialog {
+    @include Size(48rem, auto);
+  }
+  .modal-body {
+    .context {
+      @include PaddingY(1.5rem);
+      @include PaddingX(1.5rem);
+      @include BorderAll(1px, solid, $lineG30);
+      @include Rounded(0.75rem);
+      font-weight: bold;
+      ul.dot-style {
+        li {
+          > p {
+            &::before {
+              color: $G100;
+            }
+          }
+        }
+      }
+    }
+  }
+}

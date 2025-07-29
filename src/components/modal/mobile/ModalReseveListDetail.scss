@@ -1,0 +1,16 @@
+#ModalReseveListDetail {
+  .modal-dialog {
+    @include Size(100%, auto);
+    top: unset;
+    left: 0;
+    bottom: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    transform: unset;
+  }
+  .modal-header {
+    svg {
+      margin-left: auto;
+    }
+  }
+}

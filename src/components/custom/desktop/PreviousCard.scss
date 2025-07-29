@@ -1,0 +1,19 @@
+#PreviousCard {
+  cursor: pointer;
+  @include FlexBox(column, unset, unset);
+  gap: 1rem;
+  transition: all 0.3s;
+  &:hover {
+    transform: translateY(-1%);
+  }
+  .previous-img {
+    @include Rounded(0.75rem);
+    overflow: hidden;
+  }
+  .context {
+    p {
+      font-size: 1.25rem;
+      color: $secondary;
+    }
+  }
+}

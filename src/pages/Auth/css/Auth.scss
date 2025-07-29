@@ -1,0 +1,15 @@
+#SignIn {
+  .auth-container {
+    @include FlexBox(column, unset, unset);
+    @include Size(20rem, auto);
+    margin: 0 auto;
+    gap: 1rem;
+    .input-group {
+      @include FlexBox(column, unset, unset);
+      gap: 1rem;
+    }
+    #Button {
+      @include Size(100%, 3rem);
+    }
+  }
+}

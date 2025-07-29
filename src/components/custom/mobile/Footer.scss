@@ -1,0 +1,7 @@
+#Footer {
+  @include Size(100%, 20rem);
+  @include PaddingY(2rem);
+  @include PaddingX(1.25rem);
+  color: $G00;
+  background: $G100;
+}

@@ -1,0 +1,18 @@
+.react-datepicker-wrapper {
+  .react-datepicker__input-container {
+    input {
+      display: flex !important;
+      @include FlexBox(row, center, center);
+      @include Size(100%, 3rem);
+      @include BorderBottom(1px, solid, $G40);
+
+      &.react-datepicker-ignore-onclickoutside {
+        border-color: $O100;
+      }
+    }
+  }
+}
+.react-datepicker__tab-loop {
+  background-color: royalblue;
+  position: absolute;
+}

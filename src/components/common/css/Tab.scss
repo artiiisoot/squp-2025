@@ -1,0 +1,43 @@
+#Tabs {
+  cursor: pointer;
+  @include FlexBox(row, center, center);
+  @include Size(100%, auto);
+  color: $G40;
+  position: relative;
+  li {
+    @include FlexBox(row, center, center);
+    @include Size(100%, auto);
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: $light-primary;
+    white-space: nowrap;
+    position: relative;
+
+    span.border {
+      @include Size(100%, 2px);
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background: rgba($color: $light-primary, $alpha: 0.2);
+    }
+
+    &.active {
+      color: $primary;
+      span.border {
+        background: $primary;
+      }
+    }
+  }
+
+  // &.line {
+  //   li {
+  //     &.active {
+  //       color: $O100;
+  //       .border {
+  //         background: $O100;
+  //         @include Size(100%, 2px);
+  //       }
+  //     }
+  //   }
+  // }
+}

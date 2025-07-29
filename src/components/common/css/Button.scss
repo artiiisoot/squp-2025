@@ -1,0 +1,113 @@
+#Button {
+  &.show-error-msg {
+    margin-bottom: 1.375rem;
+  }
+  &.sm {
+    @include ButtonSize(sm, 1.5rem, 0.75rem, 0.25rem, 0.375rem);
+    @include PaddingX(1rem);
+  }
+  &.md {
+    @include ButtonSize(md, 2rem, 0.875rem, 0.25rem, 0.375rem);
+    @include PaddingX(1rem);
+  }
+  &.lg {
+    @include ButtonSize(lg, 3rem, 1rem, 0.25rem, 0.5rem);
+    @include PaddingX(2rem);
+  }
+  &.xl {
+    @include ButtonSize(xl, 3.75rem, 1rem, 0.25rem, 0.5rem);
+    @include PaddingX(1rem);
+  }
+  &.round {
+    @include Rounded(6.25rem);
+  }
+  &.primary {
+    color: $G00;
+    background: $O100;
+    @include BorderAll(1px, solid, $O100);
+    &:hover {
+      background: $O60;
+      @include BorderAll(1px, solid, $O60);
+    }
+    &:active {
+      background: $O40;
+      @include BorderAll(1px, solid, $O40);
+    }
+    &.active {
+      color: $O100;
+      background: $G00;
+      @include BorderAll(1px, solid, $G00);
+    }
+    &.border {
+      @include BorderAll(1px, solid, $G00);
+    }
+  }
+  &.secondary {
+    color: $G00;
+    background: $N100;
+    @include BorderAll(1px, solid, $N100);
+    &:hover,
+    &:active {
+      background: $N80;
+    }
+  }
+  &.squp {
+    color: $G00;
+    background: $primary;
+    p {
+      font-size: 1.75rem;
+    }
+    svg {
+      @include PaddingY(0.5rem);
+      @include PaddingX(0.5rem);
+      @include Rounded(100%);
+      color: $G00;
+      background: $secondary;
+    }
+    &.lg {
+      @include Size(26.25rem, 5rem);
+    }
+  }
+  &.squp-reverse {
+    color: $primary;
+    background: $G00;
+    p {
+      font-size: 1.75rem;
+    }
+    svg {
+      @include PaddingY(0.5rem);
+      @include PaddingX(0.5rem);
+      @include Rounded(100%);
+      color: $G00;
+      background: $secondary;
+    }
+    &.lg {
+      @include Size(26.25rem, 5rem);
+    }
+  }
+  &.disabled {
+    cursor: default;
+    background: $G30;
+    @include BorderAll(1px, solid, $G30);
+    &:hover,
+    &:active {
+      background: $G30;
+    }
+  }
+}
+
+#FileUploadButton {
+  cursor: pointer;
+  @include FlexBox(column, center, center);
+  @include Size(10rem, 3rem);
+  @include ButtonSize(md, 3rem, 1rem, 0.25rem, 0.375rem);
+  @include PaddingX(1rem);
+  color: $G00;
+  background: $O100;
+  &:hover {
+    background: $O60;
+  }
+  &:active {
+    background: $O40;
+  }
+}

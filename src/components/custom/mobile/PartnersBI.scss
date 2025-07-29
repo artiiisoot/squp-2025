@@ -1,0 +1,6 @@
+#PartnersBI {
+  @include FlexBox;
+  @include PaddingY(1rem);
+  @include PaddingX(1rem);
+  background: $G40;;
+}

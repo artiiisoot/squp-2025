@@ -1,0 +1,151 @@
+@mixin FlexBox($direction: row, $align: center, $justify: unset) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+  column-count: auto;
+}
+
+@mixin Ellipsis1 {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+@mixin Ellipsis($line) {
+  display: -webkit-box;
+  -webkit-line-clamp: $line; // 여러줄 이상 ellipsis
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  vertical-align: baseline;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+@mixin Rounded($rounded) {
+  border-radius: $rounded;
+}
+@mixin BorderAll($size, $type, $color) {
+  border: $size $type $color;
+}
+@mixin BorderTop($size, $type, $color) {
+  border-top: $size $type $color;
+}
+@mixin BorderBottom($size, $type, $color) {
+  border-bottom: $size $type $color;
+}
+@mixin BorderLeft($size, $type, $color) {
+  border-left: $size $type $color;
+}
+@mixin BorderRight($size, $type, $color) {
+  border-right: $size $type $color;
+}
+@mixin BtnRounded($gap, $rounded) {
+  font-weight: 700;
+  gap: $gap;
+  border-radius: $rounded;
+}
+
+@mixin Size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin FontSize($size) {
+  font-size: $size;
+}
+
+@mixin ButtonSize($size, $height, $font-size, $gap, $radius) {
+  @if $size == sm or $size == md or $size == lg or $size == xl {
+    height: $height;
+    gap: $gap;
+    border-radius: $radius;
+    font-weight: 700;
+    p {
+      font-size: $font-size;
+      white-space: nowrap;
+    }
+  } @else {
+    @warn "Unknown button size: #{$size}. Please use sm, md, or lg.";
+  }
+}
+
+@mixin TabSize($size, $height, $font-size, $gap) {
+  @if $size == sm or $size == md or $size == lg {
+    height: $height;
+    gap: $gap;
+    font-weight: 700;
+    a,
+    p {
+      font-size: $font-size;
+    }
+  } @else {
+    @warn "Unknown Tab size: #{$size}. Please use sm, md, or lg.";
+  }
+}
+
+@mixin PaddingY($size) {
+  padding-top: $size;
+  padding-bottom: $size;
+}
+
+@mixin PaddingX($size) {
+  padding-left: $size;
+  padding-right: $size;
+}
+
+@mixin Media($device) {
+  @if $device == "mobile" {
+    @media (min-width: 360px) and (max-width: 768px) {
+      $mobile-size: 360 !global;
+      @content;
+    }
+  } @else if $device == "tablet" {
+    @media (min-width: 769px) and (max-width: 1023px) {
+      $mobile-size: 1024 !global;
+      @content;
+    }
+  } @else if $device == "laptop" {
+    @media (min-width: 1024px) and (max-width: 1279px) {
+      @content;
+    }
+  } @else if $device == "desktop-min" {
+    @media (max-width: 1280px) {
+      @content;
+    }
+  } @else if $device == "desktop-sm" {
+    @media (min-width: 1280px) and (max-width: 1439px) {
+      @content;
+    }
+  } @else if $device == "desktop-md" {
+    @media (min-width: 1440px) and (max-width: 1919px) {
+      @content;
+    }
+  } @else if $device == "desktop-lg" {
+    @media (min-width: 1920px) {
+      @content;
+    }
+  } @else {
+    @warn "Unknown device type: #{$device}. Please use mobile, tablet, or laptop.";
+  }
+}
+
+@mixin CustomScrollBar($bg-color: $G00, $border-color: $G00) {
+  /* 스크롤바 설정*/
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+  /* 스크롤바 막대 설정*/
+  ::-webkit-scrollbar-thumb {
+    border: 4px solid rgba($border-color, 1);
+    border-radius: 0.75rem;
+    background: $lineG40;
+  }
+  /* 스크롤바 뒷 배경 설정*/
+  ::-webkit-scrollbar-track {
+    background: $bg-color;
+    border-radius: 6.25rem;
+    padding-right: 4px !important;
+  }
+  ::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+}

@@ -1,0 +1,406 @@
+// #Table {
+//   @include Size(100%, auto);
+//   flex: 1;
+//   .tbody {
+//     .tr {
+//       @include BorderBottom(1px, solid, $lineG20);
+//     }
+//   }
+//   .tr {
+//     @include FlexBox;
+//   }
+//   .th {
+//     font-weight: 700;
+//     background: $G10;
+//   }
+//   .th,
+//   .td {
+//     @include FlexBox(row, center, center);
+//     @include Size(100%, 100%);
+//     @include PaddingY(0.75rem);
+//     flex: 1;
+//     font-size: 0.875rem;
+//     color: $G100;
+//   }
+//   .td {
+//     gap: 0.25rem;
+//   }
+//   .empty {
+//     @include FlexBox(column, center, center);
+//     @include PaddingY(2.5rem);
+//     @include BorderBottom(1px, solid, $lineG20);
+//     color: $G100;
+//     font-weight: 500;
+//     text-align: center;
+//   }
+
+//   &.apiKey {
+//     .td {
+//       width: 100px;
+//       overflow: auto;
+//       p {
+//         width: 100%;
+//       }
+//     }
+//   }
+
+//   &.environment {
+//     &.detail {
+//       .th,
+//       .td {
+//         &:nth-child(1),
+//         &:nth-child(2) {
+//           max-width: 11.25rem;
+//         }
+//         &:nth-child(4) {
+//           max-width: 12.5rem;
+//         }
+//       }
+//     }
+//     &.account {
+//       .no-data {
+//         @include FlexBox(row, center, center);
+//         @include PaddingY(2.5rem);
+//         p {
+//           font-size: 1rem;
+//           color: $G100;
+//         }
+//       }
+//       .th,
+//       .td {
+//         &:nth-child(1),
+//         &:nth-child(2) {
+//           max-width: 13.75rem;
+//         }
+//       }
+//     }
+//     &.create {
+//       // .th,
+//       // .td {
+//       //   &:nth-child(1),
+//       //   &:nth-child(4) {
+//       //     max-width: 13rem;
+//       //   }
+//       //   &:nth-child(3) {
+//       //     max-width: 20rem;
+//       //   }
+//       //   &:nth-child(5) {
+//       //     max-width: 6.25rem;
+//       //   }
+//       // }
+//       // .th {
+//       //   &:nth-child(1) {
+//       //     max-width: 12.375rem;
+//       //   }
+//       //   &:nth-child(3) {
+//       //     max-width: 20rem;
+//       //   }
+//       //   &:nth-child(4) {
+//       //     p {
+//       //       opacity: 0;
+//       //     }
+//       //   }
+//       //   &:nth-child(5) {
+//       //     max-width: 6.25rem;
+//       //   }
+//       // }
+//       .td {
+//         #Button {
+//           p {
+//             font-size: 1rem;
+//           }
+//         }
+//         #LineButton {
+//           p {
+//             font-size: 0.75rem;
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//   &.contract {
+//     &.resource {
+//       .tbody {
+//         .tr {
+//           @include FlexBox(column, unset, unset);
+//           @include Size(100%, auto);
+//           position: relative;
+//           .group {
+//             @include FlexBox;
+//             @include Size(100%, auto);
+//             .td {
+//               &:nth-child(1) {
+//                 cursor: pointer;
+//               }
+//             }
+//           }
+//         }
+//       }
+//       .th,
+//       .td {
+//         &:nth-child(1),
+//         &:nth-child(2) {
+//           max-width: 21.25rem;
+//         }
+//         &:nth-child(5),
+//         &:nth-child(6) {
+//           max-width: 6.25rem;
+//         }
+//         &:last-child {
+//           max-width: 6.25rem;
+//         }
+//       }
+//       p {
+//         @include FlexBox;
+//         gap: 0.25rem;
+
+//         &.color-O100 {
+//           @include Size(auto, 1.75rem);
+//           position: relative;
+
+//           &::after {
+//             @include Size(100%, 1px);
+//             content: '';
+//             position: absolute;
+//             bottom: 0;
+//             left: 0;
+//             background: $O100;
+//           }
+//         }
+//         svg {
+//           transition: all 0.3s;
+//           &.active {
+//             transform: rotate(180deg);
+//           }
+//         }
+//       }
+//     }
+//     &.deploy {
+//       .tbody {
+//         .tr {
+//           @include FlexBox(column, unset, unset);
+//           @include Size(100%, auto);
+//           position: relative;
+//           .group {
+//             @include FlexBox;
+//             @include Size(100%, auto);
+//             .td {
+//               &:nth-child(1) {
+//                 cursor: pointer;
+//               }
+//             }
+//           }
+//         }
+//       }
+//       .th,
+//       .td {
+//         &:nth-child(1),
+//         &:nth-child(2),
+//         &:nth-child(4),
+//         &:nth-child(5) {
+//           max-width: 15rem;
+//         }
+//         &:last-child {
+//           max-width: 6.25rem;
+//         }
+//       }
+//       p {
+//         @include FlexBox;
+//         gap: 0.25rem;
+
+//         &.color-O100 {
+//           @include Size(auto, 1.75rem);
+//           position: relative;
+
+//           &::after {
+//             @include Size(100%, 1px);
+//             content: '';
+//             position: absolute;
+//             bottom: 0;
+//             left: 0;
+//             background: $O100;
+//           }
+//         }
+//       }
+//     }
+//   }
+//   &.notice {
+//     .tbody {
+//       .tr {
+//         @include FlexBox(column, unset, unset);
+//         @include Size(100%, auto);
+//         position: relative;
+//         .group {
+//           @include FlexBox;
+//           @include Size(100%, auto);
+//         }
+//         .td {
+//           &:nth-child(2) {
+//             @include FlexBox(row, center, flex-start);
+//           }
+//           svg {
+//             transition: all 0.3s;
+//             &.rotate {
+//               transform: rotate(180deg);
+//             }
+//           }
+//         }
+//         .context-wrapper {
+//           @include PaddingY(1.5rem);
+//           @include PaddingX(2.5rem);
+//           padding-top: unset;
+//           display: none;
+//           &.show {
+//             display: block;
+//           }
+//           .context {
+//             @include PaddingY(1.5rem);
+//             @include PaddingX(1.5rem);
+//             padding-left: 9.1875rem;
+//             background: $G10;
+//             p {
+//               word-break: keep-all;
+//               height: unset;
+//             }
+//           }
+//         }
+//       }
+//     }
+//     .th,
+//     .td {
+//       &:nth-child(1),
+//       &:nth-child(3) {
+//         max-width: 11.25rem;
+//       }
+//       &:last-child {
+//         max-width: 6.25rem;
+//       }
+//     }
+//     p {
+//       @include FlexBox;
+//       @include Size(auto, 1.5rem);
+//       gap: 0.25rem;
+//     }
+//   }
+//   &.account-manager {
+//     .th,
+//     .td {
+//       @include Size(100%, auto);
+//       p {
+//         @include Size(auto, 1.375rem);
+//       }
+//       &:nth-child(1),
+//       &:nth-child(2) {
+//         max-width: 6.25rem;
+//       }
+//     }
+//   }
+//   &.contract-history {
+//     .th,
+//     .td {
+//       @include Size(100%, auto);
+//       p {
+//         @include Size(auto, 1.375rem);
+//       }
+//       &:nth-child(1) {
+//         max-width: 6.25rem;
+//       }
+//       // &:nth-child(2) {
+//       //   max-width: 25rem;
+//       // }
+//       &:nth-child(3),
+//       &:nth-child(4),
+//       &:nth-child(5) {
+//         max-width: 22rem;
+//       }
+//     }
+//     .link {
+//       font-size: 0.875rem;
+//     }
+//   }
+//   &.contract-resources {
+//     .th,
+//     .td {
+//       p {
+//         font-size: 0.875rem;
+//       }
+//       &:nth-child(1),
+//       &:nth-child(4) {
+//         max-width: 11.25rem;
+//       }
+//       &:nth-child(3) {
+//         max-width: 6.25rem;
+//       }
+//       &:nth-child(5),
+//       &:nth-child(6) {
+//         max-width: 5rem;
+//       }
+//     }
+//     .code-block-wrapper {
+//       @include PaddingY(1.25rem);
+//       @include PaddingX(1.25rem);
+//     }
+//   }
+//   &.deploy-management {
+//     .th,
+//     .td {
+//       p {
+//         @include FlexBox;
+//         gap: 0.25rem;
+//         font-size: 0.875rem;
+//       }
+//       &:nth-child(1) {
+//         max-width: 8.75rem;
+//       }
+//       &:nth-child(2),
+//       &:nth-child(4) {
+//         max-width: 12.5rem;
+//       }
+//       &:nth-child(5),
+//       &:nth-child(6) {
+//         max-width: 5.5rem;
+//       }
+//       .key {
+//         p {
+//           color: $G60;
+//           svg {
+//             color: $G100;
+//           }
+//         }
+//       }
+//     }
+//     .code-block-wrapper {
+//       @include PaddingY(1.25rem);
+//       @include PaddingX(1.25rem);
+//     }
+//   }
+//   &.notice-manage {
+//     .tbody {
+//       .tr {
+//         cursor: pointer;
+//       }
+//     }
+//     .th,
+//     .td {
+//       p {
+//         font-size: 0.875rem;
+//         &.title {
+//           flex: 1;
+//           text-align: left;
+//         }
+//         &.stop {
+//           color: $R70;
+//         }
+//       }
+//       &:nth-child(1) {
+//         max-width: 6.25rem;
+//       }
+//       &:nth-child(3),
+//       &:nth-child(4),
+//       &:nth-child(5) {
+//         max-width: 15.125rem;
+//       }
+//     }
+//   }
+// }

@@ -1,0 +1,32 @@
+#ReserveButton {
+  cursor: pointer;
+  @include FlexBox(row, center, center);
+  @include Size(25rem, 5rem);
+  @include Rounded(6.25rem);
+  gap: 1.5rem;
+  position: fixed;
+  z-index: 1000;
+  display: none;
+  opacity: 0;
+  font-weight: bold;
+  color: $G00;
+  background: $primary;
+  animation: FadeHide 0.3s;
+
+  &.show {
+    @include FlexBox(row, center, center);
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+    bottom: 2rem;
+    opacity: 1;
+    animation: FadeCenterUp 0.3s;
+  }
+  svg {
+    // @include Size(15rem, 4rem);
+    @include PaddingY(0.5rem);
+    @include PaddingX(0.5rem);
+    @include Rounded(100%);
+    background: $secondary;
+    animation: ArrowInfiniteX 1s ease-in-out infinite;
+  }
+}

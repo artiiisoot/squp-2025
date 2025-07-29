@@ -1,0 +1,159 @@
+#Dropdown {
+  @include FlexBox;
+  gap: 0.75rem;
+  flex: 1;
+  position: relative;
+  min-width: 10rem;
+  p.text-label {
+    @include FlexBox;
+    min-height: 3rem;
+    color: $G100;
+  }
+  &.readonly {
+    .dropdown-selected {
+      cursor: default;
+      background: $G10;
+    }
+  }
+  .dropdown-inner {
+    @include FlexBox(column, unset, unset);
+    gap: 0.5rem;
+    position: relative;
+    &.add-height {
+      @include Size(auto, 4.625rem);
+    }
+    .link {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+  .dropdown-selected {
+    cursor: pointer;
+    @include FlexBox;
+    @include PaddingX(1rem);
+    @include PaddingY(0.75rem);
+    position: relative;
+    gap: 0.625rem;
+    width: 100%;
+    color: $G60;
+    &.box {
+      .border {
+        @include BorderAll(1px, solid, $lineG40);
+        @include Rounded(0.5rem);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+      &.active {
+        .border {
+          border-color: $O100;
+        }
+      }
+    }
+    &.line {
+      .border {
+        @include Size(100%, 1px);
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background: $G40;
+      }
+      &.active {
+        .border {
+          background-color: $O100;
+        }
+      }
+    }
+    &.round {
+      @include PaddingX(1rem);
+      border-radius: 6.25rem;
+      .border {
+        @include BorderAll(1px, solid, $lineG40);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 100px;
+      }
+      &.active {
+        .border {
+          border-color: $O100;
+        }
+      }
+    }
+    p {
+      flex: 1;
+      color: $G100;
+    }
+    svg {
+      transition: all 0.3s;
+    }
+    &.active {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .dropdown-list {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: $G00;
+    z-index: 999;
+    &.show-top {
+      bottom: calc(3rem + 0.5rem);
+      animation: DropdownUp 0.3s;
+    }
+    &.show-bottom {
+      top: calc(3rem + 0.5rem);
+      animation: DropdownDown 0.3s;
+    }
+    ul {
+      @include PaddingY(0.5rem);
+      @include PaddingX(0.25rem);
+      @include BorderAll(1px, solid, $G20);
+      max-height: 12.5rem;
+      overflow: auto;
+      li {
+        cursor: pointer;
+        @include PaddingY(0.75rem);
+        @include PaddingX(0.5rem);
+        @include BorderBottom(1px, solid, $G20);
+        &:last-child {
+          border: none;
+        }
+        &.active {
+          font-weight: 700;
+          &.bg-gray {
+            color: $G100;
+            background: $G10;
+          }
+          &.bg-orange {
+            color: $O100;
+            background: $O10;
+          }
+          &.color-black {
+            color: $G100;
+          }
+          &.color-orange {
+            color: $O100;
+          }
+        }
+      }
+      &.box-shadow {
+        box-shadow: 0px 6px 16px 0px rgba($G100, 0.1);
+      }
+      &.round {
+        border-radius: 0.75rem;
+      }
+    }
+  }
+  .placeholder {
+    color: $G40 !important;
+  }
+  @include CustomScrollBar;
+}

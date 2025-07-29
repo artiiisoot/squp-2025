@@ -1,0 +1,27 @@
+#ModalProgramDetail {
+  .modal-dialog {
+    @include Size(40rem, auto);
+  }
+  .modal-body {
+    .bg-img {
+      @include Size(100%, 26.875rem);
+      @include Rounded(0.75rem);
+      background: $G30;
+    }
+  }
+  .modal-footer {
+    @include FlexBox;
+    gap: 0.75rem;
+    .thumb-img {
+      @include Size(100%, 7.5rem);
+      @include Rounded(0.75rem);
+      max-width: 7.5rem;
+      background: $G30;
+    }
+    .context-group {
+      @include FlexBox(column, unset, unset);
+      @include PaddingY(0.5rem);
+      @include PaddingX(0.5rem);
+    }
+  }
+}

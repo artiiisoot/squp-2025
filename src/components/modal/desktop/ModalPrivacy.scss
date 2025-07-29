@@ -1,0 +1,32 @@
+#ModalPrivacy {
+  .modal-dialog {
+    @include Size(48rem, auto);
+  }
+  .modal-body {
+    @include PaddingY(1.5rem);
+    @include PaddingX(1.5rem);
+    @include BorderAll(1px, solid, $lineG30);
+    @include Rounded(0.75rem);
+    max-height: 34rem;
+    overflow-y: auto;
+    .context {
+      @include FlexBox(column, unset, unset);
+      gap: 1.5rem;
+      font-weight: bold;
+      ul {
+        @include FlexBox(column, unset, unset);
+        gap: 0.5rem;
+        li {
+          @include FlexBox(column, unset, unset);
+          gap: 0.5rem;
+          > p {
+            &::before {
+              color: $G100;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include CustomScrollBar;
+}

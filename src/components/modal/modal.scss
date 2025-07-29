@@ -1,0 +1,135 @@
+body[type="desktop"] {
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba($G100, 0.4);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    z-index: 9999;
+    animation: Opacity 0.3s;
+    display: block;
+
+    .modal-dialog {
+      @include FlexBox(column, unset, unset);
+      @include Size(28.75rem, auto);
+      @include PaddingY(1.25rem);
+      @include PaddingX(1.25rem);
+      @include Rounded(0.75rem);
+      gap: 1.5rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: $G00;
+    }
+    .modal-gnb {
+      @include FlexBox(row, center, flex-end);
+    }
+    .modal-header {
+      @include FlexBox;
+      @include BorderBottom(1px, solid, $lineG40);
+      padding-bottom: 1.25rem;
+      h6 {
+        flex: 1;
+      }
+      svg {
+        margin-left: auto;
+      }
+    }
+
+    .modal-body {
+      flex: 1;
+      @include FlexBox(column, unset, unset);
+      > p {
+        @include FlexBox;
+        text-align: center;
+      }
+    }
+
+    .modal-footer {
+      @include FlexBox(row, center, flex-end);
+      @include BorderTop(1px, solid, $lineG40);
+      gap: 0.75rem;
+      width: 100%;
+      padding-top: 1.25rem;
+      #Button,
+      #LineButton {
+        flex: 1;
+      }
+    }
+  }
+
+  @import "components/modal/desktop/ModalEventDetail.scss";
+  @import "components/modal/desktop/ModalExhibitionDetail.scss";
+  @import "components/modal/desktop/ModalProgramDetail.scss";
+  @import "components/modal/desktop/ModalSessionDetail.scss";
+  @import "components/modal/desktop/ModalTerms.scss";
+  @import "components/modal/desktop/ModalPrivacy.scss";
+}
+
+body[type="mobile"] {
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba($G100, 0.4);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    z-index: 9999;
+    animation: Opacity 0.3s;
+    display: block;
+
+    .modal-dialog {
+      @include FlexBox(column, unset, unset);
+      @include Size(90%, auto);
+      @include PaddingY(1.25rem);
+      @include PaddingX(1.25rem);
+      @include Rounded(0.75rem);
+      gap: 1.5rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: $G00;
+    }
+    .modal-gnb {
+      @include FlexBox(row, center, flex-end);
+    }
+    .modal-header {
+      @include FlexBox;
+      h6 {
+        flex: 1;
+      }
+    }
+
+    .modal-body {
+      flex: 1;
+      @include FlexBox(column, unset, unset);
+      p {
+        @include FlexBox;
+        text-align: center;
+      }
+    }
+
+    .modal-footer {
+      @include FlexBox;
+      gap: 0.75rem;
+      width: 100%;
+      #Button,
+      #LineButton {
+        flex: 1;
+      }
+    }
+  }
+
+  @import "components/modal/mobile/ModalEventDetail.scss";
+  @import "components/modal/mobile/ModalExhibitionDetail.scss";
+  @import "components/modal/mobile/ModalProgramDetail.scss";
+  @import "components/modal/mobile/ModalReseveListDetail.scss";
+  @import "components/modal/mobile/ModalSessionDetail.scss";
+}

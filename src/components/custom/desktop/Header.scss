@@ -1,0 +1,85 @@
+#GNB {
+  @include FlexBox;
+  @include Size(100%, auto);
+  @include PaddingX(1.25rem);
+  gap: 1.5rem;
+  position: fixed;
+  top: 0;
+  background: unset;
+  z-index: 9999;
+  transition: all 0.3s;
+  &.fixed {
+    background: $G00;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    ul {
+      li {
+        a {
+          color: $primary;
+        }
+      }
+      &.right-menu {
+        background: $primary;
+        border-color: $primary;
+        a {
+          color: $G00;
+        }
+      }
+    }
+  }
+  .header-container {
+    @include FlexBox(row, center, unset);
+    @include Size(100%, 5rem);
+    gap: 10rem;
+    max-width: var(--desktop-max-width);
+    margin: 0 auto;
+    @include Media("laptop") {
+      width: 768px;
+    }
+    @include Media("desktop-sm") {
+      width: 75rem;
+    }
+  }
+  .squp-logo {
+    @include Size(5.125rem, auto);
+  }
+  ul {
+    @include FlexBox;
+    gap: 2.5rem;
+    li {
+      cursor: pointer;
+      @include Size(auto, auto);
+      a {
+        @include FlexBox(row, center, center);
+        @include PaddingY(0.5rem);
+        @include PaddingX(1rem);
+        font-size: 1.25rem;
+        font-weight: 800;
+        flex: 1;
+        color: $G00;
+        &.active {
+          // position: relative;
+          color: $secondary;
+          text-decoration: underline;
+
+          // &::after {
+          //   content: "";
+          //   @include FlexBox;
+          //   @include Size(100%, 0.125rem);
+          //   background: $secondary;
+          //   position: absolute;
+          //   bottom: 0;
+          // }
+        }
+      }
+    }
+    &.right-menu {
+      @include FlexBox(row, center, center);
+      @include Size(8.75rem, auto);
+      @include BorderAll(1px, solid, transparent);
+      @include Rounded(0.5rem);
+      gap: 1rem;
+      margin-left: auto;
+      border-color: $G00;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+// @import "./Home/css/Home.scss";
+@import "./Auth/css/Auth.scss";
+@import "./About/css/About.scss";
+// @import "./Event/css/Event.scss";
+// @import "./Tracks/css/TracksPage.scss";
+// @import "./Previous/css/Previous.scss";
+@import "./Speakers/css/Speakers.scss";
+// @import "./Reservation/css/Reservation.scss";
+// @import "./Reservation/css/ReservationList.scss";
+
+#ApiTest {
+  @include PaddingY(1.5rem);
+  @include PaddingX(1.5rem);
+  background: $G00;
+}
+
+// DESKTOP
+body[type="desktop"] {
+  @import "pages/Home/desktop/HomePage.scss";
+  @import "pages/Tracks/desktop/TracksPage.scss";
+  @import "pages/Event/desktop/EventPage.scss";
+  @import "pages/Previous/desktop/PreviousPage.scss";
+  @import "pages/Reservation/desktop/ReservationPage.scss";
+  @import "pages/Reservation/desktop/ReservationListPage.scss";
+}
+
+// MOBILE
+body[type="mobile"] {
+  @import "pages/Home/mobile/HomePage.scss";
+  @import "pages/Tracks/mobile/TracksPage.scss";
+  @import "pages/Event/mobile/EventPage.scss";
+  @import "pages/Previous/mobile/PreviousPage.scss";
+  @import "pages/Reservation/mobile/ReservationPage.scss";
+  @import "pages/Reservation/mobile/ReservationListPage.scss";
+}

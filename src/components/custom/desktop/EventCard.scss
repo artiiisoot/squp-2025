@@ -1,0 +1,29 @@
+#EventCard {
+  cursor: pointer;
+  @include FlexBox(column, unset, unset);
+  @include Rounded(0.75rem);
+  overflow: hidden;
+  box-shadow: 0 0 16px 0 rgba($G100, 0.2);
+  transition: all 0.3s;
+  &:hover {
+    transform: translateY(-1%);
+  }
+  .event-img {
+    @include Size(100%, 16.5rem);
+  }
+  .context {
+    @include FlexBox(column, unset, unset);
+    @include Size(100%, auto);
+    @include PaddingY(1.5rem);
+    @include PaddingX(1.5rem);
+    background: $G00;
+    font-weight: bold;
+    h5 {
+      font-size: 1.625rem;
+    }
+    p {
+      font-size: 1.25rem;
+      color: $secondary;
+    }
+  }
+}

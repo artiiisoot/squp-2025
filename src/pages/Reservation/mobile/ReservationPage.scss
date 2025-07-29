@@ -1,0 +1,11 @@
+#ReservationPage {
+  .page-container {
+    gap: 2rem;
+  }
+  .group {
+    @include Size(100%, auto);
+  }
+  #Button {
+    @include Size(100%, 3rem);
+  }
+}

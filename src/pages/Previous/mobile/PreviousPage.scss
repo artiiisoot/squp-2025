@@ -1,0 +1,35 @@
+#PreviousDetailPage {
+  .page-container {
+    @include FlexBox(column, unset, unset);
+    gap: 2rem;
+
+    #Button {
+      @include Size(100%, 3rem);
+    }
+  }
+
+  .title {
+    position: relative;
+
+    h6 {
+      font-size: 1.25rem;
+    }
+    p {
+      font-size: 0.875rem;
+      color: $G60;
+    }
+  }
+
+  .video {
+    @include Size(100%, auto);
+    @include Rounded(0.5rem);
+    aspect-ratio: 16 / 9;
+    background: $G40;
+    overflow: hidden;
+  }
+}
+
+.back-button {
+  @include FlexBox;
+  gap: 0.25rem;
+}

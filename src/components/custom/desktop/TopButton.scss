@@ -1,0 +1,32 @@
+#TopButton {
+  cursor: pointer;
+  @include FlexBox(row, center, center);
+  @include Size(2.5rem, 2.5rem);
+  @include Rounded(50%);
+  position: absolute;
+  right: 1.25rem;
+  bottom: 5rem;
+  color: $G00;
+  background: $G100;
+  box-shadow: 0 4px 10px 0 rgba($G100, 0.1);
+  z-index: 999;
+  animation: FadeDown 0.3s;
+  display: none;
+  opacity: 0;
+  &.sticky {
+    display: flex;
+    position: fixed;
+    animation: FadeUp 0.3s;
+    opacity: 1;
+  }
+  &.fixed {
+    position: absolute;
+    display: flex;
+    bottom: calc(10rem + 1.25rem);
+    animation: NoneAni 0s;
+    opacity: 1;
+  }
+  svg {
+    color: $G00;
+  }
+}

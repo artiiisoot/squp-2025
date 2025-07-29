@@ -1,0 +1,81 @@
+#EarlyBirdEvent {
+  @include FlexBox(column, center, center);
+  @include PaddingY(2.5rem);
+  @include PaddingX(2.5rem);
+  @include Rounded(0.75rem);
+  gap: 2.5rem;
+  background: $primary;
+  .wrapper {
+    @include FlexBox(row, center, center);
+    @include Size(100%, 100%);
+    gap: 2.5rem;
+  }
+  .left {
+    @include FlexBox(column, center, center);
+    gap: 1.5rem;
+    .event-img {
+      @include Size(23.75rem, 19.375rem);
+    }
+  }
+  .right {
+    @include FlexBox(column, unset, unset);
+    gap: 1.5rem;
+    color: $G00;
+    h4 {
+      width: fit-content;
+      position: relative;
+      span {
+        position: static;
+        z-index: 1;
+      }
+      span.line-highlight {
+        content: "";
+        @include Size(100%, 1.5rem);
+        position: absolute;
+        bottom: 0;
+        background: rgba($color: $secondary, $alpha: 0.5);
+        z-index: 0;
+      }
+    }
+    .desc {
+      @include FlexBox(column, unset, unset);
+      gap: 0.25rem;
+      padding-bottom: 2rem;
+    }
+    .step-content {
+      @include FlexBox(row, center, center);
+      gap: 0.625rem;
+      .step-item {
+        @include Size(100%, auto);
+        position: relative;
+        span {
+          @include FlexBox(row, center, center);
+          @include Size(9.5rem, 2.5rem);
+          @include Rounded(6.25rem);
+          font-weight: bold;
+          background: $secondary;
+          position: absolute;
+          top: calc(-2.5rem / 2);
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        .context {
+          @include FlexBox(row, flex-end, center);
+          @include Size(12.5rem, 6.75rem);
+          @include PaddingY(1.5rem);
+          @include PaddingX(1.5rem);
+          @include Rounded(0.75rem);
+          text-align: center;
+          background: rgba($G00, 0.2);
+        }
+      }
+    }
+  }
+
+  #Button {
+    @include Size(17.5rem, 3rem);
+    p {
+      font-size: 1rem;
+    }
+  }
+}

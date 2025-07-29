@@ -1,0 +1,117 @@
+#TextArea {
+  @include FlexBox(row, flex-start, unset);
+  &.with-text-lebel {
+    gap: 0.75rem;
+  }
+  p.text-label {
+    @include FlexBox;
+    min-width: 7.5rem;
+    min-height: 3rem;
+    color: $G100;
+  }
+  .input-item {
+    position: relative;
+    @include FlexBox(column, flex-start, unset);
+    gap: 0.25rem;
+    width: 100%;
+    .input-label {
+      @include FlexBox;
+      gap: 0.25rem;
+      width: 100%;
+      p {
+        font-size: 0.875rem;
+      }
+    }
+    .link {
+      padding-top: 0.25rem;
+    }
+  }
+  .textarea {
+    @include FlexBox(column, flex-start, unset);
+    @include Size(100%, auto);
+    @include PaddingY(0.125rem);
+    @include PaddingX(0.125rem);
+    @include CustomScrollBar;
+    padding-bottom: 2.5rem;
+    position: relative;
+    gap: 0.625rem;
+    flex: 1;
+    textarea {
+      @include Size(100%, 6.75rem);
+      @include PaddingY(0.75rem);
+      @include PaddingX(0.5rem);
+
+      min-height: 6.75rem;
+      flex: 1;
+      color: $G80;
+      background: unset;
+      resize: none;
+      z-index: 1;
+      &::placeholder {
+        color: $G40;
+      }
+      &:focus {
+        caret-color: $O100;
+      }
+    }
+    span.text-limit {
+      position: absolute;
+      right: 0.5rem;
+      bottom: 0.75rem;
+      color: $G40;
+    }
+    &.line {
+      .border {
+        @include Size(100%, 1px);
+        left: 0;
+        bottom: 0;
+        background: $G40;
+      }
+      &:focus-within {
+        .border {
+          background: $O100;
+        }
+      }
+    }
+    &.box {
+      .border {
+        @include Size(100%, 100%);
+        @include BorderAll(1px, solid, transparent);
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-color: $G40;
+      }
+      &:focus-within {
+        .border {
+          border-color: $O100;
+        }
+      }
+    }
+    &.disabled {
+      cursor: default;
+      background: $G10;
+
+      textarea {
+        color: $G60;
+      }
+    }
+    svg {
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+
+span.error-msg {
+  font-size: 0.75rem;
+  color: $R70;
+}
+span.border {
+  position: absolute;
+  z-index: 0;
+  &.error {
+    border-color: $R70 !important;
+  }
+}

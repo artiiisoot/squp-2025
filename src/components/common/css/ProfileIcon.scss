@@ -1,0 +1,11 @@
+#ProfileIcon {
+  @include FlexBox;
+  gap: 0.75rem;
+  .profile-img {
+    @include Size(2.25rem, 2.25rem);
+  }
+  p {
+    font-size: 0.875rem;
+    color: $G100;
+  }
+}

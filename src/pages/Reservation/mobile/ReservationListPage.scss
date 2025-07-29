@@ -1,0 +1,12 @@
+#ReservationList {
+  background: $G00;
+  .page-container {
+    gap: 2rem;
+  }
+  .table-wrapper {
+    overflow: auto;
+  }
+  .query {
+    display: none;
+  }
+}

@@ -1,0 +1,23 @@
+#Pagination {
+  @include FlexBox(row, center, center);
+  ul {
+    @include FlexBox(row, center, center);
+    @include BorderAll(1px, solid, $lineG40);
+    @include Rounded(0.25rem);
+    li {
+      cursor: pointer;
+      @include FlexBox(row, center, center);
+      @include Size(2.25rem, 2.25rem);
+      @include BorderRight(1px, solid, $lineG40);
+      &:last-child {
+        border: none;
+      }
+      &.number {
+        color: $G40;
+        &.active {
+          color: $O100;
+        }
+      }
+    }
+  }
+}

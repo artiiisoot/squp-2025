@@ -1,0 +1,14 @@
+#SpeakerCard {
+  @include FlexBox(column, center, center);
+  gap: 0.75rem;
+  .card-img {
+    @include Size(18rem, 18.75rem);
+    @include Rounded(0.75rem);
+    background: $G30;
+  }
+  .context {
+    @include FlexBox(column, center, center);
+    gap: 0.75rem;
+    text-align: center;
+  }
+}

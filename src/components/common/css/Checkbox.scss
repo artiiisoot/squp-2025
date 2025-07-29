@@ -1,0 +1,50 @@
+#Checkbox {
+  @include FlexBox;
+  @include Size(100%, auto);
+  position: relative;
+  flex: 1;
+  input {
+    position: absolute;
+    visibility: hidden;
+    display: none;
+  }
+  label {
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    @include FlexBox(row, center, flex-start);
+    gap: 0.5rem;
+    flex: 1;
+    .custom-checkbox {
+      @include FlexBox(row, center, center);
+      @include Size(1.5rem, 1.5rem);
+      @include BorderAll(1px, solid, $lineG40);
+      @include Rounded(0.25rem);
+      svg {
+        opacity: 0;
+      }
+    }
+    .title {
+      flex: 1;
+      gap: 0.25rem;
+      p {
+        font-weight: bold;
+        color: $G100;
+        &.required {
+          color: $R70;
+        }
+      }
+    }
+    .more {
+      @include FlexBox;
+    }
+  }
+  input:checked + label .custom-checkbox {
+    @include BorderAll(1px, solid, $secondary);
+    background: $secondary;
+    svg {
+      opacity: 1;
+      color: $G00;
+    }
+  }
+}

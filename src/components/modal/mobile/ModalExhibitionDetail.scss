@@ -1,0 +1,54 @@
+#ModalExhibitionDetail {
+  .modal-dialog {
+    @include Size(100%, 100%);
+    @include Rounded(0);
+    @include PaddingY(0);
+    @include PaddingX(0);
+    position: relative;
+    gap: 0;
+  }
+  .modal-header {
+    @include Size(100%, 3.5rem);
+    @include PaddingX(1.25rem);
+    position: absolute;
+    svg {
+      margin-left: auto;
+      color: rgba($color: $G00, $alpha: 0.8);
+    }
+  }
+  .modal-img {
+    aspect-ratio: 3/2;
+    background: $G40;
+  }
+  .modal-body {
+    @include FlexBox(column, unset, unset);
+    @include PaddingY(1.25rem);
+    @include PaddingX(1.25rem);
+    gap: 1.5rem;
+    .title {
+      @include FlexBox(column, unset, unset);
+      gap: 0.75rem;
+      p {
+        color: $G60;
+      }
+    }
+    .content {
+      @include FlexBox(column, unset, unset);
+      gap: 0.75rem;
+      p {
+        text-align: left;
+      }
+    }
+  }
+  .modal-footer {
+    @include PaddingY(1.25rem);
+    @include PaddingX(1.25rem);
+    a {
+      @include FlexBox;
+      gap: 0.25rem;
+      p {
+        font-size: 0.875rem;
+      }
+    }
+  }
+}

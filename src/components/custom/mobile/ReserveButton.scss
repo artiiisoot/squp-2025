@@ -1,0 +1,29 @@
+#ReserveButton {
+  @include FlexBox(row, center, center);
+  @include Size(90%, 3rem);
+  @include PaddingY(0.75rem);
+  @include PaddingX(1rem);
+  @include Rounded(0.5rem);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  position: fixed;
+  z-index: 1000;
+  display: none;
+  opacity: 0;
+  font-weight: bold;
+  color: $G00;
+  background: $O100;
+  animation: FadeHide 0.3s;
+
+  &.show {
+    @include FlexBox(row, center, center);
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+    bottom: 0;
+    opacity: 1;
+    animation: FadeCenterUp 0.3s;
+  }
+  svg {
+    animation: ArrowInfiniteX 1s ease-in-out infinite;
+  }
+}

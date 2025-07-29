@@ -1,0 +1,13 @@
+#Timer {
+  position: absolute;
+  top: 50%;
+  right: 0.5rem;
+  transform: translateY(-50%);
+  span {
+    font-size: 1rem;
+    color: $B70;
+    &.exp {
+      color: $R70;
+    }
+  }
+}

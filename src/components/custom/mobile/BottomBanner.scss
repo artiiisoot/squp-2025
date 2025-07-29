@@ -1,0 +1,7 @@
+#BottomBanner {
+  @include FlexBox(column, unset, unset);
+  @include PaddingY(2rem);
+  @include PaddingX(1.25rem);
+  gap: 0.75rem;
+  background: $G40;
+}

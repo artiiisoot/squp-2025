@@ -1,0 +1,98 @@
+html,
+body[type="desktop"] {
+  @import "components/custom/desktop/Header.scss";
+  @import "components/custom/desktop/Footer.scss";
+  @import "components/custom/desktop/Loading.scss";
+  @import "components/custom/desktop/PageHeader.scss";
+  @import "components/custom/desktop/PartnersBI.scss";
+  @import "components/custom/desktop/ProgramCard.scss";
+  @import "components/custom/desktop/PreviousCard.scss";
+  @import "components/custom/desktop/BottomBanner.scss";
+  @import "components/custom/desktop/ReserveButton.scss";
+  @import "components/custom/desktop/SectionTitle.scss";
+  @import "components/custom/desktop/SpeakerCard.scss";
+  @import "components/custom/desktop/Table.scss";
+  @import "components/custom/desktop/TopButton.scss";
+  @import "components/custom/desktop/TrackCard.scss";
+  @import "components/custom/desktop/EventCard.scss";
+  @import "components/custom/desktop/ExhibitionCard.scss";
+  @import "components/custom/desktop/EarlyBirdEvent.scss";
+
+  main {
+    min-height: calc((100vh + var(--desktop-footer-height)));
+  }
+  section {
+    @include FlexBox(column, unset, unset);
+    @include PaddingY(4rem);
+    gap: 3.75rem;
+  }
+  article {
+    @include FlexBox(column, unset, unset);
+    @include PaddingY(5rem);
+    padding-bottom: 10rem;
+    gap: 2.5rem;
+    flex: 1;
+    &#HomePage {
+      padding: unset;
+    }
+  }
+  .page-container {
+    @include FlexBox(column, unset, unset);
+    @include Size(100%, auto);
+    max-width: var(--desktop-max-width);
+    margin: 0 auto;
+    gap: 0.75rem;
+    @include Media("laptop") {
+      width: 768px;
+    }
+    @include Media("desktop-sm") {
+      width: 75rem;
+    }
+  }
+}
+
+body[type="mobile"] {
+  @import "components/custom/mobile/Header.scss";
+  @import "components/custom/mobile/Footer.scss";
+  @import "components/custom/mobile/PageHeader.scss";
+  @import "components/custom/desktop/PartnersBI.scss";
+  @import "components/custom/mobile/PageTitle.scss";
+  @import "components/custom/mobile/BottomBanner.scss";
+  @import "components/custom/mobile/ReserveButton.scss";
+  @import "components/custom/mobile/SectionTitle.scss";
+  @import "components/custom/mobile/Table.scss";
+  @import "components/custom/mobile/TopButton.scss";
+  @import "components/custom/mobile/TrackCard.scss";
+
+  main {
+    min-height: calc(100vh - var(--mobile-header-height));
+  }
+  section {
+    @include FlexBox(column, unset, unset);
+    @include PaddingY(4rem);
+    @include PaddingX(1.25rem);
+    gap: 2rem;
+    overflow: hidden;
+  }
+  article {
+    @include FlexBox(column, unset, unset);
+    @include PaddingY(2rem);
+    @include PaddingX(1.25rem);
+    gap: 2rem;
+    flex: 1;
+    overflow: hidden;
+    &#HomePage,
+    &#EventPage {
+      @include PaddingY(0);
+      @include PaddingX(0);
+      gap: 0;
+    }
+  }
+  .container {
+    @include FlexBox;
+  }
+  .page-container {
+    @include FlexBox(column, unset, unset);
+    gap: 0.75rem;
+  }
+}
