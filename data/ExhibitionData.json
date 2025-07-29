@@ -1,0 +1,189 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "title": "블록체인",
+      "subtitle": "2025 시큐업 세미나 부스 체험존",
+      "grid": "flex-col",
+      "list": [
+        {
+          "number": "부스 01",
+          "booth": [
+            {
+              "brand": "OmniOneDigital ID",
+              "context": "시스템 설치 및 구축 없이 간단하게 이용 가능한 신원 자격 발급·검증 플랫폼",
+              "link": "https://www.raonsecure.com/ko/service/omnionedid"
+            },
+            {
+              "brand": "OmniOne Enterprise",
+              "context": "국내 최초 DID 상용 서비스 구축으로 검증된 블록체인 기반 DID 플랫폼",
+              "link": "https://www.raonsecure.com/ko/solution/omnioneenterprise"
+            }
+          ]
+        },
+        {
+          "number": "부스 02",
+          "booth": [
+            {
+              "brand": "OmniOne CX",
+              "context": "민간 인증부터 모바일 신분증까지 제공하는 국내 유일 통합인증 서비스",
+              "link": "https://www.raonsecure.com/ko/service/omnione"
+            },
+            {
+              "brand": "OmniOne Badge",
+              "context": "블록체인 기반 국제 표준 디지털 배지 플랫폼",
+              "link": "https://www.raonsecure.com/ko/service/badge"
+            }
+          ]
+        }
+      ],
+      "thumbImg": "exhibition_img_01.png",
+      "detailImg": "exhibition_img_01.png"
+    },
+    {
+      "id": 2,
+      "title": "AI / 딥페이크",
+      "subtitle": "2025 시큐업 세미나 부스 체험존",
+      "grid": "flex-col",
+      "list": [
+        {
+          "number": "부스 03",
+          "booth": [
+            {
+              "brand": "라온모바일시큐리티",
+              "context": "딥페이크 탐지 기능을 갖춘 개인용 모바일 백신",
+              "link": "https://www.raonsecure.com/ko/service/raonmobilesecurity"
+            }
+          ]
+        }
+      ],
+      "thumbImg": "exhibition_img_02.png",
+      "detailImg": "exhibition_img_02.png"
+    },
+    {
+      "id": 3,
+      "title": "양자내성암호",
+      "subtitle": "2025 시큐업 세미나 부스 체험존",
+      "grid": "flex-col",
+      "list": [
+        {
+          "number": "부스 04",
+          "booth": [
+            {
+              "brand": "Key#biz",
+              "context": "양자내성암호(PQC) 기반 E2E 구간암호화를 지원하는 통합 PKI 전자서명 솔루션",
+              "link": "https://www.raonsecure.com/ko/solution/biz"
+            },
+            {
+              "brand": "Key#wireless",
+              "context": "양자내성암호(PQC) 기반 E2E 구간암호화를 지원하는 모바일 통합 PKI 전자서명 솔루션",
+              "link": "https://www.raonsecure.com/ko/solution/wireless"
+            }
+          ]
+        }
+      ],
+      "thumbImg": "exhibition_img_03.png",
+      "detailImg": "exhibition_img_03.png"
+    },
+    {
+      "id": 4,
+      "title": "제로트러스트",
+      "subtitle": "2025 시큐업 세미나 부스 체험존",
+      "grid": "flex-col",
+      "list": [
+        {
+          "number": "부스 05",
+          "booth": [
+            {
+              "brand": "OnePass",
+              "context": "제로트러스트 및 내부통제 강화를 위한 생체인증·2차인증·MFA 지원 인증 통합 플랫폼",
+              "link": "https://www.raonsecure.com/ko/solution/onepass"
+            }
+          ]
+        },
+        {
+          "number": "부스 06",
+          "booth": [
+            {
+              "brand": "OneGuard",
+              "context": "엔터프라이즈 통합 디바이스 관리(MDM/MAM) 솔루션",
+              "link": "https://www.raonsecure.com/ko/solution/oneguard"
+            }
+          ]
+        }
+      ],
+      "thumbImg": "exhibition_img_04.png",
+      "detailImg": "exhibition_img_04.png"
+    },
+    {
+      "id": 5,
+      "title": "메타버스",
+      "subtitle": "2025 시큐업 세미나 부스 체험존",
+      "grid": "flex-col",
+      "list": [
+        {
+          "number": "부스 07, 08",
+          "booth": [
+            {
+              "brand": "라온 메타데미",
+              "context": "세계 최초 국내 유일의 AI·메타버스 기반 실습 전문 플랫폼",
+              "link": "https://www.raonsecure.com/ko/service/metademy"
+            }
+          ]
+        }
+      ],
+      "thumbImg": "exhibition_img_05.png",
+      "detailImg": "exhibition_img_05.png"
+    },
+    {
+      "id": 6,
+      "title": "메타데미 콘텐츠존",
+      "subtitle": "2025 시큐업 세미나 부스 체험존",
+      "grid": "grid",
+      "list": [
+        {
+          "number": "부스 09 : 그리다텍",
+          "booth": [
+            {
+              "context": "VR 동작인식 특화 간호술기 실습"
+            }
+          ]
+        },
+        {
+          "number": "부스 10 : ㈜마인즈에이아이",
+          "booth": [
+            {
+              "context": "CPX 의사 국가고시 실습 콘텐츠 임상 수행능력 평가"
+            }
+          ]
+        },
+        {
+          "number": "부스 11 : ㈜왓츠랩",
+          "booth": [
+            {
+              "context": "메타데미 실험동물부검 실습과 연동된 햅틱 글로브"
+            }
+          ]
+        },
+        {
+          "number": "부스 12 : ㈜옐로우박스",
+          "booth": [
+            {
+              "context": "VR 기기반의 동력보트 조종 훈련"
+            }
+          ]
+        },
+        {
+          "number": "부스 13 : ㈜빅픽쳐스",
+          "booth": [
+            {
+              "context": "VR 기반의 지게차, 굴착기 조종훈련"
+            }
+          ]
+        }
+      ],
+      "thumbImg": "exhibition_img_06.png",
+      "detailImg": "exhibition_img_06.png"
+    }
+  ]
+}

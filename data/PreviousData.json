@@ -1,0 +1,32 @@
+{
+  "data": [
+    {
+      "years": 2024,
+      "title": "2024 시큐업 세미나",
+      "desc": "디지털인증의 혁신과 글로벌 전략",
+      "thumbImg": "previous_img_01.png",
+      "video": "https://www.youtube.com/embed/aUyEDBABERA"
+    },
+    {
+      "years": 2023,
+      "title": "2023 시큐업 세미나",
+      "desc": "차세대 디지털 인증의 방향",
+      "thumbImg": "previous_img_02.png",
+      "video": "https://www.youtube.com/embed/X5umLktb2oM"
+    },
+    {
+      "years": 2022,
+      "title": "2022 시큐업 세미나",
+      "desc": "디지털 인증의 현재와 미래",
+      "thumbImg": "previous_img_03.png",
+      "video": null
+    },
+    {
+      "years": 2021,
+      "title": "2021 시큐업 세미나",
+      "desc": "BEYOND THE DIGITAL WORLD",
+      "thumbImg": "previous_img_04.png",
+      "video": null
+    }
+  ]
+}

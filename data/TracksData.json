@@ -1,0 +1,299 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "trackTitle": "라온시큐어",
+      "trackDesc": "Web3 & AI로 연결되는 미래 기술의 진화, \n 디지털 생태계 확장 여정의 전략과 비전",
+      "progressTime": "13:00 ~ 17:15",
+      "contentImg": "raonsecure.png",
+      "contentAlt": "raonsecure",
+      "trackInfo": {
+        "presentation": "COEX 3F Conference Room E1~E4",
+        "booth": "E홀 로비",
+        "time": "13:00~17:15"
+      },
+      "tab": "Track A",
+      "track": [
+        {
+          "time": "13:00 ~ 13:30",
+          "title": "등록 및 전시부스 관람",
+          "speaker": "",
+          "from": "",
+          "class": ""
+        },
+        {
+          "time": "13:30 ~ 13:40",
+          "title": "인사말 (Web3 & AI로 연결되는 미래)",
+          "speaker": "이순형 의장",
+          "from": "라온시큐어",
+          "class": ""
+        },
+        {
+          "time": "13:40 ~ 14:00",
+          "title": "사람을 넘어 IOT, AI Agent에 대한 신뢰 프레임워크로써의 Open DID",
+          "speaker": "김태진 전무",
+          "from": "라온시큐어",
+          "class": ""
+        },
+        {
+          "time": "14:00 ~ 14:20",
+          "title": "DID로 연결되는 일상 : OmniOne이 여는 실생활 기반 신원인증 생태계",
+          "speaker": "이재영 팀장",
+          "from": "라온시큐어",
+          "class": ""
+        },
+        {
+          "time": "14:20 ~ 14:40",
+          "title": "의료계에서 DID 신원 인증의 활용과 미래",
+          "speaker": "김용성 교수",
+          "from": "원광대",
+          "class": ""
+        },
+        {
+          "time": "14:40 ~ 15:00",
+          "title": "OmniOne과의 연계를 통한 일본 디지털 증명서 시장으로의 도전",
+          "speaker": "미즈마 CISO",
+          "from": "사이버링크스",
+          "class": ""
+        },
+        {
+          "time": "15:00 ~ 15:30",
+          "title": "Coffee Break / 전시부스 관람",
+          "speaker": "",
+          "from": "",
+          "class": "break"
+        },
+        {
+          "time": "15:30 ~ 15:45",
+          "title": "건국대학교 디지털배지 발급 플랫폼 개발 및 운영 사례",
+          "speaker": "김선교 교수",
+          "from": "건국대",
+          "class": ""
+        },
+        {
+          "time": "15:45 ~ 16:00",
+          "title": "AI를 활용한 보안 위협 대응 전략",
+          "speaker": "박현우 상무",
+          "from": "라온시큐어",
+          "class": ""
+        },
+        {
+          "time": "16:00 ~ 16:15",
+          "title": "AI와 제로트러스트의 융합을 통한 국가망보안체계(N2SF) 구현 전략",
+          "speaker": "김형관 팀장",
+          "from": "라온시큐어",
+          "class": ""
+        },
+        {
+          "time": "16:15 ~ 16:30",
+          "title": "AI시대 양자내성암호로의 대전환 “데이터 보안의 새로운 기준",
+          "speaker": "이두용 상무",
+          "from": "라온시큐어",
+          "class": ""
+        },
+        {
+          "time": "16:30 ~ 16:45",
+          "title": "AI 시대의 해킹 : 새로운 공격표면과 레드팀의 진화 ",
+          "speaker": "김동민 팀장",
+          "from": "라온시큐어",
+          "class": ""
+        },
+        {
+          "time": "16:45 ~ 17:00",
+          "title": "클로징 : 경품 추첨 및 행사 종료",
+          "speaker": "",
+          "from": "",
+          "class": "break"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "trackTitle": "라온메타",
+      "trackDesc": "Web3 & AI로 융합된 AI, 메타버스 기반 \n 실습 플랫폼, 미래 교육의 비전과 혁신",
+      "progressTime": "13:00 ~ 17:15",
+      "contentImg": "metademy.png",
+      "contentAlt": "metademy",
+      "trackInfo": {
+        "presentation": "COEX 3F Conference Room E5",
+        "booth": "E홀 로비",
+        "time": "13:00~17:15"
+      },
+      "tab": "Track B",
+      "track": [
+        {
+          "time": "13:00 ~ 13:30",
+          "title": "등록 및 전시부스 관람",
+          "speaker": "",
+          "from": ""
+        },
+        {
+          "time": "13:00 ~ 13:40",
+          "title": "축사",
+          "speaker": "최용기 부회장",
+          "from": "K-Meta"
+        },
+        {
+          "time": "13:40 ~ 14:00",
+          "title": "Web3와 AI시대의 성공하는 메타버스 전략",
+          "speaker": "윤원석 부사장",
+          "from": "라온메타"
+        },
+        {
+          "time": "14:00 ~ 14:20",
+          "title": "메타버스 실습용 디바이스 개발 트렌드와 시사점",
+          "speaker": "우운택 교수",
+          "from": "카이스트"
+        },
+        {
+          "time": "14:20 ~ 14:40",
+          "title": "AI 시대, 메타버스 혁신의 현재와 미래",
+          "speaker": "채재병 부장",
+          "from": "SK텔레콤"
+        },
+        {
+          "time": "14:40 ~ 15:00",
+          "title": "패널 토의",
+          "speaker": "키노트 발표자",
+          "from": "Keynote"
+        },
+        {
+          "time": "15:00 ~ 15:30",
+          "title": "Coffee Break / 전시부스 관람",
+          "speaker": "",
+          "from": "",
+          "class": "break"
+        },
+        {
+          "time": "15:30 ~ 15:45",
+          "title": "AI와 메타버스가 만나는 실습 교육의 미래",
+          "speaker": "조상용 대표",
+          "from": "글로브포인트"
+        },
+        {
+          "time": "15:45 ~ 16:00",
+          "title": "간호사 시험에 적용 가능한 메타버스 기반 간호술기 혁신 방향",
+          "speaker": "옥지원 대표",
+          "from": "그리다텍"
+        },
+        {
+          "time": "16:00 ~ 16:15",
+          "title": "AI 기반 의료 분야 구술시험 혁신 방안",
+          "speaker": "석정호 대표",
+          "from": "마인즈에이아이"
+        },
+        {
+          "time": "16:15 ~ 16:30",
+          "title": "메타버스에 적용 가능한 AI의 미래",
+          "speaker": "유승재 대표",
+          "from": "페르소나AI"
+        },
+        {
+          "time": "16:30 ~ 16:45",
+          "title": "가상 훈련 시스템의 발전을 위한 웨어러블 디바이스의 미래",
+          "speaker": "심동현 대표",
+          "from": "왓츠랩"
+        },
+        {
+          "time": "16:45 ~ 17:00",
+          "title": "클로징 : 경품 추첨 및 행사 종료",
+          "speaker": "",
+          "from": "",
+          "class": "break"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "trackTitle": "해커톤 결선",
+      "trackDesc": "아이디어를 넘어 창업을 꿈꾸다, \n 블록체인 & AI 해커톤",
+      "progressTime": "11:20 ~ 17:15",
+      "contentImg": "hackathon.png",
+      "contentAlt": "hackathon",
+      "trackInfo": {
+        "presentation": "COEX 3F Conference Room E6",
+        "time": "11:20~17:15"
+      },
+      "tab": "Track C",
+      "track": [
+        {
+          "type": "top",
+          "sessions": [
+            {
+              "time": "11:25 ~ 11:30",
+              "session": "심사안내"
+            },
+            {
+              "time": "11:30 ~ 11:55",
+              "session": "1번 참가팀 발표"
+            },
+            {
+              "time": "11:55 ~ 12:20",
+              "session": "2번 참가팀 발표"
+            },
+            {
+              "time": "12:20 ~ 12:45",
+              "session": "3번 참가팀 발표"
+            },
+            {
+              "time": "13:10 ~ 13:30",
+              "session": "4번 참가팀 발표"
+            },
+            {
+              "time": "11:55 ~ 12:20",
+              "session": "5번 참가팀 발표"
+            }
+          ],
+          "speaker": "장항배 교수",
+          "from": "심사위원장",
+          "break": [
+            {
+              "time": "13:30 ~ 14:00",
+              "session": "Coffee Break",
+              "class": "break"
+            }
+          ]
+        },
+        {
+          "type": "bottom",
+          "sessions": [
+            {
+              "time": "14:00 ~ 14:25",
+              "session": "6번 참가팀 발표"
+            },
+            {
+              "time": "14:25 ~ 14:50",
+              "session": "7번 참가팀 발표"
+            },
+            {
+              "time": "14:50 ~ 15:15",
+              "session": "8번 참가팀 발표"
+            },
+            {
+              "time": "15:15 ~ 15:40",
+              "session": "9번 참가팀 발표"
+            },
+            {
+              "time": "15:40 ~ 16:00",
+              "session": "10번 참가팀 발표"
+            }
+          ],
+          "speaker": "장항배 교수",
+          "from": "심사위원장",
+          "break": [
+            {
+              "time": "16:00 ~ 17:00",
+              "session": "심사위원 평가",
+              "class": "break"
+            },
+            {
+              "time": "17:00 ~ 17:20",
+              "session": "해커톤 시상식",
+              "class": "break"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
