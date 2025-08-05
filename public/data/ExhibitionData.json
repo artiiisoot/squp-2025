@@ -10,7 +10,7 @@
           "number": "부스 01",
           "booth": [
             {
-              "brand": "OmniOneDigital ID",
+              "brand": "OmniOne Digital ID",
               "context": "시스템 설치 및 구축 없이 간단하게 이용 가능한 신원 자격 발급·검증 플랫폼",
               "link": "https://www.raonsecure.com/ko/service/omnionedid"
             },
@@ -105,7 +105,7 @@
           "number": "부스 05",
           "booth": [
             {
-              "brand": "라온모바일시큐리티",
+              "brand": "라온 모바일 시큐리티",
               "context": "딥페이크 탐지 기능을 갖춘 개인용 모바일 백신",
               "link": "https://www.raonsecure.com/ko/service/raonmobilesecurity"
             }

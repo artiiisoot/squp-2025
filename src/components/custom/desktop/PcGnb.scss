@@ -40,7 +40,7 @@
     }
   }
   .squp-logo {
-    @include Size(6.25rem, auto);
+    @include Size(6.25rem, 3.0625rem);
   }
   ul {
     @include FlexBox;

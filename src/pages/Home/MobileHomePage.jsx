@@ -293,6 +293,7 @@ const MobileHomePage = () => {
             iconName="arrow_right"
             iconSize="2rem"
             iconPosition="right"
+            onClick={() => navigate("/reservation")}
           />
         </div>
       </section>
