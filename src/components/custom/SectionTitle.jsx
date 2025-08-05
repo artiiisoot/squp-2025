@@ -4,9 +4,9 @@ import { useSelector } from "react-redux";
 const SectionTitle = ({ title, context }) => {
   const { isMobile } = useSelector((state) => state.device);
   return (
-    <div id="SectionTitle">
+    <div id={isMobile ? "MobileSectionTitle" : "PcSectionTitle"}>
       <div className="page-container">
-        {isMobile ? <h4>{title}</h4> : <h4>{title}</h4>}
+        {isMobile ? <h5>{title}</h5> : <h4>{title}</h4>}
         {context && <p>{context}</p>}
       </div>
     </div>

@@ -16,20 +16,20 @@
 
 // DESKTOP
 body[type="desktop"] {
-  @import "pages/Home/desktop/HomePage.scss";
-  @import "pages/Tracks/desktop/TracksPage.scss";
-  @import "pages/Event/desktop/EventPage.scss";
-  @import "pages/Previous/desktop/PreviousPage.scss";
-  @import "pages/Reservation/desktop/ReservationPage.scss";
-  @import "pages/Reservation/desktop/ReservationListPage.scss";
+  @import "pages/Home/desktop/PcHomePage.scss";
+  @import "pages/Tracks/desktop/PcTracksPage.scss";
+  @import "pages/Event/desktop/PcEventPage.scss";
+  @import "pages/Previous/desktop/PcPreviousPage.scss";
+  @import "pages/Reservation/desktop/PcReservationPage.scss";
+  @import "pages/Reservation/desktop/PcReservationListPage.scss";
 }
 
 // MOBILE
 body[type="mobile"] {
-  @import "pages/Home/mobile/HomePage.scss";
-  @import "pages/Tracks/mobile/TracksPage.scss";
-  @import "pages/Event/mobile/EventPage.scss";
-  @import "pages/Previous/mobile/PreviousPage.scss";
-  @import "pages/Reservation/mobile/ReservationPage.scss";
-  @import "pages/Reservation/mobile/ReservationListPage.scss";
+  @import "pages/Home/mobile/MobileHomePage.scss";
+  @import "pages/Tracks/mobile/MobileTracksPage.scss";
+  @import "pages/Event/mobile/MobileEventPage.scss";
+  @import "pages/Previous/mobile/MobilePreviousPage.scss";
+  @import "pages/Reservation/mobile/MobileReservationPage.scss";
+  @import "pages/Reservation/mobile/MobileReservationListPage.scss";
 }

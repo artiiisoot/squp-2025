@@ -1,0 +1,280 @@
+#MobileHomePage {
+  padding: unset;
+  gap: 0;
+}
+
+#Intro {
+  @include Size(100%, 100svh);
+  padding: unset;
+  position: relative;
+  background: radial-gradient(
+    273.25% 98.54% at 83.13% 98%,
+    #fc435b 0%,
+    #da3a58 3%,
+    #ac2e55 9%,
+    #832352 14%,
+    #611a4f 20%,
+    #45124d 26%,
+    #300d4b 33%,
+    #20094a 40%,
+    #17064a 49%,
+    #15064a 61%,
+    #0f043b 70%,
+    #04011f 89%,
+    #000015 100%
+  );
+  &::before {
+    content: "";
+    @include FlexBox;
+    @include Size(100%, 100%);
+    position: absolute;
+    background: url("../../../assets/images/home/bg_line.svg");
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    background-position: bottom -6rem right -6rem;
+  }
+  .section-container {
+    @include FlexBox(column, center, center);
+    @include Size(100%, 100%);
+    gap: 0.875rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .squp-logo {
+      @include Size(7.6875rem, 3.75rem);
+    }
+    .raon-logo {
+      @include Size(3.125rem, 1.375rem);
+    }
+    .title {
+      @include FlexBox(column, center, center);
+      color: $G00;
+      p {
+        font-size: 1.125rem;
+      }
+    }
+    .info-text {
+      @include FlexBox(column, center, center);
+      font-size: 0.875rem;
+      color: $G00;
+      p {
+        font-size: inherit;
+      }
+    }
+  }
+  .arrow {
+    position: absolute;
+    left: 50%;
+    bottom: 2rem;
+    transform: translate3d(-50%, 0, 0);
+    color: $G00;
+    animation: ArrowInfiniteY 1s ease-in-out infinite;
+  }
+}
+
+#Overview {
+  background: $section-bg;
+  min-height: 75.125rem;
+  .section-container {
+    @include FlexBox(column, unset, unset);
+    gap: 1.5rem;
+    h5 {
+      text-align: center;
+    }
+    .section-container-context {
+      @include FlexBox(column, unset, unset);
+      gap: 1rem;
+      li {
+        font-size: 0.875rem;
+        word-break: keep-all;
+      }
+    }
+  }
+  .button-group {
+    #Button {
+      @include Size(100%, 3.75rem);
+      font-size: 1.25rem;
+      p {
+        font-size: inherit;
+      }
+      svg {
+        @include PaddingY(0.25rem);
+        @include PaddingX(0.25rem);
+      }
+    }
+  }
+}
+
+#Tracks {
+  min-height: 35.625rem;
+  .tracks-swiper {
+    @include PaddingY(0.25rem);
+    @include PaddingX(0.25rem);
+  }
+}
+
+#Event {
+  min-height: 38.25rem;
+  text-align: center;
+  color: $G00;
+  background: $primary;
+  .section-container {
+    @include FlexBox(column, center, center);
+    gap: 1.25rem;
+    h5 {
+      position: relative;
+      span {
+        position: static;
+        z-index: 1;
+      }
+      span.line-highlight {
+        content: "";
+        @include Size(100%, 0.875rem);
+        position: absolute;
+        bottom: 0;
+        background: rgba($color: $secondary, $alpha: 0.5);
+        z-index: 0;
+      }
+    }
+    .context {
+      p {
+        font-size: 0.875rem;
+        word-break: keep-all;
+      }
+    }
+  }
+  .button-group {
+    #Button {
+      @include Size(100%, 3.75rem);
+      font-size: 1.25rem;
+      p {
+        font-size: inherit;
+      }
+      svg {
+        @include PaddingY(0.25rem);
+        @include PaddingX(0.25rem);
+      }
+    }
+  }
+}
+
+#Location {
+  min-height: 26.875rem;
+  background: $section-bg;
+  .section-container {
+    @include FlexBox(column, unset, unset);
+    gap: 2.5rem;
+  }
+  .location-img {
+    background: $G40;
+    object-fit: contain;
+  }
+  .location-info {
+    @include FlexBox(column, unset, unset);
+    gap: 0.75rem;
+    .info-item {
+      @include FlexBox(row, flex-start, unset);
+      gap: 0.5rem;
+    }
+    .chip {
+      @include FlexBox(row, center, center);
+      @include Size(3.375rem, 1.875rem);
+      @include Rounded(6.25rem);
+      font-size: 0.75rem;
+      font-weight: bold;
+      color: $G00;
+      background: $primary;
+    }
+    p {
+      font-size: 0.875rem;
+    }
+  }
+}
+
+#Partners {
+  min-height: 21.75rem;
+  .section-container {
+    @include FlexBox(column, center, center);
+    gap: 40px;
+  }
+  .partner-title {
+    @include FlexBox(row, center, center);
+    @include Size(6.5rem, 2rem);
+    @include BorderAll(1px, solid, $primary);
+    @include Rounded(6.25rem);
+    font-size: 1rem;
+    font-weight: bold;
+    color: $primary;
+  }
+  .group {
+    @include FlexBox(column, center, center);
+    gap: 1.25rem;
+    .logo-group {
+      // @include FlexBox(row, center, center);
+      // gap: 0.5rem;
+      // flex-wrap: wrap;
+      .host-img {
+        @include Size(fit-content, 1.5rem);
+      }
+      .sponsor-img {
+        @include Size(fit-content, 12.25rem);
+      }
+    }
+  }
+  .partner-logo {
+    img {
+      @include Size(auto, 1.25rem);
+      object-fit: contain;
+    }
+  }
+}
+
+@include Media("tablet") {
+  #Intro {
+    @include Size(100%, 100svh);
+    padding: unset;
+    position: relative;
+    background: radial-gradient(
+      273.25% 98.54% at 83.13% 98%,
+      #fc435b 0%,
+      #da3a58 3%,
+      #ac2e55 9%,
+      #832352 14%,
+      #611a4f 20%,
+      #45124d 26%,
+      #300d4b 33%,
+      #20094a 40%,
+      #17064a 49%,
+      #15064a 61%,
+      #0f043b 70%,
+      #04011f 89%,
+      #000015 100%
+    );
+    &::before {
+      content: "";
+      @include FlexBox;
+      @include Size(100%, 100%);
+      position: absolute;
+      background: url("../../../assets/images/home/bg_line.svg");
+      background-size: 100vw;
+      background-repeat: no-repeat;
+      background-position: bottom -12rem right -12rem;
+    }
+  }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+  #Intro {
+    &::before {
+      content: "";
+      @include FlexBox;
+      @include Size(100%, 100%);
+      position: absolute;
+      background: url("../../../assets/images/home/bg_line.svg");
+      background-size: 80vw;
+      background-repeat: no-repeat;
+      background-position: bottom -8rem right -6rem;
+    }
+  }
+}

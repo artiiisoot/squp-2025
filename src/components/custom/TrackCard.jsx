@@ -1,34 +1,38 @@
 import React from "react";
 
-import { formatText } from "@/utils/utils";
+import { formatText, getRequireImage } from "@/utils/utils";
 
+import parse from "html-react-parser";
 import LineButton from "@/components/common/LineButton";
-const TrackCard = ({ data: track, trackIdx, onClick }) => {
-  const requireImage = require(`@/assets/images/home/track/${track.contentImg}`);
+import { useSelector } from "react-redux";
+
+const TrackCard = ({ data, trackIdx, onClick }) => {
+  const { isMobile } = useSelector((state) => state.device);
+  const imageSrc = getRequireImage("tracks", "list", data?.contentImg);
 
   return (
     <div
-      id="TrackCard"
+      id={isMobile ? "MobileTrackCard" : "PcTrackCard"}
       className="col-4"
       key={trackIdx}
-      onClick={() => onClick?.(track.id)}
+      onClick={() => onClick?.(data.id)}
     >
       <div className="header">
         <div className="track">
-          <p>{track.tab}</p>
+          <p>{data?.tab}</p>
         </div>
         <div className="title">
-          <p>{track.trackTitle}</p>
-          <span>{track.progressTime}</span>
+          <p>{data?.trackTitle}</p>
+          <span>{data?.progressTime}</span>
         </div>
       </div>
       <div className="body">
         <div className="content-img">
-          <img src={requireImage} alt={track.contentAlt} />
+          <img src={imageSrc} alt={data?.contentAlt} />
         </div>
       </div>
       <div className="footer">
-        <p dangerouslySetInnerHTML={{ __html: formatText(track.trackDesc) }} />
+        <p>{parse(formatText(data?.trackDesc))}</p>
         <LineButton title={"전체 트랙 보기"} btnColor={"squp"} btnSize={"lg"} />
       </div>
     </div>

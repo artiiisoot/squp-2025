@@ -1,0 +1,16 @@
+#MobileEventPage {
+  .page-container {
+    @include FlexBox(column, unset, unset);
+    gap: 3.75rem;
+  }
+  #Events,
+  #Exhibitions {
+    @include FlexBox(column, unset, unset);
+    gap: 1.25rem;
+
+    .card-list {
+      @include FlexBox(column, unset, unset);
+      gap: 1.25rem;
+    }
+  }
+}

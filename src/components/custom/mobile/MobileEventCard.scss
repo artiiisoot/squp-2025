@@ -1,0 +1,25 @@
+#MobileEventCard {
+  cursor: pointer;
+  @include FlexBox(column, unset, unset);
+  @include Rounded(0.75rem);
+  overflow: hidden;
+  box-shadow: 0 0 16px 0 rgba($G100, 0.2);
+  .event-img {
+    @include Size(100%, auto);
+  }
+  .context {
+    @include FlexBox(column, unset, unset);
+    @include Size(100%, auto);
+    @include PaddingY(1.25rem);
+    @include PaddingX(1.25rem);
+    background: $G00;
+    font-weight: bold;
+    h5 {
+      font-size: 1.125rem;
+    }
+    p {
+      font-size: 0.875rem;
+      color: $secondary;
+    }
+  }
+}

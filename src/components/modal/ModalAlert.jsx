@@ -2,6 +2,9 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setPopupReset } from "@/reducers/alertSlice";
 
+import { formatText } from "@/utils/utils";
+import parse from "html-react-parser";
+
 import Icon from "@/components/common/Icon";
 import Button from "@/components/common/Button";
 
@@ -18,14 +21,14 @@ const ModalAlert = () => {
   return (
     <>
       {isShowModal && (
-        <div id="ModalAler" className="modal">
+        <div id="ModalAlert" className="modal">
           <div className="modal-dialog">
             <div className="modal-header">
               <h6>{title}</h6>
               <Icon icon="close" size="2rem" onClick={close} />
             </div>
             <div className="modal-body">
-              <p>{context}</p>
+              <p>{parse(formatText(context))}</p>
             </div>
             <div className="modal-footer">
               <Button

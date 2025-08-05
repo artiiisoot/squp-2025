@@ -41,58 +41,13 @@
       "detailImg": "exhibition_img_01.png"
     },
     {
-      "id": 2,
-      "title": "AI / 딥페이크",
-      "subtitle": "2025 시큐업 세미나 부스 체험존",
-      "grid": "flex-col",
-      "list": [
-        {
-          "number": "부스 03",
-          "booth": [
-            {
-              "brand": "라온모바일시큐리티",
-              "context": "딥페이크 탐지 기능을 갖춘 개인용 모바일 백신",
-              "link": "https://www.raonsecure.com/ko/service/raonmobilesecurity"
-            }
-          ]
-        }
-      ],
-      "thumbImg": "exhibition_img_02.png",
-      "detailImg": "exhibition_img_02.png"
-    },
-    {
-      "id": 3,
-      "title": "양자내성암호",
-      "subtitle": "2025 시큐업 세미나 부스 체험존",
-      "grid": "flex-col",
-      "list": [
-        {
-          "number": "부스 04",
-          "booth": [
-            {
-              "brand": "Key#biz",
-              "context": "양자내성암호(PQC) 기반 E2E 구간암호화를 지원하는 통합 PKI 전자서명 솔루션",
-              "link": "https://www.raonsecure.com/ko/solution/biz"
-            },
-            {
-              "brand": "Key#wireless",
-              "context": "양자내성암호(PQC) 기반 E2E 구간암호화를 지원하는 모바일 통합 PKI 전자서명 솔루션",
-              "link": "https://www.raonsecure.com/ko/solution/wireless"
-            }
-          ]
-        }
-      ],
-      "thumbImg": "exhibition_img_03.png",
-      "detailImg": "exhibition_img_03.png"
-    },
-    {
       "id": 4,
       "title": "제로트러스트",
       "subtitle": "2025 시큐업 세미나 부스 체험존",
       "grid": "flex-col",
       "list": [
         {
-          "number": "부스 05",
+          "number": "부스 03",
           "booth": [
             {
               "brand": "OnePass",
@@ -116,6 +71,52 @@
       "detailImg": "exhibition_img_04.png"
     },
     {
+      "id": 3,
+      "title": "양자내성암호",
+      "subtitle": "2025 시큐업 세미나 부스 체험존",
+      "grid": "flex-col",
+      "list": [
+        {
+          "number": "부스 04",
+          "booth": [
+            {
+              "brand": "TouchEn Wiseaccess",
+              "context": "단일인증, 권한관리, 계정관리 등 통합계정 권한 관리 플랫폼",
+              "link": "https://www.raonsecure.com/ko/solution/wiseaccess"
+            },
+            {
+              "brand": "Key#Biz",
+              "context": "양자내성암호(PQC) 기반 E2E 구간암호화를 지원하는 통합 PKI 전자서명 솔루션",
+              "link": "https://www.raonsecure.com/ko/solution/biz"
+            }
+          ]
+        }
+      ],
+      "thumbImg": "exhibition_img_03.png",
+      "detailImg": "exhibition_img_03.png"
+    },
+    {
+      "id": 4,
+      "title": "AI / 딥페이크",
+      "subtitle": "2025 시큐업 세미나 부스 체험존",
+      "grid": "flex-col",
+      "list": [
+        {
+          "number": "부스 05",
+          "booth": [
+            {
+              "brand": "라온모바일시큐리티",
+              "context": "딥페이크 탐지 기능을 갖춘 개인용 모바일 백신",
+              "link": "https://www.raonsecure.com/ko/service/raonmobilesecurity"
+            }
+          ]
+        }
+      ],
+      "thumbImg": "exhibition_img_02.png",
+      "detailImg": "exhibition_img_02.png"
+    },
+
+    {
       "id": 5,
       "title": "메타버스",
       "subtitle": "2025 시큐업 세미나 부스 체험존",
@@ -137,7 +138,7 @@
     },
     {
       "id": 6,
-      "title": "메타데미 콘텐츠존",
+      "title": "라온메타 콘텐츠존",
       "subtitle": "2025 시큐업 세미나 부스 체험존",
       "grid": "grid",
       "list": [

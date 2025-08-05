@@ -27,6 +27,13 @@
     p {
       text-align: center;
     }
+    &.empty {
+      width: 100% !important;
+      max-width: unset !important;
+      p {
+        font-weight: bold;
+      }
+    }
   }
 
   &.default {
@@ -34,8 +41,9 @@
     .td {
       @include Size(14rem, 4.5rem);
       @include PaddingX(12px);
+      @include Ellipsis1;
       &:nth-child(1) {
-        max-width: 3.75rem;
+        max-width: 6rem;
       }
       &:nth-child(2) {
         max-width: 8rem;
@@ -67,10 +75,10 @@
       gap: 0.125rem;
       .th {
         @include Rounded(0.25rem);
-        background: $thead-bg;
         font-size: 1.5rem;
         font-weight: bold;
         color: $G00;
+        background: $thead-bg;
         &:nth-child(2) {
           background: $thead-bg-gradient;
         }
@@ -82,7 +90,7 @@
       background: unset;
       align-items: unset;
       .td {
-        cursor: pointer;
+        // cursor: pointer;
         @include FlexBox(row, unset, unset);
         gap: 0.5rem;
         flex: 1;
@@ -117,7 +125,7 @@
           font-size: 1.25rem;
           font-weight: bold;
         }
-        .speaker {
+        .speaker-item {
           @include FlexBox;
           gap: 0.25rem;
           * {
@@ -125,10 +133,10 @@
           }
           p {
             color: $thead-bg;
-            &:first-child {
+            &.speaker {
               font-weight: bold;
             }
-            &:last-child {
+            &.from {
               font-weight: 400;
             }
           }

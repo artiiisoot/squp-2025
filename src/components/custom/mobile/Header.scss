@@ -1,48 +1,55 @@
 #GNB {
   @include FlexBox;
-  @include PaddingY(1.25rem);
-  @include PaddingX(1.25rem);
+  @include Size(100%, auto);
+  @include PaddingY(1rem);
+  @include PaddingX(0.875rem);
   gap: 1.5rem;
-  position: sticky;
+  position: fixed;
   top: 0;
-  background: $G00;
+  background: transparent;
   z-index: 9999;
+  &.fixed {
+    background: $G00;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    ul {
+      li {
+        a {
+          color: $primary;
+        }
+      }
+      &.right-menu {
+        background: $primary;
+        border-color: $primary;
+        a {
+          color: $G00;
+        }
+      }
+    }
+  }
 
   .header-container {
     @include FlexBox(row, center, space-between);
+    @include Size(100%, auto);
+    max-width: unset;
+    height: unset;
     flex: 1;
     h5 {
       a {
         font-size: 1.5rem;
       }
     }
-  }
-}
-
-#Sidebar {
-  @include Size(100%, 100vh);
-  position: fixed;
-  top: 0;
-  background: $G00;
-  z-index: 10000;
-  // animation: FadeLeft 0.3s ease-out;
-  .header {
-    @include FlexBox(column, unset, center);
-    @include Size(100%, 3.5rem);
-    @include PaddingX(1.25rem);
-    svg {
-      margin-left: auto;
+    .reserve {
+      @include FlexBox(row, center, center);
+      @include Size(4rem, 2rem);
+      @include Rounded(0.25rem);
+      @include BorderAll(1px, solid, $G00);
+      font-size: 0.875rem;
+      color: $G00;
+      white-space: nowrap;
+      background: transparent;
     }
-  }
-  .body {
-    ul {
-      @include FlexBox(column, unset, unset);
-      li {
-        @include FlexBox(column, unset, unset);
-        @include PaddingY(0.5rem);
-        @include PaddingX(1.25rem);
-        font-size: 2rem;
-      }
+    svg {
+      color: $G00;
     }
   }
 }

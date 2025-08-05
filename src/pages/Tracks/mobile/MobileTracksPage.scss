@@ -1,0 +1,133 @@
+#MobileTracksPage {
+  .tab-container {
+    @include FlexBox(column, unset, unset);
+    gap: 2.5rem;
+    display: none;
+    &.active {
+      display: flex;
+    }
+    .track-info {
+      @include FlexBox(column, unset, unset);
+      gap: 1.25rem;
+      > p {
+        @include FlexBox(column, center, center);
+        text-align: center;
+      }
+      .box {
+        @include FlexBox(column, unset, unset);
+        @include Size(100%, auto);
+        @include PaddingY(0.5rem);
+        @include PaddingX(0.5rem);
+        @include BorderAll(1px, solid, $G40);
+        @include Rounded(0.5rem);
+        gap: 0.75rem;
+        .info-item {
+          @include FlexBox;
+          gap: 0.75rem;
+          .box-label {
+            @include FlexBox(row, center, center);
+            @include Size(4rem, 1.875rem);
+            font-size: 0.75rem;
+          }
+          p {
+            font-size: 0.875rem;
+            font-weight: bold;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+    .awards {
+      @include FlexBox(column, unset, unset);
+      gap: 1.25rem;
+      h5 {
+        font-size: 1.25rem;
+        text-align: center;
+      }
+      .awards-title {
+        @include FlexBox(row, center, center);
+        @include Size(100%, 3rem);
+        @include Rounded(0.5rem);
+        font-size: 1.125rem;
+        font-weight: 800;
+        color: $G00;
+        background: $primary;
+      }
+      .awards-wrapper {
+        @include FlexBox(column, unset, unset);
+        @include Size(100%, auto);
+        gap: 1.5rem;
+      }
+      .top {
+        @include FlexBox(column, center, center);
+        gap: 1.25rem;
+        flex: 1;
+        .group {
+          @include FlexBox(column, center, center);
+          gap: 0.625rem;
+          h6 {
+            @include FlexBox(row, center, center);
+            @include Size(11.25rem, 2rem);
+            @include Rounded(6.25rem);
+            font-size: 1rem;
+            font-weight: 400;
+            color: $G00;
+            background: $G80;
+          }
+          .text-group {
+            @include FlexBox(row, flex-start, stretch);
+            gap: 1rem;
+            font-size: 0.875rem;
+            font-weight: bold;
+            > span {
+              color: $secondary;
+            }
+            .item-right {
+              @include FlexBox(column, unset, unset);
+              > span {
+                color: $G80;
+              }
+            }
+          }
+        }
+      }
+      .bottom {
+        @include FlexBox(column, center, center);
+        gap: 1.25rem;
+        > p {
+          font-size: 1rem;
+          font-weight: bold;
+          text-align: center;
+        }
+        .info-box {
+          @include FlexBox(column, unset, uset);
+          @include Size(100%, auto);
+          @include PaddingY(1.5rem);
+          @include PaddingX(1.5rem);
+          @include Rounded(0.5rem);
+          gap: 0.5rem;
+          background: rgba($color: $tbody-bg, $alpha: 0.2);
+          ul {
+            @include FlexBox(column, unset, uset);
+            gap: 0.25rem;
+            li {
+              font-size: 0.875rem;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+    .button-group {
+      @include FlexBox(row, center, center);
+      #LineButton {
+        @include Size(100%, 3rem);
+        @include PaddingX(0);
+        font-weight: 400;
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

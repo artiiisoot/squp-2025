@@ -1,0 +1,24 @@
+#PcExhibitionCard {
+  cursor: pointer;
+  transition: all 0.3s;
+  &:hover {
+    transform: translateY(-1%);
+  }
+  .exhibition-label {
+    @include FlexBox(row, center, center);
+    @include Size(fit-content, 3.5rem);
+    @include PaddingX(1.5rem);
+    @include Rounded(0.75rem);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: $G00;
+    background: $secondary;
+  }
+  .exhibition-img {
+    @include Rounded(0.75rem);
+    border-top-left-radius: 0;
+    overflow: hidden;
+  }
+}

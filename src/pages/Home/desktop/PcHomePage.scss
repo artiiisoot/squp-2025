@@ -1,0 +1,269 @@
+#PcHomePage {
+  padding: unset;
+  gap: 0;
+}
+#Intro {
+  @include Size(100%, 100vh);
+  padding: unset;
+  position: relative;
+  background: radial-gradient(
+    160% 200% at 83.13% 98%,
+    #fc435b 0%,
+    #da3a58 3%,
+    #ac2e55 9%,
+    #832352 14%,
+    #611a4f 20%,
+    #45124d 26%,
+    #300d4b 33%,
+    #20094a 40%,
+    #17064a 49%,
+    #15064a 61%,
+    #0f043b 70%,
+    #04011f 89%,
+    #000015 100%
+  );
+  &::before {
+    content: "";
+    @include FlexBox;
+    @include Size(100%, 100%);
+    position: absolute;
+    background: url("../../../assets/images/home/bg_line.svg");
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-position: bottom -20rem right -50%;
+  }
+  .context {
+    @include FlexBox(column, center, center);
+    gap: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: $G00;
+    .squp-logo {
+      @include Size(20.375rem, 10rem);
+    }
+    .raon-logo {
+      @include Size(8.5rem, 3.75rem);
+    }
+    .title {
+      @include FlexBox(column, center, center);
+      gap: 0.5rem;
+      h1 {
+        font-size: 4.5rem;
+      }
+      p {
+        font-size: 3rem;
+      }
+    }
+    .info-text {
+      @include FlexBox(column, center, center);
+      gap: 0.5rem;
+      p {
+        font-size: 2.25rem;
+      }
+    }
+  }
+  .arrow {
+    position: absolute;
+    left: 50%;
+    bottom: 2rem;
+    transform: translate3d(-50%, 0, 0);
+    color: $G00;
+    animation: ArrowInfiniteY 1s ease-in-out infinite;
+  }
+}
+#Overview {
+  background: $section-bg;
+  .page-container {
+    @include Size(75rem, auto);
+    gap: 2.5rem;
+    @include Media("laptop") {
+      width: 768px;
+    }
+  }
+  .content-img {
+    @include Size(26.875rem, 43.375rem);
+    max-width: 26.875rem;
+    flex: 1;
+  }
+  .content-context {
+    @include FlexBox(column, unset, unset);
+    gap: 1.5rem;
+    flex: 1;
+    h4 {
+      color: $G100;
+    }
+    ul {
+      @include FlexBox(column, unset, unset);
+      gap: 1.5rem;
+      font-size: 1.125rem;
+      letter-spacing: -0.0338rem;
+      b {
+        color: $G100;
+      }
+    }
+  }
+  .button-group {
+    justify-content: center;
+  }
+}
+#Tracks {
+  min-height: 51.375rem;
+  .page-container {
+    @include Media("laptop") {
+      width: auto;
+    }
+    @include Media("desktop-sm") {
+      width: auto;
+    }
+  }
+  .grid {
+    gap: 1.5rem;
+  }
+}
+#Event {
+  min-height: 65rem;
+  text-align: center;
+  color: $G00;
+  background: $primary;
+  .page-container {
+    @include FlexBox(column, center, center);
+  }
+  h3 {
+    position: relative;
+    span {
+      position: static;
+      z-index: 1;
+    }
+    span.line-highlight {
+      content: "";
+      @include Size(100%, 1.5rem);
+      position: absolute;
+      bottom: 0;
+      background: rgba($color: $secondary, $alpha: 0.5);
+      z-index: 0;
+    }
+  }
+  .event-img {
+    @include Size(48.375rem, 31.625rem);
+  }
+  .context {
+    p {
+      font-size: 1.375rem;
+    }
+  }
+  .button-group {
+    justify-content: center;
+  }
+}
+
+#Location {
+  min-height: 62.25rem;
+  background: $section-bg;
+  .page-container {
+    @include FlexBox(column, unset, unset);
+    gap: 2.5rem;
+  }
+  .location-img {
+    @include Size(100%, 100%);
+    background: $G40;
+    object-fit: contain;
+  }
+  .location-info {
+    @include FlexBox(column, unset, unset);
+    gap: 1.5rem;
+    .info-item {
+      @include FlexBox;
+      gap: 1.5rem;
+    }
+    .chip {
+      @include FlexBox(row, center, center);
+      @include Size(7.5rem, 3rem);
+      @include Rounded(6.25rem);
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: $G00;
+      background: $primary;
+    }
+    p {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+#Partners {
+  min-height: 42.5rem;
+  .page-container {
+    @include FlexBox(column, center, center);
+    gap: 4rem;
+  }
+  .partner-title {
+    @include FlexBox(row, center, center);
+    @include Size(16.5rem, 4rem);
+    @include BorderAll(1px, solid, $primary);
+    @include Rounded(6.25rem);
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: $primary;
+  }
+  .group {
+    @include FlexBox(column, center, center);
+    gap: 2.5rem;
+    .logo-group {
+      @include FlexBox(row, center, center);
+      gap: 2rem;
+      flex-wrap: wrap;
+      .host-img {
+        @include Size(fit-content, 3.625rem);
+      }
+      .sponsor-img {
+        @include Size(fit-content, 13.375rem);
+      }
+    }
+  }
+  .partner-logo {
+    @include Size(auto, 3.375rem);
+    img {
+      @include Size(auto, 3.375rem);
+      object-fit: contain;
+    }
+  }
+}
+
+#Privacy {
+  .page-container {
+    @include FlexBox(column, unset, unset);
+    gap: 1rem;
+  }
+  ul {
+    @include FlexBox(column, unset, unset);
+    gap: 0.5rem;
+    list-style: none;
+    li {
+      @include FlexBox(column, unset, unset);
+      gap: 0.5rem;
+    }
+  }
+  ul.num {
+    margin-left: 1rem;
+
+    li {
+      text-indent: -0.875rem;
+    }
+  }
+  ul.num-children {
+    margin-left: 1rem;
+    li {
+      gap: 0.25rem;
+      text-indent: -0.875rem;
+    }
+  }
+  ul.hyphen {
+    margin-left: 2rem;
+    li {
+      text-indent: -1.875rem;
+    }
+  }
+}

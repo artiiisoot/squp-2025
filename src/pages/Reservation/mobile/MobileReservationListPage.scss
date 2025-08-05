@@ -1,0 +1,16 @@
+#MobileReservationListPage {
+  background: $G00;
+  .page-container {
+    gap: 2rem;
+  }
+  .table-wrapper {
+    @include FlexBox(column, unset, unset);
+    gap: 2.5rem;
+  }
+  .group {
+    @include Size(100%, auto);
+    .react-datepicker {
+      @include Size(100%, auto);
+    }
+  }
+}

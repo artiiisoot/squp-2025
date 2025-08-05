@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Icon from "./Icon";
 import { handleESC } from "@/utils/utils";
+import useOutsideClick from "@/utils/useOutsideClick";
 
 const Dropdown = ({
   labelTitle,
@@ -20,6 +21,7 @@ const Dropdown = ({
   });
   const [activeType, setActiveType] = useState("bg-gray");
   const [listType, setListType] = useState("");
+  const dropdownRef = useRef(null);
 
   const toggleOptionList = () => {
     if (readonly) {
@@ -54,8 +56,13 @@ const Dropdown = ({
     };
   }, []);
 
+  // 외부 클릭 이벤트
+  useOutsideClick(dropdownRef, () => {
+    if (isActive) setIsActive(false);
+  });
+
   return (
-    <div id="Dropdown">
+    <div id="Dropdown" ref={dropdownRef}>
       {labelTitle && (
         <div className="input-label" v-if="labelTitle">
           <span>{labelTitle}</span>

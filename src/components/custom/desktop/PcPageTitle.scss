@@ -1,0 +1,21 @@
+#PcPageTitle {
+  @include FlexBox(column, center, center);
+  gap: 0.5rem;
+  p {
+    @include FlexBox(column, center, center);
+    text-align: center;
+    &.title {
+      font-size: 3.75rem;
+      font-weight: 800;
+      span {
+        background: $thead-bg-gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+    &.context {
+      font-size: 2.5rem;
+      color: $thead-bg;
+    }
+  }
+}

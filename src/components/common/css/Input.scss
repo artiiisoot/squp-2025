@@ -2,28 +2,24 @@
   @include FlexBox(row, flex-start, unset);
   @include Size(100%, auto);
   &.with-text-lebel {
+    align-items: center;
     gap: 0.75rem;
   }
-  p.text-label {
+  .row-label,
+  .col-label {
     @include FlexBox;
     gap: 0.25rem;
     min-width: 7.5rem;
-    min-height: 3rem;
-    color: $G100;
+    p {
+      font-size: 0.875rem;
+    }
   }
   .input-item {
     position: relative;
     @include FlexBox(column, flex-start, unset);
     gap: 0.25rem;
     width: 100%;
-    .input-label {
-      @include FlexBox;
-      gap: 0.25rem;
-      width: 100%;
-      p {
-        font-size: 0.875rem;
-      }
-    }
+
     .link {
       padding-top: 0.25rem;
     }
@@ -74,12 +70,12 @@
       .border {
         @include Size(100%, 100%);
         @include BorderAll(1px, solid, transparent);
-        @include Rounded(0.25rem);
+        @include Rounded(0.5rem);
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
-        border-color: $G40;
+        border-color: $lineG40;
       }
       &:focus-within {
         .border {

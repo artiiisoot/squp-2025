@@ -1,0 +1,57 @@
+#PcTrackCard {
+  cursor: pointer;
+  @include Size(24rem, auto);
+  @include Rounded(1rem);
+  overflow: hidden;
+  background: $G00;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  transition: all 0.3s;
+  &:hover {
+    transform: translateY(-1%);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 16px;
+  }
+  .header {
+    @include FlexBox(row, stretch, unset);
+    @include PaddingY(1rem);
+    @include PaddingX(1.5rem);
+    gap: 1rem;
+    background: linear-gradient(113deg, #210b67 27.8%, #912854 101.01%);
+    color: $G00;
+    .track {
+      @include FlexBox(row, center, center);
+      @include Size(6.625rem, auto);
+      @include BorderAll(1px, solid, rgba($G00, 0.5));
+      @include Rounded(0.75rem);
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: $G00;
+    }
+    .title {
+      @include FlexBox(column, unset, unset);
+      p {
+        font-size: 1.75rem;
+        font-weight: bold;
+      }
+      span {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .body {
+    .content-img {
+      @include Size(100%, 16.5rem);
+    }
+  }
+
+  .footer {
+    @include FlexBox(column, unset, unset);
+    @include PaddingY(1.5rem);
+    @include PaddingX(1.5rem);
+    gap: 2.5rem;
+    p {
+      @include FlexBox(column, unset, unset);
+      font-size: 1.25rem;
+    }
+  }
+}

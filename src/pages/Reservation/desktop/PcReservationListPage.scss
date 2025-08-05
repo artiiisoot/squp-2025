@@ -1,0 +1,20 @@
+#PcReservationListPage {
+  background: $G00;
+
+  .page-container {
+    @include FlexBox(column, unset, unset);
+    gap: 2.5rem;
+  }
+  .table-wrapper {
+    @include FlexBox(column, unset, unset);
+    gap: 2.5rem;
+  }
+  .filter-group {
+    #Dropdown {
+      min-width: 10rem;
+    }
+    .react-datepicker__input-container {
+      min-width: 10rem;
+    }
+  }
+}

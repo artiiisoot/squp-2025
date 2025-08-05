@@ -1,39 +1,34 @@
 import React from "react";
+
 import { useDispatch, useSelector } from "react-redux";
 import { setIsCloseModal } from "@/reducers/modalSlice";
-import { getRequireImage } from "@/utils/utils";
 
+import { getRequireImage } from "@/utils/utils";
+import { formatText } from "@/utils/utils";
 import parse from "html-react-parser";
-import Icon from "@/components/common/Icon";
+
+// 컴포넌트
 import Button from "@/components/common/Button";
 
 const ModalEventDetail = ({ item }) => {
+  const { isMobile } = useSelector((state) => state.device);
   const dispatch = useDispatch();
   const { isShowModal, type } = useSelector((state) => state.modal);
 
   const imageSrc = getRequireImage("event", "detail", item?.detailImg);
+
   const handleClose = () => {
     dispatch(setIsCloseModal());
   };
-  const formatText = (text) => {
-    return text
-      .split("\n")
-      .map((text) => `${text.trim()} <br />`)
-      .join("");
-  };
+
   return (
     <>
       {isShowModal && type === "event" && (
-        <div id="ModalEventDetail" className="modal">
+        <div
+          id="ModalEventDetail"
+          className={isMobile ? "bottom-sheet" : "modal"}
+        >
           <div className="modal-dialog">
-            <div className="modal-header">
-              <h5>{item.title}</h5>
-              <Icon
-                icon="close"
-                size="2rem"
-                onClick={() => dispatch(setIsCloseModal())}
-              />
-            </div>
             <div className="modal-img">
               <img src={imageSrc} alt={item.title} />
             </div>
@@ -44,12 +39,20 @@ const ModalEventDetail = ({ item }) => {
                 </p>
                 <h5>{item.title}</h5>
               </div>
+
               <div className="content">
                 <ul className="num-style">
                   <p>{item.how.name}</p>
                   {item.how.context.map((how, howIdx) => (
                     <li key={howIdx}>
-                      <p>{parse(formatText(how))}</p>
+                      {/* <p>{parse(formatText(how.title))}</p> */}
+                      <p>{how.title}</p>
+                      {how.description &&
+                        how.description.map((description) => (
+                          <div className="description">
+                            <p>{parse(formatText(description))}</p>
+                          </div>
+                        ))}
                     </li>
                   ))}
                 </ul>

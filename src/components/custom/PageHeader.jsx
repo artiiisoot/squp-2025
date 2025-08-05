@@ -1,10 +1,13 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 const PageHeader = ({ title }) => {
+  const { isMobile } = useSelector((state) => state.device);
+
   return (
-    <div id="PageHeader">
+    <div id={isMobile ? "MobilePageHeader" : "PcPageHeader"}>
       <div className="title">
-        <h3>{title}</h3>
+        <p>{title}</p>
       </div>
     </div>
   );

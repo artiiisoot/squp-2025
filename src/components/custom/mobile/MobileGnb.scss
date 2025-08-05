@@ -1,0 +1,46 @@
+#MobileGnb {
+  @include FlexBox;
+  @include Size(100%, var(--mobile-header-height));
+  @include PaddingX(1rem);
+  @include BorderBottom(1px, solid, rgba($G00, 0.2));
+  gap: 1.5rem;
+  position: fixed;
+  top: 0;
+  background: unset;
+  z-index: 9999;
+  transition: all 0.3s;
+  background: transparent;
+  &.fixed {
+    background: $G00;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+    .group {
+      svg {
+        color: $primary;
+      }
+      .reserve {
+        background: $primary;
+      }
+    }
+  }
+  .header-container {
+    @include FlexBox(row, center, space-between);
+    @include Size(100%, auto);
+  }
+  .squp-logo {
+    @include Size(fit-content, 2.5rem);
+  }
+  .group {
+    a,
+    svg {
+      color: $G00;
+    }
+    .reserve {
+      @include FlexBox(row, center, center);
+      @include Size(5rem, 2.5rem);
+      @include Rounded(0.5rem);
+      @include BorderAll(1px, solid, $G00);
+      font-size: 0.875rem;
+    }
+  }
+}

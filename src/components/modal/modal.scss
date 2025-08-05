@@ -43,10 +43,6 @@ body[type="desktop"] {
     .modal-body {
       flex: 1;
       @include FlexBox(column, unset, unset);
-      > p {
-        @include FlexBox;
-        text-align: center;
-      }
     }
 
     .modal-footer {
@@ -62,6 +58,7 @@ body[type="desktop"] {
     }
   }
 
+  @import "components/modal/desktop/ModalAlert.scss";
   @import "components/modal/desktop/ModalEventDetail.scss";
   @import "components/modal/desktop/ModalExhibitionDetail.scss";
   @import "components/modal/desktop/ModalProgramDetail.scss";
@@ -86,9 +83,9 @@ body[type="mobile"] {
 
     .modal-dialog {
       @include FlexBox(column, unset, unset);
-      @include Size(90%, auto);
-      @include PaddingY(1.25rem);
-      @include PaddingX(1.25rem);
+      @include Size(100%, auto);
+      @include PaddingY(1rem);
+      @include PaddingX(1rem);
       @include Rounded(0.75rem);
       gap: 1.5rem;
       position: absolute;
@@ -106,16 +103,10 @@ body[type="mobile"] {
         flex: 1;
       }
     }
-
     .modal-body {
       flex: 1;
       @include FlexBox(column, unset, unset);
-      p {
-        @include FlexBox;
-        text-align: center;
-      }
     }
-
     .modal-footer {
       @include FlexBox;
       gap: 0.75rem;
@@ -127,9 +118,53 @@ body[type="mobile"] {
     }
   }
 
+  .bottom-sheet {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba($G100, 0.4);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    z-index: 9999;
+    display: block;
+    animation: Opacity 0.3s;
+
+    .modal-dialog {
+      @include FlexBox(column, unset, unset);
+      @include Size(100%, auto);
+      @include Rounded(0.75rem);
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      overflow: hidden;
+      background: $G00;
+      position: absolute;
+      bottom: 0;
+      max-height: calc(var(--vh, 1vh) * 100);
+      animation: SlideUp 0.3s;
+    }
+    .modal-body {
+      @include FlexBox(column, unset, unset);
+      gap: 0.75rem;
+      flex: 1;
+    }
+    .modal-footer {
+      @include FlexBox;
+      @include Size(100%, auto);
+      gap: 0.75rem;
+      #Button,
+      #LineButton {
+        flex: 1;
+      }
+    }
+  }
+
+  @import "components/modal/mobile/ModalAlert.scss";
   @import "components/modal/mobile/ModalEventDetail.scss";
   @import "components/modal/mobile/ModalExhibitionDetail.scss";
   @import "components/modal/mobile/ModalProgramDetail.scss";
   @import "components/modal/mobile/ModalReseveListDetail.scss";
   @import "components/modal/mobile/ModalSessionDetail.scss";
+  @import "components/modal/mobile/ModalResevationDetail.scss";
 }

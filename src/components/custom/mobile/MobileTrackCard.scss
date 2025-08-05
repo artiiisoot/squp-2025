@@ -1,0 +1,51 @@
+#MobileTrackCard {
+  cursor: pointer;
+  @include Size(100%, auto);
+  @include Rounded(1rem);
+  overflow: hidden;
+  background: $G00;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  .header {
+    @include FlexBox(row, stretch, unset);
+    @include PaddingY(0.75rem);
+    @include PaddingX(1.5rem);
+    gap: 1rem;
+    background: linear-gradient(113deg, #210b67 27.8%, #912854 101.01%);
+    color: $G00;
+    .track {
+      @include FlexBox(row, center, center);
+      @include Size(5.125rem, auto);
+      @include BorderAll(1px, solid, rgba($G00, 0.5));
+      @include Rounded(0.5rem);
+      font-size: 1rem;
+      font-weight: bold;
+      color: $G00;
+    }
+    .title {
+      @include FlexBox(column, unset, unset);
+      p {
+        font-size: 1.125rem;
+        font-weight: bold;
+        word-break: keep-all;
+      }
+      span {
+        font-size: 0.875rem;
+      }
+    }
+  }
+
+  .footer {
+    @include FlexBox(column, unset, unset);
+    @include PaddingY(1.5rem);
+    @include PaddingX(1.5rem);
+    gap: 1.5rem;
+    p {
+      @include FlexBox(column, unset, unset);
+      font-size: 0.875rem;
+    }
+    #LineButton {
+      @include Size(100%, 3rem);
+      font-size: 1rem;
+    }
+  }
+}

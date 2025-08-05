@@ -1,0 +1,18 @@
+#MobilePreviousCard {
+  cursor: pointer;
+  @include FlexBox(column, unset, unset);
+  gap: 0.5rem;
+  .previous-img {
+    @include Rounded(0.75rem);
+    overflow: hidden;
+  }
+  .context {
+    p {
+      font-size: 0.875rem;
+      color: $secondary;
+    }
+    h5 {
+      font-size: 1.125rem;
+    }
+  }
+}

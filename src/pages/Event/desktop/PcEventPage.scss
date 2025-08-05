@@ -1,0 +1,45 @@
+#PcEventPage {
+  .page-container {
+    @include FlexBox(column, unset, unset);
+    gap: 7.5rem;
+  }
+  #Events,
+  #Exhibitions {
+    @include FlexBox(column, unset, unset);
+    gap: 2rem;
+    .grid {
+      gap: 2rem;
+    }
+  }
+}
+
+.sample-box {
+  cursor: pointer;
+  @include FlexBox;
+  @include Size(100%, 17.5rem);
+  @include PaddingY(1.5rem);
+  @include PaddingX(1.5rem);
+  @include Rounded(0.5rem);
+  background: $G40;
+  .group {
+    gap: 0;
+    p {
+      font-size: 0.875rem;
+    }
+    h6 {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+#Exhibitions {
+  .group {
+    @include PaddingY(0.5rem);
+    @include PaddingX(0.5rem);
+    @include Rounded(0.45rem);
+    background: rgba($color: $G00, $alpha: 0.6);
+    p {
+      font-weight: bold;
+    }
+  }
+}

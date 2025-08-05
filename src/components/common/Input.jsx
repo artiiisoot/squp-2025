@@ -29,15 +29,15 @@ const Input = ({
   return (
     <div id="Input" className={`${rowLabel && "with-text-lebel"}`}>
       {rowLabel && (
-        <p className="text-label">
-          {rowLabel}
+        <div className="row-label">
+          <p>{rowLabel}</p>
           {labelRequired && <i className="required">*</i>}
-        </p>
+        </div>
       )}
 
       <div className="input-item">
         {colLabel && (
-          <div className="input-label">
+          <div className="col-label">
             <p>{colLabel}</p>
             {labelRequired && <i className="required">*</i>}
           </div>
@@ -47,6 +47,7 @@ const Input = ({
           <input
             id={name}
             name={name}
+            autofill={name}
             type={type}
             value={value}
             onChange={onChange}

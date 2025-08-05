@@ -4,10 +4,17 @@
       display: flex !important;
       @include FlexBox(row, center, center);
       @include Size(100%, 3rem);
+      @include PaddingY(0.75rem);
+      @include PaddingX(0.75rem);
       @include BorderBottom(1px, solid, $G40);
 
       &.react-datepicker-ignore-onclickoutside {
         border-color: $O100;
+      }
+      &.box {
+        @include BorderAll(1px, solid, transparent);
+        @include Rounded(0.5rem);
+        border-color: $lineG40;
       }
     }
   }
@@ -16,3 +23,7 @@
   background-color: royalblue;
   position: absolute;
 }
+// .react-datepicker-popper[data-placement^="top"] {
+//   opacity: 0;
+//   pointer-events: none;
+// }

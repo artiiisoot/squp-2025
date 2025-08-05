@@ -10,7 +10,7 @@
   opacity: 0;
   font-weight: bold;
   color: $G00;
-  background: $primary;
+  background: $O100;
   animation: FadeHide 0.3s;
 
   &.show {
@@ -26,7 +26,8 @@
     @include PaddingY(0.5rem);
     @include PaddingX(0.5rem);
     @include Rounded(100%);
-    background: $secondary;
+    color: $O100;
+    background: $G00;
     animation: ArrowInfiniteX 1s ease-in-out infinite;
   }
 }

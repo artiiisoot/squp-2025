@@ -7,6 +7,14 @@ export const formatText = (text) => {
     .join("");
 };
 
+export const formatDatePicker = (date) => {
+  if (!date || isNaN(date.getTime())) return "";
+  const yyyy = date.getFullYear();
+  const mm = String(date.getMonth() + 1).padStart(2, "0");
+  const dd = String(date.getDate()).padStart(2, "0");
+  return `${yyyy}-${mm}-${dd}`;
+};
+
 export const pixToRem = (px, base = 16) => {
   if (typeof px !== "number") {
     throw new Error("Input must be a number");
@@ -37,4 +45,14 @@ export const getRequireImage = (page, type, fileName) => {
     console.warn(`이미지 로딩 실패: ${path}`);
     return null;
   }
+};
+
+// 이미지 동적 로드
+export const importAllImages = (require) => {
+  const images = {};
+  require.keys().forEach((key) => {
+    const cleanKey = key.replace("./", ""); // "logo_1.png"
+    images[cleanKey] = require(key).default || require(key);
+  });
+  return images;
 };

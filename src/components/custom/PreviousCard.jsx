@@ -1,13 +1,16 @@
 import React from "react";
+import { useSelector } from "react-redux";
+
 import { getRequireImage } from "@/utils/utils";
 
 const PreviousCard = ({ item, idx, onClick }) => {
+  const { isMobile } = useSelector((state) => state.device);
   const imageSrc = getRequireImage("previous", "list", item?.thumbImg);
 
   return (
     <div
-      id="PreviousCard"
-      className="col-6"
+      id={isMobile ? "MobilePreviousCard" : "PcPreviousCard"}
+      className={isMobile ? "" : "col-6"}
       onClick={() => onClick(item.years)}
     >
       <div className="previous-img">
@@ -15,9 +18,9 @@ const PreviousCard = ({ item, idx, onClick }) => {
       </div>
       <div className="context">
         <b>
-          <p>{item.desc}</p>
+          <p>{item.title}</p>
         </b>
-        <h5>{item.title}</h5>
+        <h5>{item.desc}</h5>
       </div>
     </div>
   );

@@ -1,0 +1,29 @@
+#MobilePageHeader {
+  @include FlexBox(row, center, center);
+  @include Size(100%, calc(7.5rem + var(--mobile-header-height)));
+  @include PaddingY(2rem);
+  background: $primary-bg;
+  position: relative;
+  &::before {
+    content: "";
+    @include FlexBox;
+    @include Size(100%, 100%);
+    position: absolute;
+    background: url("../../../assets/images/home/bg_line.svg");
+    background-size: 120%;
+    background-repeat: no-repeat;
+    background-position: bottom -7rem right -10rem;
+  }
+  .title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: var(--mobile-header-height);
+    color: $G00;
+    p {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  }
+}

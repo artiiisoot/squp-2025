@@ -1,0 +1,14 @@
+#ModalAlert {
+  .modal-header,
+  .modal-footer {
+    border: unset;
+    padding: unset;
+  }
+  .modal-body {
+    > p {
+      @include FlexBox(column, center, center);
+      gap: 0.25rem;
+      color: $G60;
+    }
+  }
+}

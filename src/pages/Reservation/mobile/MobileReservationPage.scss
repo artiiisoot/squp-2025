@@ -1,0 +1,75 @@
+#MobileReservationPage {
+  .page-container {
+    gap: 2rem;
+  }
+  #MobileEarlyBirdEvent {
+    #Button {
+      display: none;
+    }
+  }
+
+  .reservation-table {
+    @include FlexBox(column, unset, unset);
+    @include BorderTop(2px, solid, $G100);
+    @include BorderBottom(1px, solid, $lineG30);
+    display: flex !important;
+    .item {
+      @include PaddingY(0.5rem);
+      @include PaddingX(0.75rem);
+      &:first-child {
+        padding-top: 2rem;
+      }
+      &:last-child {
+        padding-bottom: 2rem;
+      }
+      .col-label {
+        font-weight: bold;
+      }
+    }
+  }
+  .most-interested {
+    .grid {
+      @include FlexBox(column, unset, unset);
+      gap: 1.5rem;
+      display: flex !important;
+    }
+    > .title {
+      p {
+        &:first-child {
+          font-size: 1rem;
+          font-weight: bold;
+          color: $G100;
+          span {
+            color: $R70;
+          }
+        }
+        &:last-child {
+          font-size: 0.75rem;
+          color: $O100;
+        }
+      }
+    }
+    #MobileTrackCard {
+      #LineButton {
+        display: none;
+      }
+      .footer {
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  .button-group {
+    @include FlexBox(row, center, center);
+    gap: 0.75rem;
+    #Button {
+      @include Size(100%, 3rem);
+      min-width: 15rem;
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+}

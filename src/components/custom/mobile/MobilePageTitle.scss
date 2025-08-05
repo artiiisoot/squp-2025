@@ -1,0 +1,21 @@
+#MobilePageTitle {
+  @include FlexBox(column, center, center);
+  gap: 0.25rem;
+  p {
+    @include FlexBox(column, center, center);
+    text-align: center;
+    &.title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      span {
+        background: $thead-bg-gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+    &.context {
+      font-size: 1rem;
+      color: $thead-bg;
+    }
+  }
+}

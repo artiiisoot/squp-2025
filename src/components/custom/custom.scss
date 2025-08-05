@@ -1,22 +1,23 @@
 html,
 body[type="desktop"] {
-  @import "components/custom/desktop/Header.scss";
-  @import "components/custom/desktop/Footer.scss";
+  @import "components/custom/desktop/PcGnb.scss";
+  @import "components/custom/desktop/PcFooter.scss";
   @import "components/custom/desktop/Loading.scss";
-  @import "components/custom/desktop/PageHeader.scss";
+  @import "components/custom/desktop/PcPageHeader.scss";
+  @import "components/custom/desktop/PcPageTitle.scss";
   @import "components/custom/desktop/PartnersBI.scss";
   @import "components/custom/desktop/ProgramCard.scss";
   @import "components/custom/desktop/PreviousCard.scss";
   @import "components/custom/desktop/BottomBanner.scss";
   @import "components/custom/desktop/ReserveButton.scss";
-  @import "components/custom/desktop/SectionTitle.scss";
+  @import "components/custom/desktop/PcSectionTitle.scss";
   @import "components/custom/desktop/SpeakerCard.scss";
   @import "components/custom/desktop/Table.scss";
   @import "components/custom/desktop/TopButton.scss";
-  @import "components/custom/desktop/TrackCard.scss";
-  @import "components/custom/desktop/EventCard.scss";
-  @import "components/custom/desktop/ExhibitionCard.scss";
-  @import "components/custom/desktop/EarlyBirdEvent.scss";
+  @import "components/custom/desktop/PcTrackCard.scss";
+  @import "components/custom/desktop/PcEventCard.scss";
+  @import "components/custom/desktop/PcExhibitionCard.scss";
+  @import "components/custom/desktop/PcEarlyBirdEvent.scss";
 
   main {
     min-height: calc((100vh + var(--desktop-footer-height)));
@@ -32,9 +33,6 @@ body[type="desktop"] {
     padding-bottom: 10rem;
     gap: 2.5rem;
     flex: 1;
-    &#HomePage {
-      padding: unset;
-    }
   }
   .page-container {
     @include FlexBox(column, unset, unset);
@@ -52,47 +50,38 @@ body[type="desktop"] {
 }
 
 body[type="mobile"] {
+  @import "components/custom/mobile/MobileGnb.scss";
+  @import "components/custom/mobile/Sidebar.scss";
+  @import "components/custom/mobile/MobileFooter.scss";
   @import "components/custom/mobile/Header.scss";
   @import "components/custom/mobile/Footer.scss";
-  @import "components/custom/mobile/PageHeader.scss";
-  @import "components/custom/desktop/PartnersBI.scss";
-  @import "components/custom/mobile/PageTitle.scss";
+  @import "components/custom/mobile/MobilePageHeader.scss";
+  @import "components/custom/mobile/MobilePageTitle.scss";
+  @import "components/custom/mobile/MobilePreviousCard.scss";
   @import "components/custom/mobile/BottomBanner.scss";
   @import "components/custom/mobile/ReserveButton.scss";
-  @import "components/custom/mobile/SectionTitle.scss";
+  @import "components/custom/mobile/MobileSectionTitle.scss";
   @import "components/custom/mobile/Table.scss";
   @import "components/custom/mobile/TopButton.scss";
-  @import "components/custom/mobile/TrackCard.scss";
+  @import "components/custom/mobile/MobileEventCard.scss";
+  @import "components/custom/mobile/MobileExhibitionCard.scss";
+  @import "components/custom/mobile/MobileTrackCard.scss";
+  @import "components/custom/mobile/MobileEarlyBirdEvent.scss";
 
   main {
     min-height: calc(100vh - var(--mobile-header-height));
   }
   section {
     @include FlexBox(column, unset, unset);
-    @include PaddingY(4rem);
-    @include PaddingX(1.25rem);
-    gap: 2rem;
+    @include PaddingY(2.5rem);
+    @include PaddingX(1rem);
+    gap: 1.25rem;
     overflow: hidden;
   }
   article {
-    @include FlexBox(column, unset, unset);
-    @include PaddingY(2rem);
-    @include PaddingX(1.25rem);
-    gap: 2rem;
-    flex: 1;
-    overflow: hidden;
-    &#HomePage,
-    &#EventPage {
-      @include PaddingY(0);
-      @include PaddingX(0);
-      gap: 0;
-    }
-  }
-  .container {
-    @include FlexBox;
-  }
-  .page-container {
-    @include FlexBox(column, unset, unset);
-    gap: 0.75rem;
+    @include PaddingY(2.5rem);
+    @include PaddingX(1rem);
+    gap: 1.25rem;
+    min-height: calc(100vh - var(--mobile-footer-height));
   }
 }

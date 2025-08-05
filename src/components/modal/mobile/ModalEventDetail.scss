@@ -1,49 +1,73 @@
 #ModalEventDetail {
-  .modal-dialog {
-    @include Size(100%, 100%);
-    @include Rounded(0);
-    @include PaddingY(0);
-    @include PaddingX(0);
-    position: relative;
-    gap: 0;
-  }
-  .modal-header {
-    @include Size(100%, 3.5rem);
-    @include PaddingX(1.25rem);
-    position: absolute;
-    svg {
-      margin-left: auto;
-      color: rgba($color: $G00, $alpha: 0.8);
-    }
-  }
-  .modal-img {
-    aspect-ratio: 3/2;
-    background: $G40;
-  }
   .modal-body {
-    @include FlexBox(column, unset, unset);
-    @include PaddingY(1.25rem);
-    @include PaddingX(1.25rem);
-    gap: 1.5rem;
+    @include PaddingY(1rem);
+    @include PaddingX(1rem);
+    flex: 1;
     .title {
       @include FlexBox(column, unset, unset);
-      gap: 0.75rem;
       p {
-        color: $G60;
+        font-size: 0.75rem;
+        color: $secondary;
+      }
+      h5 {
+        font-size: 1rem;
       }
     }
     .content {
       @include FlexBox(column, unset, unset);
       gap: 0.75rem;
+      // max-height: calc(90vh - (5rem + 13.125rem + 5.625rem));
+      max-height: 15rem;
+      overflow-y: auto;
       * {
         font-size: 0.875rem;
       }
       ul {
-        @include FlexBox(column, unset, unset);
+        @include FlexBox(column, flex-start, unset);
+        gap: 0.25rem;
         > p {
+          @include FlexBox(column, unset, unset);
           font-weight: bold;
           margin-bottom: 0.25rem;
         }
+        li {
+          p {
+            @include FlexBox(row, flex-start, unset);
+            * {
+              flex: 1;
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+  }
+  .modal-footer {
+    @include PaddingY(1rem);
+    @include PaddingX(1rem);
+    .button-group {
+      @include Size(100%, auto);
+    }
+  }
+
+  @include CustomScrollBar;
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+  #ModalEventDetail {
+    .modal-dialog {
+      @include Size(20rem, 33.75rem);
+      @include Rounded(0.75rem);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: Opacity 0.3s;
+    }
+    .modal-body {
+      .content {
+        @include FlexBox(column, unset, unset);
+        gap: 0.75rem;
+        max-height: 12rem;
       }
     }
   }

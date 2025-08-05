@@ -7,7 +7,6 @@
   li {
     @include FlexBox(row, center, center);
     @include Size(100%, auto);
-    font-size: 1.75rem;
     font-weight: 800;
     color: $light-primary;
     white-space: nowrap;
@@ -28,16 +27,23 @@
       }
     }
   }
+}
+body[type="desktop"] {
+  #Tabs {
+    li {
+      font-size: 1.75rem;
+    }
+  }
+}
 
-  // &.line {
-  //   li {
-  //     &.active {
-  //       color: $O100;
-  //       .border {
-  //         background: $O100;
-  //         @include Size(100%, 2px);
-  //       }
-  //     }
-  //   }
-  // }
+body[type="mobile"] {
+  #Tabs {
+    li {
+      @include PaddingY(0.5rem);
+      p {
+        font-size: 0.875rem;
+        text-align: center;
+      }
+    }
+  }
 }

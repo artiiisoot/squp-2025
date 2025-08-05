@@ -1,0 +1,8 @@
+#PcSectionTitle {
+  .page-container {
+    @include Size(100%, auto);
+    align-items: center !important;
+    gap: 2rem;
+    text-align: center;
+  }
+}

@@ -24,10 +24,12 @@
         color: $secondary;
       }
     }
-    .wrapper {
+    .content {
       @include FlexBox;
       @include Size(100%, auto);
       gap: 0.75rem;
+      max-height: 15rem;
+      overflow-y: auto;
       &.grid {
         align-items: unset;
         row-gap: 1.5rem;
@@ -81,4 +83,6 @@
       }
     }
   }
+
+  @include CustomScrollBar;
 }

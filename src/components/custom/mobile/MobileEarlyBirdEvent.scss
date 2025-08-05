@@ -1,0 +1,92 @@
+#MobileEarlyBirdEvent {
+  @include FlexBox(column, unset, unset);
+  @include PaddingY(1.25rem);
+  @include PaddingX(1rem);
+  @include Rounded(0.75rem);
+  gap: 2.5rem;
+  background: $primary;
+  .wrapper {
+    @include FlexBox(column, center, center);
+    @include Size(100%, 100%);
+    gap: 2rem;
+    > * {
+      color: $G00;
+    }
+  }
+
+  .event-img {
+    @include Size(100%, 100%);
+  }
+
+  h5 {
+    position: relative;
+    width: fit-content;
+    font-size: 1.25rem;
+    text-align: center;
+    span {
+      position: static;
+      z-index: 1;
+    }
+    span.line-highlight {
+      content: "";
+      @include Size(100%, 0.75rem);
+      position: absolute;
+      bottom: 0;
+      background: rgba($color: $secondary, $alpha: 0.5);
+      z-index: 0;
+    }
+  }
+
+  .desc {
+    @include FlexBox(column, unset, unset);
+    gap: 0.25rem;
+    text-align: center;
+    p {
+      font-size: 0.875rem;
+    }
+  }
+
+  .step-content {
+    @include FlexBox(column, unset, unset);
+    gap: 2rem;
+    .step-item {
+      @include Size(100%, auto);
+      position: relative;
+      span {
+        @include FlexBox(row, center, center);
+        @include Size(9.5rem, 2.5rem);
+        @include Rounded(6.25rem);
+        font-weight: bold;
+        background: $secondary;
+        position: absolute;
+        top: calc(-2.5rem / 2);
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .context {
+        @include FlexBox(row, center, center);
+        @include Size(100%, 6.75rem);
+        @include PaddingY(1.5rem);
+        @include PaddingX(1.5rem);
+        @include Rounded(0.75rem);
+        text-align: center;
+        background: rgba($G00, 0.2);
+        p {
+          @include FlexBox(column, center, center);
+          padding-top: 1rem;
+        }
+      }
+    }
+  }
+
+  #Button {
+    @include Size(100%, 3rem);
+    p {
+      font-size: 1rem;
+    }
+    svg {
+      @include PaddingY(0.25rem);
+      @include PaddingX(0.25rem);
+    }
+  }
+}

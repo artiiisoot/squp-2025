@@ -1,5 +1,0 @@
-#PageHeader {
-  @include FlexBox(row, center, center);
-  @include PaddingY(2rem);
-  background: $G30;
-}

@@ -1,7 +1,33 @@
 #BottomBanner {
   @include FlexBox(column, unset, unset);
-  @include PaddingY(2rem);
-  @include PaddingX(1.25rem);
+  @include Size(100%, 6.25rem);
+  @include PaddingX(0);
   gap: 0.75rem;
-  background: $G40;
+  background: $primary;
+  .page-container {
+    @include FlexBox(row, center, center);
+    @include PaddingY(2rem);
+    color: $G00;
+    position: relative;
+    &::before {
+      content: "";
+      @include FlexBox;
+      @include Size(100%, 100%);
+      position: absolute;
+      background: url("../../../assets/images/home/bg_line.svg");
+      background-size: 80%;
+      background-repeat: no-repeat;
+      background-position: top -2.5rem right -7rem;
+    }
+  }
+  .content {
+    gap: 0.5rem;
+  }
+  h5 {
+    font-size: 1.25rem;
+  }
+  svg {
+    @include PaddingY(0.25rem);
+    @include PaddingX(0.25rem);
+  }
 }

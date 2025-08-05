@@ -1,0 +1,12 @@
+#ModalAlert {
+  .modal-dialog {
+    @include Size(90vw, auto);
+  }
+  .modal-body {
+    > p {
+      @include FlexBox(column, center, center);
+      gap: 0.25rem;
+      color: $G60;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+#MobileFooter {
+  @include FlexBox(column, unset, unset);
+  @include PaddingY(1rem);
+  @include PaddingX(1rem);
+  gap: 1.25rem;
+  background: $G80;
+  .top {
+    @include FlexBox(column, unset, unset);
+    gap: 0.625rem;
+    #Dropdown {
+      .dropdown-selected {
+        > * {
+          color: $G10;
+        }
+      }
+    }
+    .group {
+      @include FlexBox(row, center, space-between);
+      .sns-group {
+        @include FlexBox;
+        gap: 0.5rem;
+        .sns-circle {
+          cursor: pointer;
+          @include Size(2rem, 2rem);
+        }
+      }
+    }
+  }
+  .bottom {
+    @include FlexBox(row, flex-end, unset);
+    gap: 0.5rem;
+    .raon-logo {
+      @include Size(3.375rem, 1.875rem);
+    }
+    p {
+      font-size: 0.75rem;
+      color: $G10;
+    }
+  }
+}
