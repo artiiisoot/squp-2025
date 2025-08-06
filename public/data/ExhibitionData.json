@@ -41,7 +41,7 @@
       "detailImg": "exhibition_img_01.png"
     },
     {
-      "id": 4,
+      "id": 2,
       "title": "제로트러스트",
       "subtitle": "2025 시큐업 세미나 부스 체험존",
       "grid": "flex-col",
@@ -57,12 +57,22 @@
           ]
         },
         {
-          "number": "부스 06",
+          "number": "부스 04",
           "booth": [
             {
               "brand": "OneGuard",
               "context": "엔터프라이즈 통합 디바이스 관리(MDM/MAM) 솔루션",
               "link": "https://www.raonsecure.com/ko/solution/oneguard"
+            }
+          ]
+        },
+        {
+          "number": "부스 05",
+          "booth": [
+            {
+              "brand": "TouchEn Wiseaccess / OmniOne Access (SaaS)",
+              "context": "단일인증, 권한관리, 계정관리 등 통합계정 권한 관리 플랫폼",
+              "link": "https://www.raonsecure.com/ko/solution/wiseaccess"
             }
           ]
         }
@@ -77,13 +87,8 @@
       "grid": "flex-col",
       "list": [
         {
-          "number": "부스 04",
+          "number": "부스 05",
           "booth": [
-            {
-              "brand": "TouchEn Wiseaccess",
-              "context": "단일인증, 권한관리, 계정관리 등 통합계정 권한 관리 플랫폼",
-              "link": "https://www.raonsecure.com/ko/solution/wiseaccess"
-            },
             {
               "brand": "Key#Biz",
               "context": "양자내성암호(PQC) 기반 E2E 구간암호화를 지원하는 통합 PKI 전자서명 솔루션",
@@ -102,7 +107,7 @@
       "grid": "flex-col",
       "list": [
         {
-          "number": "부스 05",
+          "number": "부스 06",
           "booth": [
             {
               "brand": "라온 모바일 시큐리티",
