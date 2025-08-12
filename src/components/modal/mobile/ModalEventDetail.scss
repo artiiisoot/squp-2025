@@ -16,8 +16,8 @@
     .content {
       @include FlexBox(column, unset, unset);
       gap: 0.75rem;
-      max-height: calc(90vh - (5rem + 13.125rem + 5.625rem));
-      // max-height: 10rem;
+      // max-height: calc(90vh - (5rem + 13.125rem + 5.625rem));
+      max-height: 15rem;
       overflow-y: auto;
       * {
         font-size: 0.875rem;

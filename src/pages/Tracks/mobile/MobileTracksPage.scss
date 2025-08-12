@@ -29,6 +29,7 @@
       > p {
         @include FlexBox(column, center, center);
         text-align: center;
+        font-size: 0.875rem;
       }
       .box {
         @include FlexBox(column, unset, unset);

@@ -23,14 +23,18 @@ const MobileTracksPage = () => {
   const queryId = parseInt(query.get("track"));
   const tracksImage = [ImgRaonsecure, ImgMetademy, ImgHackathon];
 
+  const moveToHome = () => {
+    navigate("/");
+  };
+
   const handleTabButton = (idx) => {
     setCurrentIdx(idx);
     navigate(`/tracks?track=${idx}`);
   };
 
-  const moveToHome = () => {
-    navigate("/");
-  };
+  useEffect(() => {
+    setCurrentIdx(queryId);
+  }, [queryId]);
 
   useEffect(() => {
     const fetchData = async () => {
