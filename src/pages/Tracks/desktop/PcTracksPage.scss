@@ -5,7 +5,10 @@
   }
   #Tabs {
     li {
-      @include Size(100%, 4rem);
+      @include Size(100%, 5.5rem);
+      p {
+        text-align: center;
+      }
     }
   }
   .tab-container {

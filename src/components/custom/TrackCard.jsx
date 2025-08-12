@@ -32,7 +32,7 @@ const TrackCard = ({ data, trackIdx, onClick }) => {
         </div>
       </div>
       <div className="footer">
-        <p>{parse(formatText(data?.trackDesc))}</p>
+        <p>{data?.trackDesc}</p>
         <LineButton title={"전체 트랙 보기"} btnColor={"squp"} btnSize={"lg"} />
       </div>
     </div>

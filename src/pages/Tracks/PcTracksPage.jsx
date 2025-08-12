@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 
 import { fetchTracksData } from "@/api/public";
 
-import { formatText } from "@/utils/utils";
+import { formatText, removeNewLines } from "@/utils/utils";
 import parse from "html-react-parser";
 
 // 컴포넌트
@@ -75,7 +75,7 @@ const PcTracksPage = () => {
                 onClick={() => handleTabButton(track.id)}
               >
                 <p style={{ fontSize: "1.5rem" }}>
-                  {`${track.tab} : ${track.trackTitle}`}
+                  {track.tab} <br /> {removeNewLines(track.trackTitle)}
                 </p>
                 <span className="border" />
               </li>

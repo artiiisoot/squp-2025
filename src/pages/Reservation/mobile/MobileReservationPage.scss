@@ -61,6 +61,16 @@
     }
   }
 
+  #Checkbox {
+    p {
+      font-size: 0.875rem;
+    }
+  }
+
+  .more {
+    font-size: 0.875rem;
+  }
+
   .button-group {
     @include FlexBox(row, center, center);
     gap: 0.75rem;

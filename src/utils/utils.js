@@ -1,5 +1,9 @@
 //utils.js
 
+export const removeNewLines = (text) => {
+  return text.replace(/\n/g, "");
+};
+
 export const formatText = (text) => {
   return text
     .split("\n")

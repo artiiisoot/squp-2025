@@ -2,7 +2,7 @@
   "data": [
     {
       "id": 1,
-      "trackTitle": "라온시큐어",
+      "trackTitle": "Web3 & AI \n 서비스/솔루션",
       "trackDesc": "Web3 & AI로 연결되는 미래 기술의 진화, \n 디지털 생태계 확장 여정의 전략과 비전",
       "progressTime": "13:00 ~ 17:15",
       "contentImg": "raonsecure.png",
@@ -44,9 +44,9 @@
         },
         {
           "time": "14:20 ~ 14:40",
-          "title": "-",
+          "title": "Open DID를 활용한 코스타리카 디지털전환 (DX)  전략과사례",
           "speaker": "Kevin 교수",
-          "from": "MICITT",
+          "from": "TEC",
           "class": ""
         },
         {
@@ -109,8 +109,8 @@
     },
     {
       "id": 2,
-      "trackTitle": "라온메타",
-      "trackDesc": "Web3 & AI로 융합된 AI, 메타버스 기반 \n 실습 플랫폼, 미래 교육의 비전과 혁신",
+      "trackTitle": "AI, 메타버스 기반 \n 교육&실습 플랫폼",
+      "trackDesc": "Web3 & AI로 융합된 AI, 메타버스 기반 실습 플랫폼, \n 미래 교육의 비전과 혁신",
       "progressTime": "13:00 ~ 17:15",
       "contentImg": "metademy.png",
       "contentAlt": "metademy",
@@ -142,14 +142,14 @@
         {
           "time": "14:00 ~ 14:20",
           "title": "메타버스 실습용 디바이스 개발 트렌드와 시사점",
-          "speaker": "채재병 부장",
-          "from": "SK텔레콤"
+          "speaker": "우운택 교수",
+          "from": "카이스트"
         },
         {
           "time": "14:20 ~ 14:40",
           "title": "AI 시대, 메타버스 혁신의 현재와 미래",
-          "speaker": "우운택 교수",
-          "from": "카이스트"
+          "speaker": "채재병 부장",
+          "from": "SK텔레콤"
         },
         {
           "time": "14:40 ~ 15:00",
@@ -205,7 +205,7 @@
     },
     {
       "id": 3,
-      "trackTitle": "해커톤 결선",
+      "trackTitle": "2025 블록체인&\nAI 해커톤 결선",
       "trackDesc": "아이디어를 넘어 창업을 꿈꾸다, \n 블록체인 & AI 해커톤",
       "progressTime": "11:20 ~ 17:15",
       "contentImg": "hackathon.png",

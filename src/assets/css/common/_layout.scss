@@ -194,6 +194,7 @@ ul {
           gap: 0.25rem;
           &::before {
             @include Size(1rem, 1rem);
+            min-width: 1rem;
             font-size: 0.75rem;
             margin-top: 0.125rem;
           }

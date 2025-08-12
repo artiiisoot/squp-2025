@@ -66,9 +66,10 @@ const MobileTracksPage = () => {
               key={track.id}
               onClick={() => handleTabButton(track.id)}
             >
-              <p>
-                {track.tab} <br /> {track.trackTitle}
-              </p>
+              <div className="text-item">
+                <p>{track.tab}</p>
+                <p>{parse(formatText(track.trackTitle))}</p>
+              </div>
               <span className="border" />
             </li>
           ))}
