@@ -216,7 +216,7 @@ const MobileTracksPage = () => {
                           <p>창업 지원금 최대 10억 지원</p>
                         </li>
                         <li>
-                          <p>창업 공공간 및 인프라 추가 지원</p>
+                          <p>창업 공간 및 인프라 추가 지원</p>
                         </li>
                         <li>
                           <p>
@@ -236,13 +236,13 @@ const MobileTracksPage = () => {
               {currentIdx === 1 && (
                 <>
                   <LineButton
-                    title={"메인화면"}
+                    title={"Track C"}
                     btnColor={"squp"}
                     btnSize={"lg"}
                     iconName="chevron_left"
                     iconSize="1.5rem"
                     iconPosition="left"
-                    onClick={moveToHome}
+                    onClick={() => handleTabButton(3)}
                   />
                   <LineButton
                     title={"Track B"}
@@ -289,13 +289,13 @@ const MobileTracksPage = () => {
                     onClick={() => handleTabButton(currentIdx - 1)}
                   />
                   <LineButton
-                    title={"메인화면"}
+                    title={"Track A"}
                     btnColor={"squp"}
                     btnSize={"lg"}
                     iconName="chevron_right"
                     iconSize="1.5rem"
                     iconPosition="right"
-                    onClick={moveToHome}
+                    onClick={() => handleTabButton(1)}
                   />
                 </>
               )}

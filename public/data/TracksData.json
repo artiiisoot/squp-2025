@@ -19,7 +19,7 @@
           "title": "등록 및 전시부스 관람",
           "speaker": "",
           "from": "",
-          "class": ""
+          "class": "break"
         },
         {
           "time": "13:30 ~ 13:45",
@@ -37,25 +37,26 @@
         },
         {
           "time": "14:00 ~ 14:20",
-          "title": "Device Trust on Android Enterprise",
-          "speaker": "Benjamin 수석",
-          "from": "Google",
+          "title": "OmniOne과의 연계를 통한 일본 디지털 증명서 시장 도전",
+          "speaker": "Mizma CISO",
+          "from": "CyberLinks",
           "class": ""
         },
         {
           "time": "14:20 ~ 14:40",
-          "title": "Open DID를 활용한 코스타리카 디지털전환 (DX)  전략과사례",
+          "title": "Korea-Costa Rica Digital Bridge: OpenDID as a Foundation for Digital Sovereignty",
           "speaker": "Kevin 교수",
           "from": "TEC",
           "class": ""
         },
         {
           "time": "14:40 ~ 15:00",
-          "title": "OmniOne과의 연계를 통한 일본 디지털 증명서 시장 도전",
-          "speaker": "Mizma CISO",
-          "from": "CyberLinks",
+          "title": "Device Trust on Android Enterprise",
+          "speaker": "Benjamin 수석",
+          "from": "Google",
           "class": ""
         },
+
         {
           "time": "15:00 ~ 15:30",
           "title": "Coffee Break / 전시부스 관람",
@@ -67,19 +68,19 @@
           "time": "15:30 ~ 15:45",
           "title": "의료계의 DID 신원 인증의 활용과 미래",
           "speaker": "김용성 교수",
-          "from": "원광의대",
+          "from": "원광대",
           "class": ""
         },
         {
           "time": "15:45 ~ 16:00",
-          "title": "대학의 디지털배지 발급 및 운영 사례",
+          "title": "건국대학교 디지털배지 발급 플랫폼 개발 및 운영 사례",
           "speaker": "김선교 교수",
           "from": "건국대",
           "class": ""
         },
         {
           "time": "16:00 ~ 16:15",
-          "title": "AI 시대의 해킹,  AI를 활용한 대응전략",
+          "title": "AI시대의 해킹, AI를 활용한 대응전략",
           "speaker": "박현우 상무",
           "from": "라온시큐어",
           "class": ""
@@ -109,7 +110,7 @@
     },
     {
       "id": 2,
-      "trackTitle": "AI, 메타버스 기반 \n 교육&실습 플랫폼",
+      "trackTitle": "AI, 메타버스 기반 \n 교육 & 실습 플랫폼",
       "trackDesc": "Web3 & AI로 융합된 AI, 메타버스 기반 실습 플랫폼, \n 미래 교육의 비전과 혁신",
       "progressTime": "13:00 ~ 17:15",
       "contentImg": "metademy.png",
@@ -125,7 +126,8 @@
           "time": "13:00 ~ 13:30",
           "title": "등록 및 전시부스 관람",
           "speaker": "",
-          "from": ""
+          "from": "",
+          "class": "break"
         },
         {
           "time": "13:00 ~ 13:40",
@@ -135,25 +137,25 @@
         },
         {
           "time": "13:40 ~ 14:00",
-          "title": "Web3와 AI시대의 성공하는 메타버스 전략",
+          "title": "공간지능과 XR이 여는 K-Metaverse",
+          "speaker": "우운택 교수",
+          "from": "KAIST"
+        },
+        {
+          "time": "14:00 ~ 14:20",
+          "title": "Web3 & AI시대, 성공하는 메타버스 전략",
           "speaker": "윤원석 부사장",
           "from": "라온메타"
         },
         {
-          "time": "14:00 ~ 14:20",
-          "title": "메타버스 실습용 디바이스 개발 트렌드와 시사점",
-          "speaker": "우운택 교수",
-          "from": "카이스트"
-        },
-        {
           "time": "14:20 ~ 14:40",
-          "title": "AI 시대, 메타버스 혁신의 현재와 미래",
+          "title": "메타버스 실습용 디바이스 개발 트렌드와 시사점",
           "speaker": "채재병 부장",
           "from": "SK텔레콤"
         },
         {
           "time": "14:40 ~ 15:00",
-          "title": "패널 토의",
+          "title": "패널 토의 : K-Metaverse, To be or Not to be? - Web3와 AI로 답하다.",
           "speaker": "",
           "from": ""
         },
@@ -166,33 +168,33 @@
         },
         {
           "time": "15:30 ~ 15:45",
-          "title": "AI와 메타버스가 만나는 실습 교육의 미래",
-          "speaker": "조상용 대표",
-          "from": "글로브포인트"
+          "title": "가상 훈련 시스템의 발전을 위한 웨어러블 디바이스의 미래",
+          "speaker": "심동현 대표",
+          "from": "왓츠랩"
         },
         {
           "time": "15:45 ~ 16:00",
+          "title": "첨단 ICT기반 디지털 교육 콘텐츠",
+          "speaker": "한상일 상무",
+          "from": "와이에스티"
+        },
+        {
+          "time": "16:00 ~ 16:15",
           "title": "간호사 시험에 적용 가능한 메타버스 기반 간호술기 혁신 방향",
           "speaker": "옥지원 대표",
           "from": "그리다텍"
         },
         {
-          "time": "16:00 ~ 16:15",
-          "title": "AI 기반 의료 분야 구술시험 혁신 방안",
-          "speaker": "석정호 대표",
-          "from": "마인즈AI"
-        },
-        {
           "time": "16:15 ~ 16:30",
-          "title": "메타버스에 적용 가능한 AI의 미래",
-          "speaker": "유승재 대표",
-          "from": "페르소나AI"
+          "title": "의료 VR 프로그램 소개 및 효과",
+          "speaker": "장수아 소장",
+          "from": "마인즈에이아이"
         },
         {
           "time": "16:30 ~ 16:45",
-          "title": "가상 훈련 시스템의 발전을 위한 웨어러블 디바이스의 미래",
-          "speaker": "심동현 대표",
-          "from": "왓츠랩"
+          "title": "메타버스에 적용 가능한 AI의 미래",
+          "speaker": "유승재 대표",
+          "from": "페르소나AI"
         },
         {
           "time": "16:45 ~ 17:15",
@@ -205,7 +207,7 @@
     },
     {
       "id": 3,
-      "trackTitle": "2025 블록체인&\nAI 해커톤 결선",
+      "trackTitle": "2025 블록체인 & \n AI 해커톤 결선",
       "trackDesc": "아이디어를 넘어 창업을 꿈꾸다, \n 블록체인 & AI 해커톤",
       "progressTime": "11:20 ~ 17:15",
       "contentImg": "hackathon.png",
@@ -220,7 +222,8 @@
           "time": "11:20 ~ 11:30",
           "title": "해커톤 심사 안내",
           "speaker": "",
-          "from": ""
+          "from": "",
+          "class": "break"
         },
         {
           "time": "11:30 ~ 11:50",
@@ -231,7 +234,7 @@
         {
           "time": "11:55 ~ 12:15",
           "title": "마이데이터와 모바일신분증을 활용한 디지털 위임장 서비스",
-          "speaker": "위임",
+          "speaker": "We-im",
           "from": ""
         },
         {
@@ -243,7 +246,7 @@
         {
           "time": "12:45 ~ 13:05",
           "title": "모바일신분증과 블록체인을 활용한 AI 스마트 병원 동행 서비스",
-          "speaker": "머지",
+          "speaker": "Merge",
           "from": ""
         },
         {

@@ -131,7 +131,7 @@
     },
     {
       "id": 5,
-      "subtitle": "시큐업 스탬프투어 이벤트",
+      "subtitle": "시큐업 스탬프 투어 이벤트",
       "title": "부스 스탬프 투어 이벤트",
       "thumbImg": "event_img_05.png",
       "detailImg": "event_img_05.png",
@@ -155,7 +155,7 @@
       },
       "prize": {
         "name": "경품",
-        "context": ["라온 캐릭터 인형 3종 중 택 1"]
+        "context": ["라온 캐릭터 인형 3종 중 랜덤 1종"]
       }
     },
     {

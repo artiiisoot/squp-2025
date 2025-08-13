@@ -4,9 +4,10 @@
   @include PaddingX(1rem);
   gap: 1.25rem;
   background: $G80;
+
   .top {
     @include FlexBox(column, unset, unset);
-    gap: 0.625rem;
+    gap: 1.25rem;
     #Dropdown {
       .dropdown-selected {
         > * {
@@ -15,7 +16,7 @@
       }
     }
     .group {
-      @include FlexBox(row, center, space-between);
+      @include FlexBox(column, flex-start, space-between);
       .sns-group {
         @include FlexBox;
         gap: 0.5rem;
@@ -30,7 +31,7 @@
     @include FlexBox(row, flex-end, unset);
     gap: 0.5rem;
     .raon-logo {
-      @include Size(3.375rem, 1.875rem);
+      @include Size(3.375rem, auto);
     }
     p {
       font-size: 0.75rem;

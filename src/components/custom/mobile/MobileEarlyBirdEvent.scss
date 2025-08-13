@@ -12,6 +12,13 @@
     > * {
       color: $G00;
     }
+    > span {
+      @include FlexBox;
+      // @include Size(100%, 100%);
+      font-size: 0.75rem;
+      word-break: keep-all;
+      text-align: center;
+    }
   }
 
   .event-img {

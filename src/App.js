@@ -38,18 +38,18 @@ function App() {
     return () => window.removeEventListener("resize", setVh);
   }, []);
 
-  useEffect(() => {
-    const searchParams = new URLSearchParams(window.location.search);
-    const mode = searchParams.get("mode");
-    if (mode !== "dev") {
-      setIsDevMode(false);
-    }
-  }, []);
+  // useEffect(() => {
+  //   const searchParams = new URLSearchParams(window.location.search);
+  //   const mode = searchParams.get("mode");
+  //   if (mode !== "dev") {
+  //     setIsDevMode(false);
+  //   }
+  // }, []);
 
-  if (!isDevMode) {
-    window.location.href = "/";
-    return null;
-  }
+  // if (!isDevMode) {
+  //   window.location.href = "/";
+  //   return null;
+  // }
 
   const isSamsungBrowser = /SamsungBrowser/i.test(navigator.userAgent);
   if (isSamsungBrowser) {

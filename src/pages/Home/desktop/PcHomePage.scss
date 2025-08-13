@@ -74,6 +74,72 @@
     animation: ArrowInfiniteY 1s ease-in-out infinite;
   }
 }
+#MainVideo {
+  position: relative;
+  .video-content {
+    @include Size(100%, 90vh);
+    position: relative;
+    max-width: var(--desktop-max-width);
+    margin: 0 auto;
+  }
+  .dim {
+    @include Size(100%, 100vh);
+    position: absolute;
+    top: 0;
+    background: rgba($color: $G100, $alpha: 0.4);
+    z-index: 1;
+  }
+  video {
+    @include Size(100%, 100vh);
+    position: absolute;
+    top: 0;
+    object-fit: cover;
+  }
+  .context {
+    @include FlexBox(column, center, center);
+    @include Size(100%, auto);
+    gap: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: $G00;
+    z-index: 2;
+    .squp-logo {
+      @include Size(20.375rem, 10rem);
+    }
+    .raon-logo {
+      @include Size(8.5rem, 3.75rem);
+    }
+    .title {
+      @include FlexBox(column, center, center);
+      gap: 0.5rem;
+      h1 {
+        font-size: 4.5rem;
+      }
+      p {
+        font-size: 3rem;
+      }
+    }
+    .info-text {
+      @include FlexBox(column, center, center);
+      gap: 0.5rem;
+      p {
+        font-size: 2.25rem;
+      }
+    }
+  }
+  .arrow {
+    position: absolute;
+    left: 50%;
+    bottom: 2rem;
+    transform: translate3d(-50%, 0, 0);
+    color: $G00;
+    animation: ArrowInfiniteY 1s ease-in-out infinite;
+    z-index: 3;
+  }
+}
 #Overview {
   background: $section-bg;
   .page-container {

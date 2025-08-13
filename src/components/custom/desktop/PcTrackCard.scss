@@ -49,9 +49,9 @@
     @include PaddingY(1.5rem);
     @include PaddingX(1.5rem);
     gap: 2.5rem;
-    p {
+    > p {
       @include FlexBox(column, unset, unset);
-      font-size: 1.25rem;
+      font-size: 1rem;
     }
   }
 }

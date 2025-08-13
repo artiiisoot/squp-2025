@@ -1,43 +1,51 @@
 #Sidebar {
-  @include Size(100%, 100vh);
-  position: fixed;
-  top: 0;
-  background: $G00;
-  z-index: 10000;
-  animation: FadeLeft 0.3s;
-  .header {
-    @include FlexBox(column, unset, center);
-    @include Size(100%, var(--mobile-header-height));
-    @include PaddingX(1rem);
-    svg {
-      margin-left: auto;
-    }
-  }
-  .body {
-    @include FlexBox(column, unset, unset);
-    @include PaddingX(1rem);
-    gap: 2.5rem;
-    ul {
-      @include FlexBox(column, unset, unset);
-      gap: 1.25rem;
-      li {
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: $primary;
-      }
-    }
-    #Button {
-      @include PaddingX(0);
-      @include Size(11.25rem, 3rem);
-      gap: 0.5rem;
-      color: $G00;
-      background: $primary;
-      p {
-        font-size: 1.25rem;
-      }
+  .modal-dialog {
+    @include Size(80%, 100vh);
+    @include PaddingY(0);
+    @include PaddingX(0);
+    @include Rounded(0);
+    position: fixed;
+    // top: 0;
+    top: 0;
+    left: unset;
+    right: 0;
+    transform: unset;
+    background: $G00;
+    animation: FadeLeft 0.3s;
+    .header {
+      @include FlexBox(column, unset, center);
+      @include Size(100%, var(--mobile-header-height));
+      @include PaddingX(1rem);
       svg {
-        @include PaddingY(0.25rem);
-        @include PaddingX(0.25rem);
+        margin-left: auto;
+      }
+    }
+    .body {
+      @include FlexBox(column, unset, unset);
+      @include PaddingX(1rem);
+      gap: 2.5rem;
+      ul {
+        @include FlexBox(column, unset, unset);
+        gap: 1.25rem;
+        li {
+          font-size: 1.5rem;
+          font-weight: bold;
+          color: $primary;
+        }
+      }
+      #Button {
+        @include PaddingX(0);
+        @include Size(11.25rem, 3rem);
+        gap: 0.5rem;
+        color: $G00;
+        background: $primary;
+        p {
+          font-size: 1.25rem;
+        }
+        svg {
+          @include PaddingY(0.25rem);
+          @include PaddingX(0.25rem);
+        }
       }
     }
   }

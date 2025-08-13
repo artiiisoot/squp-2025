@@ -222,7 +222,7 @@ const PcTracksPage = () => {
                         <p>창업 지원금 최대 10억 지원</p>
                       </li>
                       <li>
-                        <p>창업 공공간 및 인프라 추가 지원</p>
+                        <p>창업 공간 및 인프라 추가 지원</p>
                       </li>
                       <li>
                         <p>
@@ -241,16 +241,16 @@ const PcTracksPage = () => {
             {currentIdx === 1 && (
               <>
                 <LineButton
-                  title={"메인화면"}
+                  title={"Track C"}
                   btnColor={"squp"}
                   btnSize={"lg"}
                   iconName="chevron_left"
                   iconSize="1.5rem"
                   iconPosition="left"
-                  onClick={moveToHome}
+                  onClick={() => handleTabButton(3)}
                 />
                 <LineButton
-                  title={"Track B : 라온메타"}
+                  title={"Track B"}
                   btnColor={"squp"}
                   btnSize={"lg"}
                   iconName="chevron_right"
@@ -263,7 +263,7 @@ const PcTracksPage = () => {
             {currentIdx === 2 && (
               <>
                 <LineButton
-                  title={"Track A : 라온시큐어"}
+                  title={"Track A"}
                   btnColor={"squp"}
                   btnSize={"lg"}
                   iconName="chevron_left"
@@ -272,7 +272,7 @@ const PcTracksPage = () => {
                   onClick={() => handleTabButton(currentIdx - 1)}
                 />
                 <LineButton
-                  title={"Track C : 해커톤 결선"}
+                  title={"Track C"}
                   btnColor={"squp"}
                   btnSize={"lg"}
                   iconName="chevron_right"
@@ -285,7 +285,7 @@ const PcTracksPage = () => {
             {currentIdx === 3 && (
               <>
                 <LineButton
-                  title={"Track B : 라온메타"}
+                  title={"Track B"}
                   btnColor={"squp"}
                   btnSize={"lg"}
                   iconName="chevron_left"
@@ -294,13 +294,13 @@ const PcTracksPage = () => {
                   onClick={() => handleTabButton(currentIdx - 1)}
                 />
                 <LineButton
-                  title={"메인화면"}
+                  title={"Track A"}
                   btnColor={"squp"}
                   btnSize={"lg"}
                   iconName="chevron_right"
                   iconSize="1.5rem"
                   iconPosition="right"
-                  onClick={moveToHome}
+                  onClick={() => handleTabButton(1)}
                 />
               </>
             )}

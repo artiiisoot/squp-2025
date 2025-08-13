@@ -99,7 +99,8 @@ const PcReservationPage = () => {
         setIsModalAlert({
           isShowModal: true,
           title: null,
-          context: "사전등록이 완료되었습니다. \n 신청해주셔서 감사합니다.",
+          context:
+            "사전등록이 완료되었습니다. \n 신청해주셔서 감사드리며, 사전등록 배지는 \n 등록해주신 메일주소를 통해 발송해드릴 예정입니다. ",
           btnName: "확인",
           onConfirm: () => {
             dispatch(setPopupReset());

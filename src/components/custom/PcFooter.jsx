@@ -29,7 +29,6 @@ const PcFooter = () => {
       url: "https://www.digitaltrustnetworks.com",
     },
     { text: "OmniOne", value: 6, url: "https://www.omnione.net" },
-    { text: "Security IQ UP", value: 7, url: "https://www.squp.kr" },
   ];
 
   const snsButtons = [

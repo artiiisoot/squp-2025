@@ -17,9 +17,11 @@
   }
   .raon-logo {
     @include Size(5.5rem, 2.4375rem);
+    @include PaddingY(0.25rem);
+    @include PaddingX(0.25rem);
   }
   .left {
-    @include FlexBox;
+    @include FlexBox(row, flex-end, unset);
     gap: 2rem;
     .group {
       @include FlexBox;

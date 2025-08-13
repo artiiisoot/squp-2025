@@ -42,32 +42,34 @@ const Sidebar = () => {
     <>
       {isShowModal && type === "sidebar" && (
         <div id="Sidebar" className="modal">
-          <div className="header">
-            <Icon
-              icon="close"
-              size="2rem"
-              onClick={() => {
-                dispatch(setIsCloseModal());
-              }}
-            />
-          </div>
-          <div className="body">
-            <ul>
-              {menus.map((menu, idx) => (
-                <li key={idx} onClick={() => handleMoveToPage(menu.path)}>
-                  {menu.name}
-                </li>
-              ))}
-            </ul>
-            <Button
-              title={"사전등록"}
-              btnColor={"squp-reverse"}
-              btnSize={"lg"}
-              iconName="arrow_right"
-              iconSize="1.75rem"
-              iconPosition="right"
-              onClick={handleMoveToReservation}
-            />
+          <div className="modal-dialog">
+            <div className="header">
+              <Icon
+                icon="close"
+                size="2rem"
+                onClick={() => {
+                  dispatch(setIsCloseModal());
+                }}
+              />
+            </div>
+            <div className="body">
+              <ul>
+                {menus.map((menu, idx) => (
+                  <li key={idx} onClick={() => handleMoveToPage(menu.path)}>
+                    {menu.name}
+                  </li>
+                ))}
+              </ul>
+              <Button
+                title={"사전등록"}
+                btnColor={"squp-reverse"}
+                btnSize={"lg"}
+                iconName="arrow_right"
+                iconSize="1.75rem"
+                iconPosition="right"
+                onClick={handleMoveToReservation}
+              />
+            </div>
           </div>
         </div>
       )}

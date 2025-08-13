@@ -15,11 +15,18 @@
     }
   }
   .modal-body {
+    @include PaddingY(1.5rem);
+    @include PaddingX(1.5rem);
+    @include BorderAll(1px, solid, $lineG30);
+    @include Rounded(0.75rem);
     .context {
-      @include PaddingY(1.5rem);
-      @include PaddingX(1.5rem);
-      @include BorderAll(1px, solid, $lineG30);
-      @include Rounded(0.75rem);
+      @include FlexBox(column, unset, unset);
+      gap: 1.5rem;
+      font-weight: bold;
+      max-height: calc(
+        100vh - (1.875rem + 1.5rem + 1.5rem + 3rem + 3rem + 2rem)
+      );
+      overflow-y: auto;
       font-weight: bold;
       ul.dot-style {
         li {

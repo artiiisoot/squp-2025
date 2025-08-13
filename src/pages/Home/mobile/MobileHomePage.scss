@@ -219,10 +219,10 @@
       // gap: 0.5rem;
       // flex-wrap: wrap;
       .host-img {
-        @include Size(fit-content, 1.5rem);
+        @include Size(fit-content, auto);
       }
       .sponsor-img {
-        @include Size(fit-content, 12.25rem);
+        @include Size(fit-content, auto);
       }
     }
   }

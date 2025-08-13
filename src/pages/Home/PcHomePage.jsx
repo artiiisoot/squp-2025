@@ -24,6 +24,7 @@ import EventImg from "@/assets/images/home/event/event_img.png";
 import LocationImg from "@/assets/images/home/location/location_img.png";
 import HostImg from "@/assets/images/home/partners/host/host.png";
 import SponsorImg from "@/assets/images/home/partners/sponsor/sponsor.png";
+import MainVideo from "@/assets/video/main_video.mp4";
 
 const PcHomePage = () => {
   const dispatch = useDispatch();
@@ -128,7 +129,7 @@ const PcHomePage = () => {
 
   return (
     <article id="PcHomePage">
-      <section id="Intro">
+      {/* <section id="Intro">
         <div className="context flex-col">
           <div className="squp-logo">
             <img src={SqupLogoColor2} alt="squp_logo_color" />
@@ -150,6 +151,30 @@ const PcHomePage = () => {
         </div>
 
         <Icon icon="chevron_down" size="8rem" className="arrow" />
+      </section> */}
+
+      <section id="MainVideo">
+        <div className="video-content">
+          <div className="context">
+            <div className="title">
+              <h1>Web3 & AI로 연결되는 미래</h1>
+              <p>2025 시큐업 & 해커톤</p>
+            </div>
+
+            <div className="info-text">
+              <p>2025. 09. 23(화)</p>
+              <p>COEX 3F Conference Room E Hall</p>
+            </div>
+
+            <div className="raon-logo">
+              <img src={RaonLogoWhite} alt="raon_logo_white" />
+            </div>
+          </div>
+          <Icon icon="chevron_down" size="8rem" className="arrow" />
+        </div>
+
+        <div className="dim" />
+        <video src={MainVideo} type="video/mp4" autoplay="true" loop muted />
       </section>
 
       <section id="Overview">
@@ -159,7 +184,7 @@ const PcHomePage = () => {
           </div>
 
           <div className="content-context">
-            <h4>2025 시큐업&해커톤에 여러분을 초대합니다.</h4>
+            <h4>2025 시큐업 & 해커톤에 여러분을 초대합니다.</h4>
             <ul>
               <li>
                 디지털 기술은 이제 사회를 연결하고, 산업을 이끌며, 인류의 미래를
@@ -176,10 +201,10 @@ const PcHomePage = () => {
               </li>
 
               <li>
-                이처럼 기술과 사회가 급변하는 시대에,{" "}
+                이처럼 기술과 사회가 급변하는 시대에{" "}
                 <b>&lt;2025 시큐업&gt;은 "Web3 & AI로 연결된 미래"</b>를 주제로{" "}
                 <br />
-                디지털 혁신이 만들어갈 새로운 가능성과, 그 속에서 우리가 준비한
+                디지털 혁신이 만들어갈 새로운 가능성과 그 속에서 우리가 준비한
                 미래 전략과 비전을 나누는 <br />
                 뜻깊은 자리가 될 것입니다.
               </li>
@@ -196,12 +221,12 @@ const PcHomePage = () => {
                 <b>메타버스, 딥페이크, 제로트러스트, 양자내성암호, 블록체인</b>{" "}
                 등 디지털 보안의 주요 이슈를 <br />
                 다양한 프로그램과 함께 심도 있게 다루며, 참석자 여러분이 다가올
-                디지털 신뢰 시대를 먼저 체험하고, <br />그 안에서 새로운 기회와
+                디지털 신뢰 시대를 먼저 체험하고 <br />그 안에서 새로운 기회와
                 방향을 발견할 수 있기를 바랍니다.
               </li>
 
               <li>
-                기술의 본질은 연결이고, 연결의 본질은 신뢰입니다. 지금, Web3와
+                기술의 본질은 연결이고, 연결의 본질은 신뢰입니다. 지금 Web3와
                 AI가 주도하는 변화의 물결 속에서 <br />
                 우리는 디지털 신뢰 사회의 주춧돌을 함께 놓아가야 합니다.
               </li>

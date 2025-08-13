@@ -9,7 +9,8 @@
     transform: translateY(-1%);
   }
   .event-img {
-    @include Size(100%, 16.5rem);
+    // @include Size(100%, 16.5rem);
+    @include Size(100%, auto);
   }
   .context {
     @include FlexBox(column, unset, unset);

@@ -19,7 +19,7 @@ const ModalPrivacy = () => {
         <div id="ModalPrivacy" className="modal">
           <div className="modal-dialog">
             <div className="modal-header">
-              <h5>개인정보 수집 및 이용 동의</h5>
+              <h5>개인정보처리방침</h5>
               <Icon
                 icon="close"
                 size="2rem"
