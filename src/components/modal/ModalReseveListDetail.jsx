@@ -20,49 +20,6 @@ const ModalReseveListDetail = ({ selectItem }) => {
         <div id="ModalResevationDetail" className="bottom-sheet">
           <div className="modal-dialog">
             <div className="modal-body">
-              {/* <div id="Table" className="row-type">
-                <div className="tr">
-                  <div className="td name">
-                    <p>{selectItem?.name}</p>
-                  </div>
-                </div>
-                <div className="tr">
-                  <div className="th">휴대폰번호</div>
-                  <div className="td">
-                    <p>{selectItem?.phone}</p>
-                  </div>
-                </div>
-                <div className="tr">
-                  <div className="th">이메일</div>
-                  <div className="td">
-                    <p>{selectItem?.email}</p>
-                  </div>
-                </div>
-                <div className="tr">
-                  <div className="th">회사명</div>
-                  <div className="td">
-                    <p>{selectItem?.company}</p>
-                  </div>
-                </div>
-                <div className="tr">
-                  <div className="th">부서명</div>
-                  <div className="td">
-                    <p>{selectItem?.department}</p>
-                  </div>
-                </div>
-                <div className="tr">
-                  <div className="th">직급/직책</div>
-                  <div className="td">
-                    <p>{selectItem?.position}</p>
-                  </div>
-                </div>
-                <div className="tr">
-                  <div className="th">예약일</div>
-                  <div className="td">
-                    <p>{selectItem?.wdate}</p>
-                  </div>
-                </div>
-              </div> */}
               <ul className="list-group">
                 <li>
                   <p>이름</p>
@@ -77,12 +34,20 @@ const ModalReseveListDetail = ({ selectItem }) => {
                   <p>{selectItem?.email}</p>
                 </li>
                 <li>
+                  <p>업종</p>
+                  <p>{selectItem?.industry}</p>
+                </li>
+                <li>
                   <p>회사명</p>
                   <p>{selectItem?.company}</p>
                 </li>
                 <li>
                   <p>부서명</p>
                   <p>{selectItem?.department}</p>
+                </li>
+                <li>
+                  <p>직군</p>
+                  <p>{selectItem?.job_category}</p>
                 </li>
                 <li>
                   <p>직급/직책</p>

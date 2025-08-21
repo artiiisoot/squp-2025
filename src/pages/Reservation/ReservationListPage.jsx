@@ -183,6 +183,7 @@ const ReservationList = () => {
         이름: item.name,
         휴대폰번호: item.phone,
         이메일: item.email,
+        부서명: item.department,
         직급직책: item.position,
         회사명: item.company,
         관심트랙: item.fav_content,
@@ -427,6 +428,9 @@ const ReservationList = () => {
                   <p>이메일</p>
                 </div>
                 <div className="th">
+                  <p>부서명</p>
+                </div>
+                <div className="th">
                   <p>직급/직책</p>
                 </div>
                 <div className="th">
@@ -459,6 +463,9 @@ const ReservationList = () => {
                     </div>
                     <div className="td">
                       <p>{item.email}</p>
+                    </div>
+                    <div className="td">
+                      <p>{item.department}</p>
                     </div>
                     <div className="td">
                       <p>{item.position}</p>

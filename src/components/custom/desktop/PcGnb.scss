@@ -5,7 +5,8 @@
   gap: 1.5rem;
   position: fixed;
   top: 0;
-  background: unset;
+  // background: rgba($color: #1b1364, $alpha: 0.2);
+  background: transparent;
   z-index: 9999;
   transition: all 0.3s;
   &.fixed {

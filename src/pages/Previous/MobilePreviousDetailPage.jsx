@@ -20,7 +20,14 @@ const MobilePreviousDetailPage = () => {
   const imageSrc = getRequireImage("previous", "list", selectedItem?.thumbImg);
 
   const handleMoveToSite = () => {
-    window.open(`http://www.squp.kr/${id}`, "_blank");
+    if (id === "2021") {
+      window.open(
+        `https://www.raoncorp.com/data/squp/2021/index.html?mode=replay`,
+        "_blank"
+      );
+    } else {
+      window.open(`http://www.squp.kr/${id}`, "_blank");
+    }
   };
 
   useEffect(() => {

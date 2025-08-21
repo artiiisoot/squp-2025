@@ -130,51 +130,82 @@ const PcHomePage = () => {
   return (
     <article id="PcHomePage">
       {/* <section id="Intro">
-        <div className="context flex-col">
+        <div className="section-container flex-col">
           <div className="squp-logo">
             <img src={SqupLogoColor2} alt="squp_logo_color" />
           </div>
 
-          <div className="title">
-            <h1>Web3 & AI로 연결되는 미래</h1>
-            <p>2025 시큐업 & 해커톤</p>
-          </div>
-
-          <div className="info-text">
-            <p>2025. 09. 23(화)</p>
-            <p>COEX 3F Conference Room E Hall</p>
-          </div>
-
-          <div className="raon-logo">
-            <img src={RaonLogoWhite} alt="raon_logo_white" />
-          </div>
-        </div>
-
-        <Icon icon="chevron_down" size="8rem" className="arrow" />
-      </section> */}
-
-      <section id="MainVideo">
-        <div className="video-content">
           <div className="context">
             <div className="title">
-              <h1>Web3 & AI로 연결되는 미래</h1>
-              <p>2025 시큐업 & 해커톤</p>
+              <h2>Web3 & AI로 연결되는 미래</h2>
             </div>
 
             <div className="info-text">
-              <p>2025. 09. 23(화)</p>
-              <p>COEX 3F Conference Room E Hall</p>
-            </div>
-
-            <div className="raon-logo">
-              <img src={RaonLogoWhite} alt="raon_logo_white" />
+              <div className="item">
+                <p>일시</p>
+                <p>|</p>
+                <p>2025. 09. 23(화)</p>
+              </div>
+              <div className="item">
+                <p>장소</p>
+                <p>|</p>
+                <p>COEX 3F Conference Room E Hall</p>
+              </div>
             </div>
           </div>
+        </div>
+
+        <Icon icon="chevron_down" size="6rem" className="arrow" />
+      </section> */}
+
+      <section id="MainVideo">
+        {/* <div className="video-container"> */}
+        <div className="video-content">
+          <div className="section-container flex-col">
+            <div className="squp-logo">
+              <img src={SqupLogoColor2} alt="squp_logo_color" />
+            </div>
+
+            <div className="context">
+              <div className="title">
+                <h2>Web3 & AI로 연결되는 미래</h2>
+              </div>
+
+              <div className="info-text">
+                <div className="item">
+                  <p>일시</p>
+                  <p>|</p>
+                  <p>2025. 09. 23(화)</p>
+                </div>
+                <div className="item">
+                  <p>시큐업 세미나 13:00~17:15, 해커톤 결선 11:20~17:15</p>
+                </div>
+                <div className="item">
+                  <p>장소</p>
+                  <p>|</p>
+                  <p>COEX 3F Conference Room E Hall</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <Icon icon="chevron_down" size="8rem" className="arrow" />
         </div>
 
         <div className="dim" />
-        <video src={MainVideo} type="video/mp4" autoplay="true" loop muted />
+
+        <video autoPlay muted loop playsInline>
+          <source src={MainVideo} />
+        </video>
+        {/* <iframe
+            src="https://www.youtube.com/embed/HiFYkbk6pJo?controls=0&autoplay=1&loop=1&mute=1&playlist=HiFYkbk6pJo"
+            title="시큐업 main"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe> */}
+        {/* </div> */}
       </section>
 
       <section id="Overview">
@@ -313,7 +344,7 @@ const PcHomePage = () => {
       </section>
 
       <section id="Location">
-        <SectionTitle title="LOCATION" />
+        <SectionTitle title="LOCATION" context="COEX 3층 컨퍼런스룸 E" />
         <div className="page-container">
           <div className="location-img">
             <img src={LocationImg} alt="location_img" />
@@ -322,12 +353,15 @@ const PcHomePage = () => {
           <div className="location-info">
             <div className="info-item">
               <div className="chip">일시</div>
-              <p>2025년 9월 23일(화), 13:00~17:15, 해커톤 결선 : 11:20~17:15</p>
+              <p>
+                2025년 9월 23일(화), 시큐업 세미나 : 13:00~17:15, 해커톤 결선 :
+                11:20~17:15
+              </p>
             </div>
             <div className="info-item">
               <div className="chip">장소</div>
               <p>
-                서울시 강남구 영동대로 513(삼성동, 코엑스) 컨퍼런스룸 3층 E홀
+                서울시 강남구 영동대로 513(삼성동, 코엑스) 3층 컨퍼런스룸 E홀
               </p>
             </div>
           </div>

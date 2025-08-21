@@ -36,6 +36,14 @@ export const validateFields = (fields, agreements) => {
     errors.email = "올바른 이메일을 입력해 주세요.";
   }
 
+  // 업종(Industry) 필수 검사 추가
+  if (!fields.industry) {
+    errors.industry = "업종을 선택해 주세요.";
+  }
+  if (!fields.job_category) {
+    errors.job_category = "직군을 선택해 주세요.";
+  }
+
   // 4~6. 회사명, 부서명, 직책 공통 검사
   const validateText = (value, label) => {
     const val = value.trim();
@@ -53,8 +61,10 @@ export const validateFields = (fields, agreements) => {
   };
 
   const labels = {
+    // industry: "업종",
     company: "회사명",
     department: "부서명",
+    // job_category: "직군",
     position: "직책",
   };
 

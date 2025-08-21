@@ -53,7 +53,7 @@ const MobileEarlyBirdEvent = () => {
             <div className="step-item" key={idx}>
               <span>{`STEP ${idx + 1}`}</span>
               <div className="context">
-                <p>{step.context}</p>
+                <p>{parse(formatText(step.context))}</p>
               </div>
             </div>
           ))}

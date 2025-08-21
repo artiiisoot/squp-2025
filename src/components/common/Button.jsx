@@ -7,6 +7,7 @@ const Button = ({
   btnColor,
   btnSize,
   btnRound = "",
+  className = "",
   disabled = false,
   iconName = "",
   iconSize = "",
@@ -16,7 +17,7 @@ const Button = ({
   return (
     <button
       id="Button"
-      className={`${btnColor} ${btnSize} ${btnRound} ${
+      className={`${btnColor} ${btnSize} ${btnRound} ${className} ${
         disabled ? "disabled" : ""
       }`}
       onClick={onClick}

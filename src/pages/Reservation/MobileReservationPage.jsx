@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import { useDispatch, useSelector } from "react-redux";
 import { setIsShowModal } from "@/reducers/modalSlice";
+import { setIsModalAlert, setPopupReset } from "@/reducers/alertSlice";
 
 import { reserve } from "@/api/apiActions";
 import { fetchTracksData } from "@/api/public";
@@ -16,14 +17,16 @@ import Checkbox from "@/components/common/Checkbox";
 import MobileEarlyBirdEvent from "@/components/custom/MobileEarlyBirdEvent";
 import TrackCard from "@/components/custom/TrackCard";
 import ModalTerms from "@/components/modal/ModalTerms";
-import { setIsModalAlert, setPopupReset } from "@/reducers/alertSlice";
+import Dropdown from "@/components/common/Dropdown";
 
 const initialFields = {
   name: "",
   phone: "",
   email: "",
+  industry: "",
   company: "",
   department: "",
+  job_category: "",
   position: "",
   fav_content: "",
 };
@@ -40,6 +43,78 @@ const MobileReservationPage = () => {
   const [errors, setErrors] = useState({});
   const inputRefs = useRef({});
   const [data, setData] = useState([]);
+
+  const industryOptions = [
+    {
+      text: "공공",
+      value: "공공",
+    },
+    {
+      text: "금융",
+      value: "금융",
+    },
+    {
+      text: "기업/IT",
+      value: "기업/IT",
+    },
+    {
+      text: "기업/일반",
+      value: "기업/일반",
+    },
+    {
+      text: "기관/협회",
+      value: "기관/협회",
+    },
+    {
+      text: "교육/학생",
+      value: "교육/학생",
+    },
+    {
+      text: "언론",
+      value: "언론",
+    },
+    {
+      text: "기타",
+      value: "기타",
+    },
+  ];
+  const jobOptions = [
+    {
+      text: "개발/엔지니어",
+      value: "개발/엔지니어",
+    },
+    {
+      text: "판매/영업",
+      value: "판매/영업",
+    },
+    {
+      text: "마케팅/PR",
+      value: "마케팅/PR",
+    },
+    {
+      text: "일반사무",
+      value: "일반사무",
+    },
+    {
+      text: "임원/매니징",
+      value: "임원/매니징",
+    },
+    {
+      text: "교육/학생",
+      value: "교육/학생",
+    },
+    {
+      text: "기자",
+      value: "기자",
+    },
+    {
+      text: "기타",
+      value: "기타",
+    },
+  ];
+
+  const [industryValue, setIndustryValue] = useState("");
+  const [jobValue, setJobValue] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -100,7 +175,7 @@ const MobileReservationPage = () => {
           isShowModal: true,
           title: null,
           context:
-            "사전등록이 완료되었습니다. \n 신청해주셔서 감사드리며, 사전등록 배지는 \n 등록해주신 메일주소를 통해 발송해드릴 예정입니다. ",
+            "사전등록이 완료되었습니다. <br /> 성원에 감사드리며, 3일 내 제출해주신 메일주소로 <br /> [2025 시큐업 얼리버드배지]가 발송될 예정이오니, <br /> 현장에서 진행하는 사전등록 이벤트에 많은 참여 바랍니다.",
           btnName: "확인",
           onConfirm: () => {
             dispatch(setPopupReset());
@@ -112,6 +187,39 @@ const MobileReservationPage = () => {
       navigate("/");
     }
   };
+
+  const handleIndustryChange = (item) => {
+    console.log("item", item);
+
+    setIndustryValue(item);
+    setFields((prev) => ({
+      ...prev,
+      industry: item.value,
+    }));
+  };
+  const handleJobChange = (item) => {
+    console.log("item", item);
+    setFields((prev) => ({
+      ...prev,
+      job_category: item.value,
+    }));
+    setJobValue(item);
+  };
+
+  // useEffect(() => {
+  //   dispatch(
+  //     setIsModalAlert({
+  //       isShowModal: true,
+  //       title: null,
+  //       context:
+  //         "사전등록이 완료되었습니다. <br /><br /> 성원에 감사드리며, 3일 내 제출해주신 메일주소로 <br /> [2025 시큐업 얼리버드배지]가 발송될 예정이오니, <br /> 현장에서 진행하는 사전등록 이벤트에 많은 참여 바랍니다.",
+  //       btnName: "확인",
+  //       onConfirm: () => {
+  //         dispatch(setPopupReset());
+  //       },
+  //     })
+  //   );
+  // });
 
   const isFormValid = useMemo(() => {
     return Object.keys(validateFields(fields, agreements)).length === 0;
@@ -198,6 +306,22 @@ const MobileReservationPage = () => {
               />
             </div>
             <div className="item">
+              <Dropdown
+                colLabel={"업종"}
+                labelRequired={true}
+                selectedType="box"
+                readonly={false}
+                showPosition="show-bottom"
+                getCurrentText={
+                  industryValue ? industryValue.value : "업종을 선택해 주세요."
+                }
+                options={industryOptions}
+                onChanage={handleIndustryChange}
+                errorMsg={errors.industry}
+                ref={(el) => (inputRefs.current.industry = el)}
+              />
+            </div>
+            <div className="item">
               <Input
                 id="company"
                 name="company"
@@ -225,6 +349,22 @@ const MobileReservationPage = () => {
                 errorMsg={errors.department}
                 ref={(el) => (inputRefs.current.department = el)}
                 required
+              />
+            </div>
+            <div className="item">
+              <Dropdown
+                colLabel={"직군"}
+                labelRequired={true}
+                selectedType="box"
+                readonly={false}
+                showPosition="show-bottom"
+                getCurrentText={
+                  jobValue ? jobValue.value : "직군을 선택해 주세요."
+                }
+                options={jobOptions}
+                onChanage={handleJobChange}
+                errorMsg={errors.job_category}
+                ref={(el) => (inputRefs.current.job_category = el)}
               />
             </div>
             <div className="item">
@@ -304,6 +444,7 @@ const MobileReservationPage = () => {
               title={"등록하기"}
               btnSize={"lg"}
               btnColor={"squp"}
+              className={"gtn-cover gtn-submit"}
               disabled={!isFormValid}
               onClick={handleSubmit}
             />

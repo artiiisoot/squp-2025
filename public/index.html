@@ -1,55 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- <meta name="theme-color" content="#ff8400" /> -->
-    <meta name="color-scheme" content="light">
-    <meta name="theme-color" content="#ffffff">
+<html lang="ko">
 
-    <meta name="keywords" content="라온, 라온시큐어, 시큐업, 시큐업세미나, SQUP, Security IQ UP " />
-    <meta name="description" content="시큐업 세미나(Security IQ UP)는 라온시큐어에서 매년 주최하는 컨퍼런스로 IT, 보안, 인증 분야에서 매해 이슈화 되고 있는 업계 소식을 바탕으로 새로운 기술, 제품을 소개하는 자리입니다." />
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- <meta name="theme-color" content="#ff8400" /> -->
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="keywords" content="시큐업, 시큐업세미나, SQUP, Security IQ UP, 2025시큐업, 시큐업2025" />
+  <meta name="description"
+    content="시큐업 세미나(Security IQ UP)는 라온시큐어에서 매년 주최하는 컨퍼런스로 IT, 보안, 인증 분야에서 매해 이슈화 되고 있는 업계 소식을 바탕으로 새로운 기술, 제품을 소개하는 자리입니다." />
 
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-   
-    <!-- 구글 태그매니저 코드 / Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-KK24G4XW');</script>
-    <!-- End Google Tag Manager -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="2025 시큐업 & 해커톤">
+  <meta property="og:description"
+    content="시큐업 세미나(Security IQ UP)는 라온시큐어에서 매년 주최하는 컨퍼런스로 IT, 보안, 인증 분야에서 매해 이슈화 되고 있는 업계 소식을 바탕으로 새로운 기술, 제품을 소개하는 자리입니다.">
+  <meta property="og:image" content="%PUBLIC_URL%/og_img.png" />
+  <meta property="og:url" content="https://www.squp.kr/2025/">
+  <meta property="og:site_name" content="2025 시큐업 & 해커톤">
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YV0VRKNGKZ"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+  <meta http-equiv="author" content="2025 시큐업 & 해커톤">
+  <meta http-equiv="subject" content="2025 시큐업 & 해커톤">
+  <meta http-equiv="title" content="2025 시큐업 & 해커톤">
 
-      gtag('config', 'G-YV0VRKNGKZ');
-    </script>
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-    <!-- 네이버 사이트 소유확인 코드 -->
-    <meta name="naver-site-verification" content="9bca788066ed84a22297d5ba4c2fcc9c31fe4d27" />
+  <!-- 구글 태그매니저 코드 / Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KK24G4XW');</script>
+  <!-- End Google Tag Manager -->
 
-    <title>2025 시큐업 & 해커톤</title>
-  </head>
-  <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK24G4XW"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YV0VRKNGKZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-    <!-- End Google Tag Manager (noscript) -->
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-  </body>
+    gtag('config', 'G-YV0VRKNGKZ');
+  </script>
+
+  <!-- 네이버 사이트 소유확인 코드 -->
+  <meta name="naver-site-verification" content="9bca788066ed84a22297d5ba4c2fcc9c31fe4d27" />
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <script>
+
+    /// load jQuery in no-conflict mode
+    jQuery.noConflict();
+
+    /// run the following script using our jQuery library
+
+    (function ($) {
+
+      /// dom ready
+      $(function () {
+
+        /// add gtm.click handlers
+
+        $('body').on('click', function (e) {
+
+          dataLayer.push({
+
+            "gtm.element": e.target,
+
+            "gtm.elementClasses": $(e.target).attr('class'),
+
+            "gtm.elementId": $(e.target).attr('id'),
+
+            "gtm.elementTarget": e.target,
+
+            "gtm.elementUrl": $(e.target).attr('href'),
+
+            "event": "gtm.click"
+
+          });
+
+        });
+
+        /// add gtm.linkClick handlers
+
+        $(document).on('click', 'a', function (e) {
+
+          dataLayer.push({
+
+            "gtm.element": e.currentTarget,
+
+            "gtm.elementClasses": $(e.currentTarget).attr('class'),
+
+            "gtm.elementId": $(e.currentTarget).attr('id'),
+
+            "gtm.elementTarget": e.target,
+
+            "gtm.elementUrl": $(e.currentTarget).attr('href'),
+
+            "event": "gtm.linkClick"
+
+          });
+
+        });
+
+      });
+
+    })(jQuery);
+  </script>
+
+  <title>2025 시큐업 & 해커톤</title>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK24G4XW" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- End Google Tag Manager (noscript) -->
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+</body>
+
 </html>
-
-
-
-
-
-

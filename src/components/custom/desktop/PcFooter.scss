@@ -16,7 +16,7 @@
     }
   }
   .raon-logo {
-    @include Size(5.5rem, 2.4375rem);
+    @include Size(5.5rem, auto);
     @include PaddingY(0.25rem);
     @include PaddingX(0.25rem);
   }

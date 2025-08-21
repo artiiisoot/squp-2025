@@ -4,62 +4,75 @@
 }
 
 #Intro {
-  @include Size(100%, 100svh);
+  @include Size(100%, vw(498));
   padding: unset;
   position: relative;
-  background: radial-gradient(
-    273.25% 98.54% at 83.13% 98%,
-    #fc435b 0%,
-    #da3a58 3%,
-    #ac2e55 9%,
-    #832352 14%,
-    #611a4f 20%,
-    #45124d 26%,
-    #300d4b 33%,
-    #20094a 40%,
-    #17064a 49%,
-    #15064a 61%,
-    #0f043b 70%,
-    #04011f 89%,
-    #000015 100%
-  );
-  &::before {
-    content: "";
-    @include FlexBox;
-    @include Size(100%, 100%);
-    position: absolute;
-    background: url("../../../assets/images/home/bg_line.svg");
-    background-size: 100vw;
-    background-repeat: no-repeat;
-    background-position: bottom -6rem right -6rem;
-  }
+  background: url("../../../assets/images/home/bg_img.png") center center /
+      cover no-repeat,
+    linear-gradient(
+      274deg,
+      rgba(0, 0, 0, 0) 33.11%,
+      rgba(0, 16, 165, 0.2) 83.88%
+    ),
+    linear-gradient(
+      94deg,
+      rgba(0, 0, 0, 0) 51.74%,
+      rgba(190, 51, 86, 0.12) 73.91%,
+      rgba(190, 51, 86, 0.4) 104.44%
+    ),
+    linear-gradient(
+      94deg,
+      rgba(29, 0, 105, 0.2) 3.8%,
+      rgba(0, 0, 0, 0.2) 56.02%
+    ),
+    radial-gradient(
+      118.3% 83.32% at 50% 53.02%,
+      #000 0%,
+      #150d2d 40.14%,
+      #18064a 100%
+    );
   .section-container {
     @include FlexBox(column, center, center);
     @include Size(100%, 100%);
-    gap: 0.875rem;
+    // gap: vw(24);
+    gap: 1.5rem;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     .squp-logo {
-      @include Size(7.6875rem, 3.75rem);
+      // @include Size(vw(160), vw(78));
+      @include Size(10rem, 4.875rem);
     }
     .raon-logo {
       @include Size(3.125rem, 1.375rem);
     }
-    .title {
+    .context {
       @include FlexBox(column, center, center);
-      color: $G00;
-      p {
-        font-size: 1.125rem;
+      // @include Size(100%, 100%);
+      // gap: vw(10);
+      gap: 0.625rem;
+      .title {
+        @include FlexBox(column, center, center);
+        color: $G00;
+        h5 {
+          // font-size: vw(28);
+          font-size: 1.75rem;
+        }
       }
-    }
-    .info-text {
-      @include FlexBox(column, center, center);
-      font-size: 0.875rem;
-      color: $G00;
-      p {
-        font-size: inherit;
+      .info-text {
+        @include FlexBox(column, center, center);
+        // gap: vw(4);
+        color: $G00;
+        .item {
+          @include FlexBox;
+          gap: 0.5rem;
+          p {
+            // font-size: vw(12);
+            font-size: 0.75rem;
+            font-weight: 600;
+          }
+        }
       }
     }
   }
@@ -70,6 +83,110 @@
     transform: translate3d(-50%, 0, 0);
     color: $G00;
     animation: ArrowInfiniteY 1s ease-in-out infinite;
+  }
+}
+
+#MainVideo {
+  position: relative;
+  padding: unset;
+  .video-content {
+    @include Size(100%, 100%);
+    aspect-ratio: 1/1;
+    position: relative;
+  }
+  .dim {
+    @include Size(100%, 100%);
+    aspect-ratio: 1/1;
+    position: absolute;
+    top: 0;
+    background: rgba($color: $G100, $alpha: 0.4);
+    z-index: 1;
+  }
+  video {
+    @include Size(100%, 100%);
+    aspect-ratio: 1/1;
+    position: absolute;
+    top: 0;
+    object-fit: cover;
+  }
+
+  // .video-container {
+  //   width: 100%;
+  //   height: 0;
+  //   padding-top: 56.25%; /* 가장 중요 */
+  //   position: relative;
+  //   iframe {
+  //     width: 100%;
+  //     height: 100%;
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //   }
+  // }
+
+  // .video-obj {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   background: url("../../../assets/video/main_video.mp4") center center
+  //     no-repeat;
+  //   background-size: cover;
+  // }
+  .section-container {
+    @include FlexBox(column, center, center);
+    @include Size(100%, 100%);
+    // gap: vw(24);
+    gap: 1.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    .squp-logo {
+      // @include Size(vw(160), vw(78));
+      @include Size(10rem, 4.875rem);
+    }
+    .raon-logo {
+      @include Size(3.125rem, 1.375rem);
+    }
+    .context {
+      @include FlexBox(column, center, center);
+      // gap: vw(10);
+      gap: 0.625rem;
+      .title {
+        @include FlexBox(column, center, center);
+        color: $G00;
+        h5 {
+          // font-size: vw(28);
+          font-size: 1.75rem;
+        }
+      }
+      .info-text {
+        @include FlexBox(column, center, center);
+        // gap: vw(4);
+        color: $G00;
+        .item {
+          @include FlexBox;
+          gap: 0.5rem;
+          p {
+            // font-size: vw(12);
+            font-size: 0.75rem;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+  .arrow {
+    position: absolute;
+    left: 50%;
+    bottom: 1rem;
+    transform: translate3d(-50%, 0, 0);
+    color: $G00;
+    animation: ArrowInfiniteY 1s ease-in-out infinite;
+    z-index: 3;
   }
 }
 

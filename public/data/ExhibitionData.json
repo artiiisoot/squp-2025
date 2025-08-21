@@ -3,7 +3,7 @@
     {
       "id": 1,
       "title": "블록체인",
-      "subtitle": "2025 시큐업 세미나 부스 체험존",
+      "subtitle": "2025 시큐업 전시 부스",
       "grid": "flex-col",
       "list": [
         {
@@ -43,7 +43,7 @@
     {
       "id": 2,
       "title": "제로트러스트",
-      "subtitle": "2025 시큐업 세미나 부스 체험존",
+      "subtitle": "2025 시큐업 전시 부스",
       "grid": "flex-col",
       "list": [
         {
@@ -83,7 +83,7 @@
     {
       "id": 3,
       "title": "양자내성암호",
-      "subtitle": "2025 시큐업 세미나 부스 체험존",
+      "subtitle": "2025 시큐업 전시 부스",
       "grid": "flex-col",
       "list": [
         {
@@ -103,7 +103,7 @@
     {
       "id": 4,
       "title": "AI / 딥페이크",
-      "subtitle": "2025 시큐업 세미나 부스 체험존",
+      "subtitle": "2025 시큐업 전시 부스",
       "grid": "flex-col",
       "list": [
         {
@@ -124,7 +124,7 @@
     {
       "id": 5,
       "title": "메타버스",
-      "subtitle": "2025 시큐업 세미나 부스 체험존",
+      "subtitle": "2025 시큐업 전시 부스",
       "grid": "flex-col",
       "list": [
         {
@@ -144,11 +144,11 @@
     {
       "id": 6,
       "title": "라온메타 콘텐츠존",
-      "subtitle": "2025 시큐업 세미나 부스 체험존",
+      "subtitle": "2025 시큐업 전시 부스",
       "grid": "grid",
       "list": [
         {
-          "number": "부스 09 : 그리다텍",
+          "number": "부스 09 : 그리다텍㈜",
           "booth": [
             {
               "context": "VR 동작인식 특화 간호술기 실습"
@@ -180,7 +180,7 @@
           ]
         },
         {
-          "number": "부스 13 : ㈜빅픽쳐스",
+          "number": "부스 13 : 빅픽쳐스㈜",
           "booth": [
             {
               "context": "VR 기반의 지게차, 굴착기 조종훈련"

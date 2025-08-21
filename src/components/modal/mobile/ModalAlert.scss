@@ -7,6 +7,9 @@
       @include FlexBox(column, center, center);
       gap: 0.25rem;
       color: $G60;
+      font-size: 0.875rem;
+      text-align: center;
+      word-break: keep-all;
     }
   }
 }

@@ -56,10 +56,10 @@ const PcReservationListPage = () => {
       text: "이메일",
       value: "ra_email",
     },
-    {
-      text: "회사명",
-      value: "ra_company",
-    },
+    // {
+    //   text: "회사명",
+    //   value: "ra_company",
+    // },
   ];
   const sortOption = [
     {
@@ -180,8 +180,11 @@ const PcReservationListPage = () => {
         이름: item.name,
         휴대폰번호: item.phone,
         이메일: item.email,
-        직급직책: item.position,
+        업종: item.industry,
         회사명: item.company,
+        부서명: item.department,
+        직군: item.job_category,
+        직급직책: item.position,
         관심트랙: item.fav_content,
         등록일: item.wdate,
       }));
@@ -323,10 +326,19 @@ const PcReservationListPage = () => {
                   <p>이메일</p>
                 </div>
                 <div className="th">
-                  <p>직급/직책</p>
+                  <p>업종</p>
                 </div>
                 <div className="th">
                   <p>회사명</p>
+                </div>
+                <div className="th">
+                  <p>부서명</p>
+                </div>
+                <div className="th">
+                  <p>직군</p>
+                </div>
+                <div className="th">
+                  <p>직급/직책</p>
                 </div>
                 <div className="th">
                   <p>관심트랙</p>
@@ -355,10 +367,19 @@ const PcReservationListPage = () => {
                       <p>{item.email}</p>
                     </div>
                     <div className="td">
-                      <p>{item.position}</p>
+                      <p>{item.industry}</p>
                     </div>
                     <div className="td">
                       <p>{item.company}</p>
+                    </div>
+                    <div className="td">
+                      <p>{item.department}</p>
+                    </div>
+                    <div className="td">
+                      <p>{item.job_category}</p>
+                    </div>
+                    <div className="td">
+                      <p>{item.position}</p>
                     </div>
                     <div className="td">
                       <p>{item.fav_content}</p>

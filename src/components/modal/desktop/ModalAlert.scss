@@ -9,6 +9,8 @@
       @include FlexBox(column, center, center);
       gap: 0.25rem;
       color: $G60;
+      text-align: center;
+      word-break: keep-all;
     }
   }
 }

@@ -55,10 +55,10 @@ const MobileReservationListPage = () => {
       text: "이메일",
       value: "ra_email",
     },
-    {
-      text: "회사명",
-      value: "ra_company",
-    },
+    // {
+    //   text: "회사명",
+    //   value: "ra_company",
+    // },
   ];
   const sortOption = [
     {
@@ -181,8 +181,11 @@ const MobileReservationListPage = () => {
         이름: item.name,
         휴대폰번호: item.phone,
         이메일: item.email,
-        직급직책: item.position,
+        업종: item.industry,
         회사명: item.company,
+        부서명: item.department,
+        직군: item.job_category,
+        직급직책: item.position,
         관심트랙: item.fav_content,
         등록일: item.wdate,
       }));

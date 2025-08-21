@@ -17,7 +17,7 @@ const EarlyBirdEvent = () => {
     {
       step: 2,
       context:
-        "이메일로 발행 받은 배지를 \n 시큐업 행사 현장 데스크에 인증하기!",
+        "이메일로 발행 받은 배지를 시큐업 \n 행사 현장 데스크에 인증하기!",
     },
     {
       step: 1,
@@ -54,7 +54,7 @@ const EarlyBirdEvent = () => {
               <div className="step-item" key={idx}>
                 <span>{`STEP ${idx + 1}`}</span>
                 <div className="context">
-                  <p>{step.context}</p>
+                  <p>{parse(formatText(step.context))}</p>
                 </div>
               </div>
             ))}
@@ -62,7 +62,7 @@ const EarlyBirdEvent = () => {
 
           <span>
             (사전등록 완료 후, 3일 내 제출해주신 메일주소로 [2025 시큐업
-            얼리버드배지]가 발송됩니다.)
+            얼리버드 배지]가 발송됩니다.)
           </span>
         </div>
       </div>

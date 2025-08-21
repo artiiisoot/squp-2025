@@ -2,6 +2,8 @@
   .modal-body {
     @include PaddingY(1rem);
     @include PaddingX(1rem);
+    max-height: 80vh;
+    overflow-y: auto;
 
     .list-group {
       @include FlexBox(column, unset, unset);

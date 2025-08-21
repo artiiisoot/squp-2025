@@ -9,10 +9,11 @@ import Dropdown from "@/components/common/Dropdown";
 // 오브젝트
 // import RaonLogoWhite from "@/assets/images/raon_logo_white.svg";
 import RaonLogoWhite from "@/assets/images/raon_logo_white.png";
-import SnsCircleFacebook from "@/assets/images/footer/sns/circle_facebook.svg";
 import SnsCircleBlog from "@/assets/images/footer/sns/circle_blog.svg";
+import SnsCircleFacebook from "@/assets/images/footer/sns/circle_facebook.svg";
 import SnsCircleInstagram from "@/assets/images/footer/sns/circle_instagram.svg";
 import SnsCircleYoutube from "@/assets/images/footer/sns/circle_youtube.svg";
+import SnsCircleX from "@/assets/images/footer/sns/circle_x.svg";
 import SnsCircleLinkedin from "@/assets/images/footer/sns/circle_linkedin.svg";
 
 const PcFooter = () => {
@@ -33,14 +34,14 @@ const PcFooter = () => {
 
   const snsButtons = [
     {
-      img: SnsCircleFacebook,
-      alt: "페이스북",
-      url: "https://www.facebook.com/raonsecure",
-    },
-    {
       img: SnsCircleBlog,
       alt: "블로그",
       url: "https://blog.naver.com/funraon",
+    },
+    {
+      img: SnsCircleFacebook,
+      alt: "페이스북",
+      url: "https://www.facebook.com/raonsecure",
     },
     {
       img: SnsCircleInstagram,
@@ -51,6 +52,11 @@ const PcFooter = () => {
       img: SnsCircleYoutube,
       alt: "유튜브",
       url: "https://www.youtube.com/channel/UCKolDleelO3jVKNDO35nDOg",
+    },
+    {
+      img: SnsCircleX,
+      alt: "X",
+      url: "https://x.com/raonsecure",
     },
     {
       img: SnsCircleLinkedin,

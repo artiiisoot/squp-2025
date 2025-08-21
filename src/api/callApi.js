@@ -1,9 +1,9 @@
 import CryptoJS from "crypto-js";
 // const BASE = "https://squp.kr/api/api_copy.php";
-// const BASE = "https://cxuxdev12.cafe24.com/api/api_copy.php";
+const BASE = "https://cxuxdev12.cafe24.com/api/api_copy.php";
 // const KEY = "G7m5zUk9P3xL1qW2erE8BfK0TgYdR4sN6VoJpCzMhXaL9lK3";
 
-const BASE = process.env.REACT_APP_API_BASE_OFFICIAL_URL;
+// const BASE = process.env.REACT_APP_API_BASE_OFFICIAL_URL;
 const KEY = process.env.REACT_APP_API_KEY;
 
 export async function callApi({ endpoint = "", method = "POST", body = null }) {

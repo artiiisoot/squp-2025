@@ -84,9 +84,9 @@ function BottomBanner() {
       <div className="page-container">
         <div className="content">
           {isMobile ? (
-            <h5>지금 바로 사전 예약 하러가기</h5>
+            <h5>지금 바로 사전등록하기</h5>
           ) : (
-            <h3>지금 바로 사전 예약 하러가기</h3>
+            <h3>지금 바로 사전등록하기</h3>
           )}
           <Icon icon="arrow_right" size={isMobile ? "2rem" : "3.5rem"} />
         </div>

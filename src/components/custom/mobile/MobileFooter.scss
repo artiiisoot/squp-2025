@@ -16,7 +16,11 @@
       }
     }
     .group {
-      @include FlexBox(column, flex-start, space-between);
+      // @include FlexBox(column, flex-start, space-between);
+      @include FlexBox(row, center, space-between);
+      > p {
+        font-size: 0.875rem;
+      }
       .sns-group {
         @include FlexBox;
         gap: 0.5rem;

@@ -26,6 +26,7 @@ import EventImg from "@/assets/images/home/event/event_img.png";
 import LocationImg from "@/assets/images/home/location/location_img.png";
 import HostImg from "@/assets/images/home/partners/host/mo_host.png";
 import SponsorImg from "@/assets/images/home/partners/sponsor/mo_sponsor.png";
+import MainVideo from "@/assets/video/main_video.mp4";
 
 const MobileHomePage = () => {
   const dispatch = useDispatch();
@@ -129,30 +130,79 @@ const MobileHomePage = () => {
 
   return (
     <article id="MobileHomePage">
-      <section id="Intro">
+      {/* <section id="Intro">
         <div className="section-container flex-col">
-          {/* {isMobile ? <h4>INTRO TITLE</h4> : <h3>INTRO TITLE</h3>} */}
-
           <div className="squp-logo">
             <img src={SqupLogoColor2} alt="squp_logo_color" />
           </div>
 
-          <div className="title">
-            <h5>Web3 & AI로 연결되는 미래</h5>
-            <p>2025 시큐업 & 해커톤</p>
-          </div>
+          <div className="context">
+            <div className="title">
+              <h5>Web3 & AI로 연결되는 미래</h5>
+            </div>
 
-          <div className="info-text">
-            <p>2025. 09. 23(화)</p>
-            <p>COEX 3F Conference Room E Hall</p>
-          </div>
-
-          <div className="raon-logo">
-            <img src={RaonLogoWhite} alt="raon_logo_white" />
+            <div className="info-text">
+              <div className="item">
+                <p>일시</p>
+                <p>|</p>
+                <p>2025. 09. 23(화)</p>
+              </div>
+              <div className="item">
+                <p>장소</p>
+                <p>|</p>
+                <p>COEX 3F Conference Room E Hall</p>
+              </div>
+            </div>
           </div>
         </div>
 
         <Icon icon="chevron_down" size="3rem" className="arrow" />
+      </section> */}
+
+      <section id="MainVideo">
+        {/* <div className="video-container"> */}
+        <div className="video-content">
+          <div className="section-container flex-col">
+            <div className="squp-logo">
+              <img src={SqupLogoColor2} alt="squp_logo_color" />
+            </div>
+
+            <div className="context">
+              <div className="title">
+                <h5>Web3 & AI로 연결되는 미래</h5>
+              </div>
+
+              <div className="info-text">
+                <div className="item">
+                  <p>일시</p>
+                  <p>|</p>
+                  <p>2025. 09. 23(화)</p>
+                </div>
+                <div className="item">
+                  <p>장소</p>
+                  <p>|</p>
+                  <p>COEX 3F Conference Room E Hall</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <Icon icon="chevron_down" size="3rem" className="arrow" />
+        </div>
+
+        <div className="dim" />
+        <video autoPlay muted loop playsInline>
+          <source src={MainVideo} />
+        </video>
+        {/* <iframe
+            src="https://www.youtube.com/embed/HiFYkbk6pJo?controls=0&autoplay=1&loop=1&mute=1&playlist=HiFYkbk6pJo"
+            title="시큐업 main"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe> */}
+        {/* </div> */}
       </section>
 
       <section id="Overview">
@@ -297,7 +347,7 @@ const MobileHomePage = () => {
       </section>
 
       <section id="Location">
-        <SectionTitle title="LOCATION" />
+        <SectionTitle title="LOCATION" context="COEX 3층 컨퍼런스룸 E" />
         <div className="section-container">
           <div className="location-img">
             <img src={LocationImg} alt="location_img" />

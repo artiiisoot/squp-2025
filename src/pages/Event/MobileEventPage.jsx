@@ -70,7 +70,7 @@ const MobileEventPage = () => {
         <div className="page-container">
           <div id="Events">
             <PageTitle
-              title={"2025 시큐업 세미나 이벤트"}
+              title={"2025 시큐업 이벤트"}
               context={
                 "단 하나도 놓칠 수 없는 이벤트들! \n 지금 바로 확인하세요!"
               }
@@ -92,9 +92,9 @@ const MobileEventPage = () => {
 
           <div id="Exhibitions">
             <PageTitle
-              title={"2025 시큐업 세미나 부스 체험존"}
+              title={"2025 시큐업 전시 부스"}
               context={
-                "라온의 최신 기술과 제품, \n 시큐업 체험존에서 만나보세요!"
+                "라온의 최신 기술과 제품, \n 시큐업 전시 부스에서 만나보세요!"
               }
             />
 

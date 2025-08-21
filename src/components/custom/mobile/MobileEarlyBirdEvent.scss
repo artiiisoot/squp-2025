@@ -59,7 +59,7 @@
     .step-item {
       @include Size(100%, auto);
       position: relative;
-      span {
+      > span {
         @include FlexBox(row, center, center);
         @include Size(9.5rem, 2.5rem);
         @include Rounded(6.25rem);

@@ -4,7 +4,9 @@ import { handleESC } from "@/utils/utils";
 import useOutsideClick from "@/utils/useOutsideClick";
 
 const Dropdown = ({
-  labelTitle,
+  rowLabel,
+  colLabel,
+  labelRequired,
   selectedType,
   getCurrentText,
   getCurrentValue,
@@ -13,6 +15,8 @@ const Dropdown = ({
   initValue,
   onChanage,
   readonly,
+
+  errorMsg,
 }) => {
   const [isActive, setIsActive] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState({
@@ -22,6 +26,7 @@ const Dropdown = ({
   const [activeType, setActiveType] = useState("bg-gray");
   const [listType, setListType] = useState("");
   const dropdownRef = useRef(null);
+  const [selectedItem, setSelectedItem] = useState(false);
 
   const toggleOptionList = () => {
     if (readonly) {
@@ -40,6 +45,7 @@ const Dropdown = ({
       return option == item;
     });
     onChanage(returnValue);
+    setSelectedItem(true);
     setIsActive(false);
   };
 
@@ -63,38 +69,56 @@ const Dropdown = ({
 
   return (
     <div id="Dropdown" ref={dropdownRef}>
-      {labelTitle && (
-        <div className="input-label" v-if="labelTitle">
-          <span>{labelTitle}</span>
+      {rowLabel && (
+        <div className="row-label">
+          <p>{rowLabel}</p>
+          {labelRequired && <i className="required">*</i>}
         </div>
       )}
+      <div className="dropdown-wrapper">
+        {colLabel && (
+          <div className="col-label">
+            <p>{colLabel}</p>
+            {labelRequired && <i className="required">*</i>}
+          </div>
+        )}
 
-      <div
-        className={`dropdown-selected ${selectedType} ${isActive && "active"}`}
-        onClick={() => toggleOptionList()}
-      >
-        <p>{getCurrentText}</p>
-        <Icon icon="chevron_down" size="1.5rem" />
-        <span className="border" />
+        <div
+          className={`dropdown-selected ${selectedType} ${
+            isActive && "active"
+          }`}
+          onClick={() => toggleOptionList()}
+        >
+          <p className={selectedItem ? "" : "placehold"}>{getCurrentText}</p>
+          <Icon icon="chevron_down" size="1.5rem" />
+          <span className="border" />
+        </div>
+
+        {isActive && (
+          <div
+            className={`dropdown-list ${showPosition} ${
+              colLabel ? "padding-top" : ""
+            }`}
+          >
+            <ul className={listType}>
+              {options.map((item, idx) => (
+                <li
+                  className={`${activeType} ${
+                    selectedIndex.value == item.value ? "active" : ""
+                  }`}
+                  onClick={() => clickItem(item)}
+                  key={item.value}
+                >
+                  <p>{item.text}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {/* 에러메세지 */}
+        {errorMsg && <span className="error-msg">{errorMsg}</span>}
       </div>
-
-      {isActive && (
-        <div className={`dropdown-list ${showPosition}`}>
-          <ul className={listType}>
-            {options.map((item, idx) => (
-              <li
-                className={`${activeType} ${
-                  selectedIndex.value == item.value ? "active" : ""
-                }`}
-                onClick={() => clickItem(item)}
-                key={item.value}
-              >
-                <p>{item.text}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
     </div>
   );
 };
