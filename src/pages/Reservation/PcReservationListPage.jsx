@@ -180,10 +180,10 @@ const PcReservationListPage = () => {
         이름: item.name,
         휴대폰번호: item.phone,
         이메일: item.email,
-        업종: item.industry,
+        // 업종: item.industry,
         회사명: item.company,
         부서명: item.department,
-        직군: item.job_category,
+        // 직군: item.job_category,
         직급직책: item.position,
         관심트랙: item.fav_content,
         등록일: item.wdate,
@@ -325,18 +325,18 @@ const PcReservationListPage = () => {
                 <div className="th">
                   <p>이메일</p>
                 </div>
-                <div className="th">
+                {/* <div className="th">
                   <p>업종</p>
-                </div>
+                </div> */}
                 <div className="th">
                   <p>회사명</p>
                 </div>
                 <div className="th">
                   <p>부서명</p>
                 </div>
-                <div className="th">
+                {/* <div className="th">
                   <p>직군</p>
-                </div>
+                </div> */}
                 <div className="th">
                   <p>직급/직책</p>
                 </div>
@@ -366,18 +366,18 @@ const PcReservationListPage = () => {
                     <div className="td">
                       <p>{item.email}</p>
                     </div>
-                    <div className="td">
+                    {/* <div className="td">
                       <p>{item.industry}</p>
-                    </div>
+                    </div> */}
                     <div className="td">
                       <p>{item.company}</p>
                     </div>
                     <div className="td">
                       <p>{item.department}</p>
                     </div>
-                    <div className="td">
+                    {/* <div className="td">
                       <p>{item.job_category}</p>
-                    </div>
+                    </div> */}
                     <div className="td">
                       <p>{item.position}</p>
                     </div>

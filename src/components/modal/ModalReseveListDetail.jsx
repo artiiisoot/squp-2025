@@ -33,10 +33,10 @@ const ModalReseveListDetail = ({ selectItem }) => {
                   <p>이메일</p>
                   <p>{selectItem?.email}</p>
                 </li>
-                <li>
+                {/* <li>
                   <p>업종</p>
                   <p>{selectItem?.industry}</p>
-                </li>
+                </li> */}
                 <li>
                   <p>회사명</p>
                   <p>{selectItem?.company}</p>
@@ -45,10 +45,10 @@ const ModalReseveListDetail = ({ selectItem }) => {
                   <p>부서명</p>
                   <p>{selectItem?.department}</p>
                 </li>
-                <li>
+                {/* <li>
                   <p>직군</p>
                   <p>{selectItem?.job_category}</p>
-                </li>
+                </li> */}
                 <li>
                   <p>직급/직책</p>
                   <p>{selectItem?.position}</p>
