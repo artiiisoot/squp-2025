@@ -194,6 +194,46 @@
               "context": "K-POP 엔터테인먼트"
             }
           ]
+        },
+        {
+          "number": "포스터 보드 1 : ㈜브이알애드",
+          "booth": [
+            {
+              "context": "의료 VR 시뮬레이터"
+            }
+          ]
+        },
+        {
+          "number": "포스터 보드 2 : ㈜뉴베이스",
+          "booth": [
+            {
+              "context": "의료 실습 시뮬레이션"
+            }
+          ]
+        },
+        {
+          "number": "포스터 보드 3 : ㈜브이리스브이알",
+          "booth": [
+            {
+              "context": "VR 트럭, VR 직무훈련"
+            }
+          ]
+        },
+        {
+          "number": "포스터 보드 4 : ㈜아고라스",
+          "booth": [
+            {
+              "context": "AI, IT 실습 및 영어 교육"
+            }
+          ]
+        },
+        {
+          "number": "포스터 보드 5 : ㈜맞추다",
+          "booth": [
+            {
+              "context": "자격증 기출문제 풀이 서비스"
+            }
+          ]
         }
       ],
       "thumbImg": "exhibition_img_06.png",

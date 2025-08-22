@@ -139,7 +139,7 @@ const ReservationList = () => {
   };
 
   const handleListDetail = (idx) => {
-    console.log("idx", idx);
+    // console.log("idx", idx);
     const listItem = data?.[idx];
     setSelectItem(listItem);
     setIsModalOpen(true);
@@ -276,7 +276,7 @@ const ReservationList = () => {
   }, [filters]);
 
   useEffect(() => {
-    console.log("allData", allData);
+    // console.log("allData", allData);
   });
 
   return (

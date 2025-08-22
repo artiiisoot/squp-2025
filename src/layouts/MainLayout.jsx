@@ -28,7 +28,7 @@ const MainLayout = () => {
     } else {
       dispatch(setServerMode("DEV"));
     }
-    console.log("window.location", window.location);
+    // console.log("window.location", window.location);
   }, [location]);
 
   useModalObserver();

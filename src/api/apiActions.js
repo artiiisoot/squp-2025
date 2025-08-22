@@ -34,7 +34,7 @@ export const getData = createAsyncThunk(
     }
 
     // console.log("per_page", response.per_page);
-    console.log("payload1", response);
+    // console.log("payload1", response);
 
     return response;
   }
@@ -49,13 +49,13 @@ export const getAllData = createAsyncThunk(
       useHash: true,
     });
 
-    // if (response?.data) {
-    //   dispatch(setAllData(response.data));
-    //   dispatch(setResponse(response.query));
-    //   dispatch(setPage(response.page));
-    //   dispatch(setPerPage(response.per_page));
-    //   dispatch(setTotal(response.total));
-    // }
+    if (response?.data) {
+      dispatch(setAllData(response.data));
+      dispatch(setResponse(response.query));
+      dispatch(setPage(response.page));
+      dispatch(setPerPage(response.per_page));
+      dispatch(setTotal(response.total));
+    }
 
     // // console.log("per_page", response.per_page);
     // console.log("payload2", response.data);

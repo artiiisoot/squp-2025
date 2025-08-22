@@ -36,7 +36,7 @@ const ApiTest = () => {
     phone: "",
     email: "",
     company: "",
-    year: 2025
+    year: 2025,
   });
 
   const [errorMessage, setErrorMessage] = useState("");
@@ -158,9 +158,7 @@ const ApiTest = () => {
         <pre>{JSON.stringify(data, null, 2)}</pre>
       </div> */}
 
-      <pre>
-        {res}
-      </pre>
+      <pre>{res}</pre>
 
       <div>
         <h2>기본 API 호출</h2>

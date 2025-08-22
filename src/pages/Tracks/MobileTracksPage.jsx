@@ -42,7 +42,7 @@ const MobileTracksPage = () => {
         const response = await fetchTracksData();
         if (response?.data) {
           setData(response.data);
-          console.log("response", response.data);
+          // console.log("response", response.data);
         }
       } catch (error) {
         console.error("Error fetching tracks data:", error);

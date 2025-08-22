@@ -35,7 +35,7 @@ function BottomBanner() {
   }, []);
 
   useEffect(() => {
-    console.log("endPosition", endPosition);
+    // console.log("endPosition", endPosition);
   });
 
   useEffect(() => {
@@ -65,8 +65,8 @@ function BottomBanner() {
       }
     });
 
-    console.log("loadedCount", loadedCount);
-    console.log("images", images);
+    // console.log("loadedCount", loadedCount);
+    // console.log("images", images);
 
     // 모든 이미지가 이미 로딩된 경우
     if (loadedCount === images.length) {
