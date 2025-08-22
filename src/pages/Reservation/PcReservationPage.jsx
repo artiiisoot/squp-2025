@@ -23,10 +23,10 @@ const initialFields = {
   name: "",
   phone: "",
   email: "",
-  industry: "",
+  // industry: "",
   company: "",
   department: "",
-  job_category: "",
+  // job_category: "",
   position: "",
   fav_content: "",
 };
@@ -122,25 +122,20 @@ const PcReservationPage = () => {
     let newValue = value;
 
     // 특수문자 제거 대상
-    const specialCharFields = ["name", "department", "position"];
-
-    specialCharFields.forEach((field) => {
-      if (name === field) {
-        newValue = value.replace(/[^a-zA-Zㄱ-ㅎ가-힣]/g, "");
-      }
-    });
+    const specialCharFields = ["name", "department", "position", "company"];
+    if (specialCharFields.includes(name)) {
+      newValue = newValue.replace(/^\s+/, ""); // 앞 공백 제거
+      newValue = newValue.replace(/\s{2,}/g, " "); // 연속 공백 1칸
+    }
 
     // 전화번호: 숫자만
     if (name === "phone") {
-      newValue = value.replace(/-/g, "").slice(0, 11);
+      newValue = value.replace(/[^0-9]/g, "").slice(0, 11);
     }
-    // 이메일: 공백 제거
+
+    // 이메일: 공백 제거, 일부 특수문자 허용
     if (name === "email") {
-      newValue = newValue.replace(/\s/g, "");
-    }
-    // 이메일: 공백 제거
-    if (name === "company") {
-      newValue = value.replace(/[^a-zA-Zㄱ-ㅎ가-힣0-9]/g, "");
+      newValue = value.replace(/[^a-zA-Z0-9@._%+-]/g, "").replace(/\s/g, "");
     }
 
     setFields((prev) => ({
@@ -149,6 +144,21 @@ const PcReservationPage = () => {
       year: 2025,
       type: "squp",
     }));
+
+    // --- 에러 즉시 검증 ---
+    const newErrors = { ...errors };
+    const validation = validateFields(
+      { ...fields, [name]: newValue },
+      agreements
+    );
+
+    if (validation[name]) {
+      newErrors[name] = validation[name];
+    } else {
+      delete newErrors[name];
+    }
+
+    setErrors(newErrors);
   };
 
   const handleCheckbox = () => {
@@ -188,7 +198,7 @@ const PcReservationPage = () => {
   };
 
   const handleIndustryChange = (item) => {
-    console.log("item", item);
+    // console.log("item", item);
 
     setIndustryValue(item);
     setFields((prev) => ({
@@ -197,7 +207,7 @@ const PcReservationPage = () => {
     }));
   };
   const handleJobChange = (item) => {
-    console.log("item", item);
+    // console.log("item", item);
     setFields((prev) => ({
       ...prev,
       job_category: item.value,
@@ -304,8 +314,8 @@ const PcReservationPage = () => {
                 required
               />
             </div>
-            <div className="item col-6">
-              {/* <Input
+            {/* <div className="item col-6"> */}
+            {/* <Input
                 id="업종데이터"
                 name="업종데이터"
                 rowLabel="업종"
@@ -318,7 +328,7 @@ const PcReservationPage = () => {
                 ref={(el) => (inputRefs.current.업종데이터 = el)}
                 required
               /> */}
-              <Dropdown
+            {/* <Dropdown
                 rowLabel={"업종"}
                 labelRequired={true}
                 selectedType="box"
@@ -332,7 +342,7 @@ const PcReservationPage = () => {
                 errorMsg={errors.industry}
                 ref={(el) => (inputRefs.current.industry = el)}
               />
-            </div>
+            </div> */}
             <div className="item col-6">
               <Input
                 id="company"
@@ -363,8 +373,8 @@ const PcReservationPage = () => {
                 required
               />
             </div>
-            <div className="item col-6">
-              {/* <Input
+            {/* <div className="item col-6"> */}
+            {/* <Input
                 id="직군데이터"
                 name="직군데이터"
                 rowLabel="직군"
@@ -377,7 +387,7 @@ const PcReservationPage = () => {
                 ref={(el) => (inputRefs.current.직군데이터 = el)}
                 required
               /> */}
-              <Dropdown
+            {/* <Dropdown
                 rowLabel={"직군"}
                 labelRequired={true}
                 selectedType="box"
@@ -391,7 +401,7 @@ const PcReservationPage = () => {
                 errorMsg={errors.job_category}
                 ref={(el) => (inputRefs.current.job_category = el)}
               />
-            </div>
+            </div> */}
             <div className="item col-6">
               <Input
                 id="position"
