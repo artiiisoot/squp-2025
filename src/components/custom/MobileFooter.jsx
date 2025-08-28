@@ -98,7 +98,7 @@ const MobileFooter = () => {
           showPosition="show-top"
           getCurrentText={"FAMILY SITE"}
           options={siteOption}
-          onChanage={handleTypeChange}
+          onChange={handleTypeChange}
         />
 
         <div className="group">

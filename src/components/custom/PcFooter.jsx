@@ -121,7 +121,7 @@ const PcFooter = () => {
             showPosition="show-top"
             getCurrentText={"FAMILY SITE"}
             options={siteOption}
-            onChanage={handleTypeChange}
+            onChange={handleTypeChange}
           />
         </div>
       </div>

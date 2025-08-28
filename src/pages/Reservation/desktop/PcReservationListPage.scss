@@ -8,6 +8,13 @@
   .table-wrapper {
     @include FlexBox(column, unset, unset);
     gap: 2.5rem;
+    .filter-group {
+      #Dropdown,
+      #LineButton {
+        max-width: 10rem;
+        min-width: 10rem;
+      }
+    }
   }
   .filter-group {
     #Dropdown {

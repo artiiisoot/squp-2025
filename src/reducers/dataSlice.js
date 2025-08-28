@@ -11,8 +11,8 @@ let initialState = {
     e_date: "",
     ra_sort: "desc",
   },
-  page: null,
-  per_page: null,
+  perPage: 10,
+  page: 1,
   total: null,
 };
 
@@ -39,7 +39,7 @@ const dataSlice = createSlice({
       state.page = action.payload;
     },
     setPerPage(state, action) {
-      state.per_page = action.payload;
+      state.perPage = action.payload;
     },
     setTotal(state, action) {
       state.total = action.payload;

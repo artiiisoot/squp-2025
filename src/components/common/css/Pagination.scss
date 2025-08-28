@@ -18,6 +18,10 @@
           color: $O100;
         }
       }
+      &.disabled {
+        cursor: not-allowed;
+        color: $lineG40;
+      }
     }
   }
 }

@@ -308,7 +308,7 @@ const ReservationList = () => {
                   getCurrentText={typeValue?.text || typeOption[0].text}
                   getCurrentValue={filters.ra_column}
                   options={typeOption}
-                  onChanage={handleTypeChange}
+                  onChange={handleTypeChange}
                 />
 
                 <Dropdown
@@ -320,7 +320,7 @@ const ReservationList = () => {
                   getCurrentText={sortValue?.text || sortOption[0].text}
                   getCurrentValue={filters.ra_sort}
                   options={sortOption}
-                  onChanage={handleSortChange}
+                  onChange={handleSortChange}
                 />
               </div>
 
@@ -362,7 +362,7 @@ const ReservationList = () => {
                 getCurrentText={typeValue?.text || typeOption[0].text}
                 getCurrentValue={filters.ra_column}
                 options={typeOption}
-                onChanage={handleTypeChange}
+                onChange={handleTypeChange}
               />
               <DatePicker
                 dateFormat="yyyy/MM/dd"
@@ -399,7 +399,7 @@ const ReservationList = () => {
                 getCurrentText={sortValue?.text || sortOption[0].text}
                 getCurrentValue={filters.ra_sort}
                 options={sortOption}
-                onChanage={handleSortChange}
+                onChange={handleSortChange}
               />
               <Button
                 title={"다운로드"}

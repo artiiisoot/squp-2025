@@ -325,7 +325,7 @@ const MobileReservationPage = () => {
                   industryValue ? industryValue.value : "업종을 선택해 주세요."
                 }
                 options={industryOptions}
-                onChanage={handleIndustryChange}
+                onChange={handleIndustryChange}
                 errorMsg={errors.industry}
                 ref={(el) => (inputRefs.current.industry = el)}
               />
@@ -371,7 +371,7 @@ const MobileReservationPage = () => {
                   jobValue ? jobValue.value : "직군을 선택해 주세요."
                 }
                 options={jobOptions}
-                onChanage={handleJobChange}
+                onChange={handleJobChange}
                 errorMsg={errors.job_category}
                 ref={(el) => (inputRefs.current.job_category = el)}
               />

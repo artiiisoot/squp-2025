@@ -27,7 +27,7 @@ const MobileReservationListPage = () => {
   const dispatch = useDispatch();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectItem, setSelectItem] = useState({});
-  const { data, res, page, per_page, total } = useSelector(
+  const { data, res, page, perPage, total } = useSelector(
     (state) => state.data
   );
 
@@ -36,6 +36,7 @@ const MobileReservationListPage = () => {
     search_text: "",
     s_date: "",
     e_date: "",
+    perPage: 10,
     ra_sort: "desc",
   });
   const typeOption = [
@@ -73,18 +74,34 @@ const MobileReservationListPage = () => {
 
   const [typeValue, setTypeValue] = useState(typeOption[0]);
   const [sortValue, setSortValue] = useState(sortOption[0]);
+
+  // 페이지네이션: 5개씩 표시
   const [totalPages, setTotalPages] = useState(1);
+  const maxVisible = 5;
+  const startPage = useMemo(() => {
+    return Math.floor((page - 1) / maxVisible) * maxVisible + 1;
+  }, [page]);
+  const endPage = useMemo(() => {
+    return Math.min(startPage + maxVisible - 1, totalPages);
+  }, [startPage, totalPages]);
+  const pagesToShow = useMemo(() => {
+    return Array.from(
+      { length: Math.max(endPage - startPage + 1, 0) },
+      (_, i) => startPage + i
+    );
+  }, [startPage, endPage]);
+
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
 
-  const pagesNumber = useMemo(() => {
-    const result = [];
-    for (let i = 0; i < totalPages; i++) {
-      result.push(i);
-    }
+  // const pagesNumber = useMemo(() => {
+  //   const result = [];
+  //   for (let i = 0; i < totalPages; i++) {
+  //     result.push(i);
+  //   }
 
-    return result;
-  }, [totalPages]);
+  //   return result;
+  // }, [totalPages]);
 
   // 검색 조건 필터 이벤트
   const handleFilterChange = (e) => {
@@ -222,17 +239,16 @@ const MobileReservationListPage = () => {
         // s_date: formatDatePicker(startDate),
         // e_date: formatDatePicker(endDate),
         page,
-        per_page,
         ra_year: 2025,
       })
     );
-  }, [page]);
+  }, [dispatch, page, filters]);
 
   useEffect(() => {
-    if (total && per_page) {
-      setTotalPages(Math.ceil(total / per_page));
+    if (total && perPage) {
+      setTotalPages(Math.ceil(total / perPage));
     }
-  }, [total, per_page]);
+  }, [total, perPage]);
 
   // 새로고침 시 새로운 데이터 불러오기
   useEffect(() => {
@@ -254,7 +270,7 @@ const MobileReservationListPage = () => {
               getCurrentText={typeValue?.text || typeOption[0].text}
               getCurrentValue={filters.ra_column}
               options={typeOption}
-              onChanage={handleTypeChange}
+              onChange={handleTypeChange}
             />
 
             <Dropdown
@@ -266,7 +282,7 @@ const MobileReservationListPage = () => {
               getCurrentText={sortValue?.text || sortOption[0].text}
               getCurrentValue={filters.ra_sort}
               options={sortOption}
-              onChanage={handleSortChange}
+              onChange={handleSortChange}
             />
           </div>
 
@@ -392,33 +408,40 @@ const MobileReservationListPage = () => {
 
           <div id="Pagination">
             <ul>
-              <li disabled={page === 1} onClick={() => handlePageChange(1)}>
+              <li
+                disabled={page === 1}
+                className={page === 1 ? "disabled" : ""}
+                onClick={() => handlePageChange(1)}
+              >
                 <Icon icon="chevrons_left" size="1.5rem" />
               </li>
               <li
                 disabled={page === 1}
+                className={page === 1 ? "disabled" : ""}
                 onClick={() => handlePageChange(page - 1)}
               >
                 <Icon icon="chevron_left" size="1.5rem" />
               </li>
-              {pagesNumber.map((_, idx) => (
+              {pagesToShow.map((num) => (
                 <li
-                  key={idx + 1}
-                  className={page === idx + 1 ? "number active" : "number"}
-                  disabled={page === idx + 1}
-                  onClick={() => handlePageChange(idx + 1)}
+                  key={num}
+                  className={page === num ? "number active" : "number"}
+                  disabled={page === num}
+                  onClick={() => handlePageChange(num)}
                 >
-                  {idx + 1}
+                  {num}
                 </li>
               ))}
               <li
                 disabled={page === totalPages}
+                className={page === totalPages ? "disabled" : ""}
                 onClick={() => handlePageChange(page + 1)}
               >
                 <Icon icon="chevron_right" size="1.5rem" />
               </li>
               <li
                 disabled={page === totalPages}
+                className={page === totalPages ? "disabled" : ""}
                 onClick={() => handlePageChange(totalPages)}
               >
                 <Icon icon="chevrons_right" size="1.5rem" />

@@ -13,7 +13,7 @@ const Dropdown = ({
   showPosition,
   options,
   initValue,
-  onChanage,
+  onChange,
   readonly,
 
   errorMsg,
@@ -44,7 +44,7 @@ const Dropdown = ({
     const returnValue = options.find((option) => {
       return option == item;
     });
-    onChanage(returnValue);
+    onChange(returnValue);
     setSelectedItem(true);
     setIsActive(false);
   };

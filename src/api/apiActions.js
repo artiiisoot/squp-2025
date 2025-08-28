@@ -28,8 +28,8 @@ export const getData = createAsyncThunk(
     if (response?.data) {
       dispatch(setData(response.data));
       dispatch(setResponse(response.query));
-      dispatch(setPage(response.page));
-      dispatch(setPerPage(response.per_page));
+      // dispatch(setPage(response.page));
+      // dispatch(setPerPage(response.perPage));
       dispatch(setTotal(response.total));
     }
 
@@ -52,8 +52,8 @@ export const getAllData = createAsyncThunk(
     if (response?.data) {
       dispatch(setAllData(response.data));
       dispatch(setResponse(response.query));
-      dispatch(setPage(response.page));
-      dispatch(setPerPage(response.per_page));
+      // dispatch(setPage(response.page));
+      // dispatch(setPerPage(response.per_page));
       dispatch(setTotal(response.total));
     }
 
