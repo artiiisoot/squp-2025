@@ -2,7 +2,7 @@
   "data": [
     {
       "id": 1,
-      "subtitle": "시큐업 현장등록 이벤트",
+      "subtitle": "시큐업 세미나 현장등록 이벤트",
       "title": "Welcome to 시큐업!",
       "thumbImg": "event_img_01.png",
       "detailImg": "event_img_01.png",
@@ -32,7 +32,7 @@
     },
     {
       "id": 2,
-      "subtitle": "경품 추첨 이벤트",
+      "subtitle": "시큐업 세미나 경품 추첨 이벤트",
       "title": "Lucky Draw",
       "thumbImg": "event_img_02.png",
       "detailImg": "event_img_02.png",
@@ -64,7 +64,7 @@
     },
     {
       "id": 3,
-      "subtitle": "인형 뽑기 이벤트",
+      "subtitle": "시큐업 세미나 인형 뽑기 이벤트",
       "title": "라온을 뽑아라!",
       "thumbImg": "event_img_03.png",
       "detailImg": "event_img_03.png",
@@ -96,7 +96,7 @@
     },
     {
       "id": 4,
-      "subtitle": "인스타그램 팔로우 이벤트",
+      "subtitle": "시큐업 세미나 인스타그램 팔로우 이벤트",
       "title": "Follow 라온 인스타그램!",
       "thumbImg": "event_img_04.png",
       "detailImg": "event_img_04.png",
@@ -131,7 +131,7 @@
     },
     {
       "id": 5,
-      "subtitle": "시큐업 스탬프 투어 이벤트",
+      "subtitle": "시큐업 세미나 스탬프 투어 이벤트",
       "title": "부스 스탬프 투어 이벤트",
       "thumbImg": "event_img_05.png",
       "detailImg": "event_img_05.png",
@@ -160,7 +160,7 @@
     },
     {
       "id": 6,
-      "subtitle": "사진촬영 & SNS 업로드 이벤트",
+      "subtitle": "시큐업 세미나 SNS 업로드 이벤트",
       "title": "라옹이와 포토 타임!",
       "thumbImg": "event_img_06.png",
       "detailImg": "event_img_06.png",

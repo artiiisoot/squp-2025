@@ -169,6 +169,7 @@ const MobileHomePage = () => {
 
             <div className="context">
               <div className="title">
+                <h1>시큐업 세미나</h1>
                 <h5>Web3 & AI로 연결되는 미래</h5>
               </div>
 

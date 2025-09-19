@@ -158,6 +158,11 @@
       .title {
         @include FlexBox(column, center, center);
         color: $G00;
+        h1 {
+          position: absolute;
+          visibility: hidden;
+          display: none;
+        }
         h5 {
           // font-size: vw(28);
           font-size: 1.75rem;
