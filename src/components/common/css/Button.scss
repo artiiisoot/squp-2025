@@ -76,8 +76,8 @@
       font-size: 1.75rem;
     }
     svg {
-      @include PaddingY(0.5rem);
-      @include PaddingX(0.5rem);
+      @include PaddingY(0.25rem);
+      @include PaddingX(0.25rem);
       @include Rounded(100%);
       color: $G00;
       background: $secondary;

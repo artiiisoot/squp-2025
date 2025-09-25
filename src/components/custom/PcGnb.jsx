@@ -1,6 +1,10 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
+import { useDispatch } from "react-redux";
+import { setIsShowModal } from "@/reducers/modalSlice";
+
+// 오브젝트
 // import SqupLogoColor from "@/assets/images/squp_logo_color.svg";
 // import SqupLogoWhite from "@/assets/images/squp_logo_white.svg";
 import SqupLogoColor from "@/assets/images/squp_logo_color.png";
@@ -8,6 +12,8 @@ import SqupLogoWhite from "@/assets/images/squp_logo_white.png";
 
 const PcGnb = ({ isFixed }) => {
   const location = useLocation();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const menus = [
     {
@@ -23,6 +29,16 @@ const PcGnb = ({ isFixed }) => {
       path: "/previous",
     },
   ];
+
+  const handleRegist = () => {
+    // navigate("/reservation");
+    dispatch(
+      setIsShowModal({
+        isShowModal: true,
+        type: "finish",
+      })
+    );
+  };
 
   return (
     <nav id="PcGnb" className={isFixed ? "fixed" : ""}>
@@ -45,11 +61,13 @@ const PcGnb = ({ isFixed }) => {
             </li>
           ))}
         </ul>
-        <ul className="right-menu">
+        {/* <ul className="right-menu">
           <li>
-            <Link to={"/reservation"}>사전등록</Link>
+            <Link to={"#"} onClick={() => handleRegist()}>
+              사전등록
+            </Link>
           </li>
-        </ul>
+        </ul> */}
       </div>
     </nav>
   );

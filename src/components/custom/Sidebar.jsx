@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { useDispatch, useSelector } from "react-redux";
-import { setIsCloseModal } from "@/reducers/modalSlice";
+import { setIsCloseModal, setIsShowModal } from "@/reducers/modalSlice";
 
 // 컴포넌트
 import Icon from "@/components/common/Icon";
@@ -34,8 +34,14 @@ const Sidebar = () => {
   };
 
   const handleMoveToReservation = () => {
-    navigate("/reservation");
-    dispatch(setIsCloseModal());
+    dispatch(
+      setIsShowModal({
+        isShowModal: true,
+        type: "finish",
+      })
+    );
+    // navigate("/reservation");
+    // dispatch(setIsCloseModal());
   };
 
   return (
@@ -60,7 +66,7 @@ const Sidebar = () => {
                   </li>
                 ))}
               </ul>
-              <Button
+              {/* <Button
                 title={"사전등록"}
                 btnColor={"squp-reverse"}
                 btnSize={"lg"}
@@ -68,7 +74,7 @@ const Sidebar = () => {
                 iconSize="1.75rem"
                 iconPosition="right"
                 onClick={handleMoveToReservation}
-              />
+              /> */}
             </div>
           </div>
         </div>

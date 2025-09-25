@@ -169,32 +169,38 @@ const PcReservationPage = () => {
   };
 
   const handleSubmit = () => {
-    if (isFormValid) {
-      const validation = validateFields(fields, agreements);
-      setErrors(validation);
-      if (Object.keys(validation).length > 0) {
-        const firstInvalid = Object.keys(validation)[0];
-        inputRefs.current[firstInvalid]?.focus();
+    dispatch(
+      setIsShowModal({
+        isShowModal: true,
+        type: "finish",
+      })
+    );
+    // if (isFormValid) {
+    //   const validation = validateFields(fields, agreements);
+    //   setErrors(validation);
+    //   if (Object.keys(validation).length > 0) {
+    //     const firstInvalid = Object.keys(validation)[0];
+    //     inputRefs.current[firstInvalid]?.focus();
 
-        return;
-      }
+    //     return;
+    //   }
 
-      dispatch(
-        setIsModalAlert({
-          isShowModal: true,
-          title: null,
-          context:
-            "사전등록이 완료되었습니다. <br /> 성원에 감사드리며, 3일 내 제출해주신 메일주소로 <br /> [2025 시큐업 얼리버드배지]가 발송될 예정이오니, <br /> 현장에서 진행하는 사전등록 이벤트에 많은 참여 바랍니다.",
-          btnName: "확인",
-          onConfirm: () => {
-            dispatch(setPopupReset());
-          },
-        })
-      );
-      dispatch(reserve(fields));
-      setFields(initialFields);
-      navigate("/");
-    }
+    //   dispatch(
+    //     setIsModalAlert({
+    //       isShowModal: true,
+    //       title: null,
+    //       context:
+    //         "사전등록이 완료되었습니다. <br /> 성원에 감사드리며, 3일 내 제출해주신 메일주소로 <br /> [2025 시큐업 얼리버드배지]가 발송될 예정이오니, <br /> 현장에서 진행하는 사전등록 이벤트에 많은 참여 바랍니다.",
+    //       btnName: "확인",
+    //       onConfirm: () => {
+    //         dispatch(setPopupReset());
+    //       },
+    //     })
+    //   );
+    //   dispatch(reserve(fields));
+    //   setFields(initialFields);
+    //   navigate("/");
+    // }
   };
 
   const handleIndustryChange = (item) => {

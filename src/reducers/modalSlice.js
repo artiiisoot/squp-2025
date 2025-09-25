@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 let initialState = {
   isShowModal: false,
   type: "",
+  title: "",
 };
 
 const modalSlice = createSlice({
@@ -12,6 +13,7 @@ const modalSlice = createSlice({
     setIsShowModal(state, action) {
       state.isShowModal = action.payload.isShowModal;
       state.type = action.payload.type;
+      state.title = action.payload.title;
     },
     setIsCloseModal(state) {
       Object.assign(state, initialState);

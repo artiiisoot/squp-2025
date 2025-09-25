@@ -197,7 +197,7 @@
 
 #Overview {
   background: $section-bg;
-  min-height: 75.125rem;
+  // min-height: 75.125rem;
   .section-container {
     @include FlexBox(column, unset, unset);
     gap: 1.5rem;
@@ -228,6 +228,49 @@
   }
 }
 
+#Replay {
+  color: $G00;
+  background: $primary;
+  .section-container {
+    @include FlexBox(column, center, center);
+    gap: 1.5rem;
+    h5 {
+      @include Size(fit-content, auto);
+      position: relative;
+      text-align: center;
+      span {
+        position: static;
+        z-index: 1;
+      }
+      span.line-highlight {
+        content: "";
+        @include Size(100%, 0.875rem);
+        position: absolute;
+        bottom: 0;
+        background: rgba($color: $secondary, $alpha: 0.5);
+        z-index: 0;
+      }
+      &.inline {
+        display: inline-block !important;
+        font-weight: 400;
+        color: $G30;
+        b {
+          color: $G00;
+        }
+      }
+    }
+  }
+  .button-group {
+    @include Size(100%, auto);
+    #Button {
+      @include Size(100%, 3.75rem);
+      p {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
+
 #Tracks {
   min-height: 35.625rem;
   .tracks-swiper {
@@ -237,7 +280,7 @@
 }
 
 #Event {
-  min-height: 38.25rem;
+  // min-height: 38.25rem;
   text-align: center;
   color: $G00;
   background: $primary;

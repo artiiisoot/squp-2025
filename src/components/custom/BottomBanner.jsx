@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { setEndPosition } from "@/reducers/refSlice";
+import { setIsShowModal } from "@/reducers/modalSlice";
 
 // 컴포넌트
 import Icon from "../common/Icon";
@@ -14,7 +15,13 @@ function BottomBanner() {
   const { endPosition } = useSelector((state) => state.ref);
 
   const handleGoToReservation = () => {
-    navigate("/reservation");
+    // navigate("/reservation");
+    dispatch(
+      setIsShowModal({
+        isShowModal: true,
+        type: "finish",
+      })
+    );
   };
 
   // endRef 설정

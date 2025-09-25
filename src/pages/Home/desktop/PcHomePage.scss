@@ -87,7 +87,6 @@
   .video-content {
     @include Size(100%, 90vh);
     position: relative;
-    // max-width: var(--desktop-max-width);
     margin: 0 auto;
   }
   .dim {
@@ -103,31 +102,6 @@
     top: 0;
     object-fit: cover;
   }
-
-  // .video-container {
-  //   width: 100%;
-  //   height: 0;
-  //   padding-top: 56.25%; /* 가장 중요 */
-  //   position: relative;
-  //   iframe {
-  //     width: 100%;
-  //     height: 100%;
-  //     position: absolute;
-  //     top: 0;
-  //     left: 0;
-  //   }
-  // }
-
-  // .video-obj {
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   right: 0;
-  //   bottom: 0;
-  //   background: url("../../../assets/video/main_video.mp4") center center
-  //     no-repeat;
-  //   background-size: cover;
-  // }
 
   .section-container {
     @include FlexBox(column, center, center);
@@ -209,6 +183,18 @@
     @include FlexBox(column, unset, unset);
     gap: 1.5rem;
     flex: 1;
+    &.final {
+      gap: 2.5rem;
+      h1 {
+        font-size: 3.875rem;
+        color: $G100;
+      }
+      ul {
+        gap: 2.5rem;
+        font-size: 1.875rem;
+        color: $G80;
+      }
+    }
     h4 {
       color: $G100;
     }
@@ -226,6 +212,37 @@
     justify-content: center;
   }
 }
+#Replay {
+  background: $primary;
+  .page-container {
+    align-items: center;
+    gap: 2.5rem;
+  }
+  h3 {
+    width: fit-content;
+    position: relative;
+    color: $G00;
+    span {
+      position: static;
+      z-index: 1;
+    }
+    span.line-highlight {
+      content: "";
+      @include Size(100%, 1.5rem);
+      position: absolute;
+      bottom: 0;
+      background: rgba($color: $secondary, $alpha: 0.5);
+      z-index: 0;
+    }
+  }
+  h4 {
+    display: inline;
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-align: center;
+    color: $G00;
+  }
+}
 #Tracks {
   min-height: 51.375rem;
   .page-container {
@@ -241,7 +258,7 @@
   }
 }
 #Event {
-  min-height: 65rem;
+  // min-height: 65rem;
   text-align: center;
   color: $G00;
   background: $primary;

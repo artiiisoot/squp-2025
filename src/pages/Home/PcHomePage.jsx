@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import { useDispatch, useSelector } from "react-redux";
 import { setStartPosition } from "@/reducers/refSlice";
+import { setIsShowModal } from "@/reducers/modalSlice";
 
 import { fetchTracksData } from "@/api/public";
 
@@ -38,6 +39,16 @@ const PcHomePage = () => {
 
   const handleMoveTrack = (trackId) => {
     navigate(`/tracks?track=${trackId}`);
+  };
+
+  const handleRegist = () => {
+    console.log("regist");
+    dispatch(
+      setIsShowModal({
+        isShowModal: true,
+        type: "finish",
+      })
+    );
   };
 
   useEffect(() => {
@@ -104,6 +115,27 @@ const PcHomePage = () => {
   //   setHostImages(importAll(hostContext));
   //   setSponsorImages(importAll(sponsorContext));
   // }, []);
+
+  const handleMoveToVideo = () => {
+    dispatch(
+      setIsShowModal({
+        isShowModal: true,
+        type: "replay",
+        title: "시큐업 영상이 곧 공개됩니다!",
+      })
+    );
+  };
+
+  const handleMoveToSketch = () => {
+    window.open("https://blog.naver.com/funraon/224020210863", "_blank");
+    // dispatch(
+    //   setIsShowModal({
+    //     isShowModal: true,
+    //     type: "replay",
+    //     title: "시큐업 현장 스케치가 곧 공개됩니다!",
+    //   })
+    // );
+  };
 
   // 사전등록버튼 플로팅 이벤트
   useEffect(() => {
@@ -198,15 +230,6 @@ const PcHomePage = () => {
         <video autoPlay muted loop playsInline>
           <source src={MainVideo} />
         </video>
-        {/* <iframe
-            src="https://www.youtube.com/embed/HiFYkbk6pJo?controls=0&autoplay=1&loop=1&mute=1&playlist=HiFYkbk6pJo"
-            title="시큐업 main"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe> */}
-        {/* </div> */}
       </section>
 
       <section id="Overview">
@@ -215,9 +238,9 @@ const PcHomePage = () => {
             <img src={OverviewImg} alt="overview_img" />
           </div>
 
-          <div className="content-context">
-            <h4>2025 시큐업 & 해커톤에 여러분을 초대합니다.</h4>
-            <ul>
+          <div className="content-context final">
+            {/* <h4>2025 시큐업 & 해커톤에 여러분을 초대합니다.</h4> */}
+            {/* <ul>
               <li>
                 디지털 기술은 이제 사회를 연결하고, 산업을 이끌며, 인류의 미래를
                 설계하는 근간이 되었습니다. <br />
@@ -271,11 +294,35 @@ const PcHomePage = () => {
               </li>
 
               <li>감사합니다.</li>
+            </ul> */}
+            <h1>
+              2025 시큐업 & 해커톤에 <br /> 참석해주셔서 감사합니다.
+            </h1>
+            <span className="line" />
+            <ul>
+              <li>
+                보내주신 관심과 성원 덕분에 2025 시큐업& 해커톤이
+                <br />
+                성황리에 마무리 되었습니다.
+              </li>
+
+              <li>
+                이번 시큐업을 통해 Web3와 AI로 연결되는 미래에 대한
+                <br />
+                다양한 인사이트를 얻으셨기를 바라며 소중한 시간을 내어
+                <br />
+                참석해주신 모든 분들께 깊이 감사드립니다.
+              </li>
+
+              <li>
+                2026 시큐업에서 다시 뵙겠습니다. <br />
+                감사합니다.
+              </li>
             </ul>
           </div>
         </div>
 
-        <div className="button-group">
+        {/* <div className="button-group">
           <Button
             title={"사전등록하기"}
             btnColor={"squp"}
@@ -283,8 +330,41 @@ const PcHomePage = () => {
             iconName="arrow_right"
             iconSize="2rem"
             iconPosition="right"
-            onClick={() => navigate("/reservation")}
+            onClick={() => handleRegist()}
           />
+        </div> */}
+      </section>
+
+      <section id="Replay">
+        <div className="page-container">
+          <h3>
+            <span>2025 SQUP & REPLAY!</span>
+            <span className="line-highlight" />
+          </h3>
+          <h4>
+            <b>2025 시큐업 하이라이트 영상</b>과 <b>현장 스케치</b>가
+            공개되었습니다. <br /> 지금 바로 확인해보세요!
+          </h4>
+          <div className="button-group">
+            <Button
+              title={"영상 보러가기"}
+              btnColor={"squp-reverse"}
+              btnSize={"lg"}
+              iconName="arrow_right"
+              iconSize="2rem"
+              iconPosition="right"
+              onClick={() => handleMoveToVideo()}
+            />
+            <Button
+              title={"현장 스케치 보러가기"}
+              btnColor={"squp-reverse"}
+              btnSize={"lg"}
+              iconName="arrow_right"
+              iconSize="2rem"
+              iconPosition="right"
+              onClick={() => handleMoveToSketch()}
+            />
+          </div>
         </div>
       </section>
 
@@ -331,7 +411,7 @@ const PcHomePage = () => {
             </p>
           </div>
         </div>
-        <div className="button-group">
+        {/* <div className="button-group">
           <Button
             title={"사전등록하기"}
             btnColor={"squp-reverse"}
@@ -339,9 +419,9 @@ const PcHomePage = () => {
             iconName="arrow_right"
             iconSize="2rem"
             iconPosition="right"
-            onClick={() => navigate("/reservation")}
+            onClick={() => handleRegist()}
           />
-        </div>
+        </div> */}
       </section>
 
       <section id="Location">
@@ -392,9 +472,9 @@ const PcHomePage = () => {
         </div>
       </section>
 
-      <BottomBanner />
+      {/* <BottomBanner /> */}
 
-      <ReserveButton ref={reserveButton} />
+      {/* <ReserveButton ref={reserveButton} /> */}
 
       {/* <ModalProgramDetail /> */}
     </article>

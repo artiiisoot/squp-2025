@@ -2,14 +2,18 @@ import React, { useEffect } from "react";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
 
 import { useDispatch } from "react-redux";
+import { setServerMode } from "@/reducers/deviceSlice";
 
+import useModalObserver from "@/hooks/useModalObserver";
+
+// 컴포넌트
 import HeaderLayout from "@/layouts/HeaderLayout";
 import FooterLayout from "@/layouts/FooterLayout";
 import ModalAlert from "@/components/modal/ModalAlert";
 // import ModalProgramDetail from "@/components/modal/ModalProgramDetail";
 // import TopButton from "@/components/common/TopButton";
-import { setServerMode } from "@/reducers/deviceSlice";
-import useModalObserver from "@/hooks/useModalObserver";
+import ModalFinishRegist from "@/components/modal/ModalFinishRegist";
+import ModalReplayAlert from "@/components/modal/ModalReplayAlert";
 
 const MainLayout = () => {
   const dispatch = useDispatch();
@@ -38,6 +42,8 @@ const MainLayout = () => {
       <HeaderLayout />
       <main>
         <ModalAlert />
+        <ModalFinishRegist />
+        <ModalReplayAlert />
         {/* <ModalProgramDetail /> */}
 
         {/* <TopButton ref={topButton} /> */}

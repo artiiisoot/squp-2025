@@ -24,6 +24,16 @@ const MobileGnb = ({ isFixed }) => {
     );
   };
 
+  const handleRegist = () => {
+    // navigate("/reservation");
+    dispatch(
+      setIsShowModal({
+        isShowModal: true,
+        type: "finish",
+      })
+    );
+  };
+
   return (
     <nav id="MobileGnb" className={isFixed ? "fixed" : ""}>
       <div className="header-container">
@@ -35,9 +45,9 @@ const MobileGnb = ({ isFixed }) => {
         </Link>
 
         <div className="group">
-          <Link to={"/reservation"} className="reserve">
+          {/* <Link to={"#"} className="reserve" onClick={() => handleRegist()}>
             사전등록
-          </Link>
+          </Link> */}
           <Icon icon="hamburger" size="2rem" onClick={handleShowSidebar} />
         </div>
       </div>

@@ -65,6 +65,8 @@ body[type="desktop"] {
   @import "components/modal/desktop/ModalSessionDetail.scss";
   @import "components/modal/desktop/ModalTerms.scss";
   @import "components/modal/desktop/ModalPrivacy.scss";
+  @import "components/modal/desktop/ModalFinishRegist.scss";
+  @import "components/modal/desktop/ModalReplayAlert.scss";
 }
 
 body[type="mobile"] {
@@ -169,4 +171,6 @@ body[type="mobile"] {
   @import "components/modal/mobile/ModalResevationDetail.scss";
   @import "components/modal/mobile/ModalTerms.scss";
   @import "components/modal/mobile/ModalPrivacy.scss";
+  @import "components/modal/mobile/ModalFinishRegist.scss";
+  @import "components/modal/mobile/ModalReplayAlert.scss";
 }

@@ -1,5 +1,8 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+
+import { setIsShowModal } from "@/reducers/modalSlice";
 
 import parse from "html-react-parser";
 import { formatText } from "@/utils/utils";
@@ -8,6 +11,7 @@ import Button from "@/components/common/Button";
 import EarlybirdImg from "@/assets/images/event/earlybird_img.png";
 
 const EarlyBirdEvent = () => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const steps = [
     {
@@ -24,6 +28,17 @@ const EarlyBirdEvent = () => {
       context: "배지 인증 완료자 대상 \n 행사 종료 후 기프티콘 지급!",
     },
   ];
+
+  const handleMoveToReservation = () => {
+    dispatch(
+      setIsShowModal({
+        isShowModal: true,
+        type: "finish",
+      })
+    );
+    // navigate("/reservation");
+    // dispatch(setIsCloseModal());
+  };
 
   return (
     <div id="PcEarlyBirdEvent">
@@ -66,7 +81,7 @@ const EarlyBirdEvent = () => {
           </span>
         </div>
       </div>
-
+      {/* 
       <Button
         title={"사전등록하기"}
         btnColor={"squp-reverse"}
@@ -74,8 +89,8 @@ const EarlyBirdEvent = () => {
         iconName="arrow_right"
         iconSize="1.5rem"
         iconPosition="right"
-        onClick={() => navigate("/reservation")}
-      />
+        onClick={() => handleMoveToReservation()}
+      /> */}
     </div>
   );
 };

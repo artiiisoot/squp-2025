@@ -1,0 +1,52 @@
+#ModalReplayAlert {
+  .logo {
+    @include Size(8.375rem, 3.125rem);
+  }
+  .modal-dialog {
+    @include Size(90%, auto);
+    gap: 0.875rem;
+  }
+  .modal-header {
+    @include FlexBox(row, center, center);
+    padding: unset;
+  }
+  .modal-body {
+    align-items: center;
+    gap: 0.75rem;
+    text-align: center;
+    color: $primary;
+    h5 {
+      font-size: 1.125rem;
+    }
+    .text-group {
+      @include FlexBox(column, center, center);
+    }
+    p {
+      @include FlexBox;
+      gap: 0.25rem;
+      font-size: 0.875rem;
+      word-break: keep-all;
+      .icon-img {
+        @include Size(1.25rem, 1.25rem);
+      }
+    }
+    span.line {
+      @include Size(1.25rem, 1px);
+      background: $primary;
+    }
+  }
+  .modal-footer {
+    @include FlexBox(row, center, center);
+    #Button {
+      @include Size(auto, 2.5rem);
+      max-width: 5rem;
+      p {
+        font-size: 0.875rem;
+      }
+    }
+  }
+  .modal-header,
+  .modal-footer {
+    border: none;
+  }
+}
