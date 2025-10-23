@@ -117,13 +117,14 @@ const PcHomePage = () => {
   // }, []);
 
   const handleMoveToVideo = () => {
-    dispatch(
-      setIsShowModal({
-        isShowModal: true,
-        type: "replay",
-        title: "시큐업 영상이 곧 공개됩니다!",
-      })
-    );
+    window.open("https://youtu.be/Cf8rkglD_jw", "_blank");
+    // dispatch(
+    //   setIsShowModal({
+    //     isShowModal: true,
+    //     type: "replay",
+    //     title: "시큐업 영상이 곧 공개됩니다!",
+    //   })
+    // );
   };
 
   const handleMoveToSketch = () => {
