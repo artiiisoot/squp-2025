@@ -15,12 +15,13 @@ import SnsCircleInstagram from "@/assets/images/footer/sns/circle_instagram.svg"
 import SnsCircleYoutube from "@/assets/images/footer/sns/circle_youtube.svg";
 import SnsCircleX from "@/assets/images/footer/sns/circle_x.svg";
 import SnsCircleLinkedin from "@/assets/images/footer/sns/circle_linkedin.svg";
+import SnsCircleTstory from "@/assets/images/footer/sns/circle_tstory.svg";
 
 const PcFooter = () => {
   const dispatch = useDispatch();
 
   const siteOption = [
-    { text: "Raon IT Group", value: 1, url: "https://www.raoncorp.com" },
+    { text: "Raon IT Group", value: 1, url: "https://www.raon.com" },
     { text: "RaonSecure", value: 2, url: "https://www.raonsecure.com" },
     { text: "RaonVentures", value: 3, url: "https://www.raon.vc" },
     { text: "INBIZNET", value: 4, url: "https://www.inbiznetcorp.com" },
@@ -39,14 +40,14 @@ const PcFooter = () => {
       url: "https://blog.naver.com/funraon",
     },
     {
-      img: SnsCircleFacebook,
-      alt: "페이스북",
-      url: "https://www.facebook.com/raonsecure",
-    },
-    {
       img: SnsCircleInstagram,
       alt: "인스타그램",
       url: "https://www.instagram.com/raonsecure",
+    },
+    {
+      img: SnsCircleFacebook,
+      alt: "페이스북",
+      url: "https://www.facebook.com/raonsecure",
     },
     {
       img: SnsCircleYoutube,
@@ -62,6 +63,11 @@ const PcFooter = () => {
       img: SnsCircleLinkedin,
       alt: "링크드인",
       url: "https://www.linkedin.com/company/raonsecure/",
+    },
+    {
+      img: SnsCircleTstory,
+      alt: "티스토리",
+      url: "https://raonsecure.tistory.com",
     },
   ];
 
@@ -80,7 +86,7 @@ const PcFooter = () => {
       setIsShowModal({
         isShowModal: true,
         type: "privacy",
-      })
+      }),
     );
   };
 

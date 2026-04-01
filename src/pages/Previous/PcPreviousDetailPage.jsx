@@ -22,8 +22,8 @@ const PcPreviousDetailPage = () => {
   const handleMoveToSite = () => {
     if (id === "2021") {
       window.open(
-        `https://www.raoncorp.com/data/squp/2021/index.html?mode=replay`,
-        "_blank"
+        `https://www.raon.com/data/squp/2021/index.html?mode=replay`,
+        "_blank",
       );
     } else {
       window.open(`http://www.squp.kr/${id}`, "_blank");

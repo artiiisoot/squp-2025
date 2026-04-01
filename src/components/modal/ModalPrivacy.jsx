@@ -306,13 +306,13 @@ const ModalPrivacy = () => {
                       <li>▶ 개인정보 보호책임자</li>
                       <li>성명 : 김성규</li>
                       <li>직책 : 프로</li>
-                      <li>이메일 : skkim@raoncorp.com</li>
+                      <li>이메일 : skkim@raon.com</li>
                       <li>※ 개인정보 보호 담당부서로 연결됩니다.</li>
                     </ul>
                     <ul>
                       <li>▶ 개인정보 보호 담당부서</li>
                       <li>부서명 : 마케팅팀</li>
-                      <li>이메일 : marketing@raoncorp.com</li>
+                      <li>이메일 : marketing@raon.com</li>
                     </ul>
                   </li>
                   <li>
@@ -335,7 +335,7 @@ const ModalPrivacy = () => {
                     <ul>
                       <li>▶ 개인정보 열람청구 접수․처리 부서</li>
                       <li>부서명 : 마케팅팀</li>
-                      <li>이메일 : marketing@raoncorp.com</li>
+                      <li>이메일 : marketing@raon.com</li>
                     </ul>
                   </li>
                 </ul>
