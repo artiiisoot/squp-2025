@@ -21,8 +21,8 @@ const MobileFooter = () => {
   const dispatch = useDispatch();
 
   const siteOption = [
-    { text: "Raon IT Group", value: 1, url: "https://www.raon.com" },
-    { text: "RaonSecure", value: 2, url: "https://www.raonsecure.com" },
+    { text: "Raon IT Group", value: 1, url: "https://www.raongroup.com" },
+    { text: "RaonSecure", value: 2, url: "https://www.raon.com" },
     { text: "RaonVentures", value: 3, url: "https://www.raon.vc" },
     { text: "INBIZNET", value: 4, url: "https://www.inbiznetcorp.com" },
     {
