@@ -23,14 +23,15 @@ const PcFooter = () => {
   const siteOption = [
     { text: "Raon IT Group", value: 1, url: "https://www.raongroup.com" },
     { text: "RaonSecure", value: 2, url: "https://www.raon.com" },
-    { text: "RaonVentures", value: 3, url: "https://www.raon.vc" },
-    { text: "INBIZNET", value: 4, url: "https://www.inbiznetcorp.com" },
+    { text: "RaonMeta", value: 3, url: "https://www.raonmeta.com" },
+    { text: "RaonVentures", value: 4, url: "https://www.raon.vc" },
+    { text: "INBIZNET", value: 5, url: "https://www.inbiznetcorp.com" },
     {
       text: "Digital Trust Networks",
-      value: 5,
+      value: 6,
       url: "https://www.digitaltrustnetworks.com",
     },
-    { text: "OmniOne", value: 6, url: "https://www.omnione.net" },
+    { text: "OmniOne", value: 7, url: "https://www.omnione.net" },
   ];
 
   const snsButtons = [
